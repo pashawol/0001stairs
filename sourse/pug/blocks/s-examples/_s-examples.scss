@@ -1,0 +1,110 @@
+.s-examples {
+	background-color: #f1f1f1;
+	h2{
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 	rem(980);
+		text-transform: uppercase;
+		margin-bottom: rem(22);
+	}
+	@include media-breakpoint-up(xl) {
+		padding-top: rem(80);
+		padding-bottom: rem(100);
+	}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+
+}
+
+.tabs{
+	&__row{
+		@include media-breakpoint-up(xl) {
+
+			@include roww(85 / 2);
+		}
+	}
+	&__caption{
+		@extend .row;
+		margin-left: 0;
+		margin-right: 0;
+		margin-bottom: rem(38);
+	}
+	&__btn{
+		@extend .col-sm;
+		text-align: center;
+		font-size: $h6-font-size;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: 0;
+		border-bottom: 2px solid $primary;
+		padding: rem(16) rem(15);
+		&.active{
+			color: #ffffff;
+			background-color: $primary;
+		}
+	}
+	
+}
+
+.prod-item{
+	box-shadow: 0 4px 45px rgba(0, 0, 0, 0.13);
+border-radius: 10px;
+background-color: #ffffff;
+padding: rem(23) rem(23) rem(20);
+height: 100%;
+picture{
+	text-align: center;
+	border-radius: 3px;
+	background-color: #f9f8f7;
+	@include block(306,257);
+	margin-bottom: rem(12);
+	img{
+		@include a-cent;
+		max-height: 100%;
+	}
+}
+&__col{
+	margin-bottom: rem(7);
+}
+&__foot{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	.h6{
+		margin-right: 5px;
+	}
+}
+&__btn{
+	@extend .btn-primary;
+	@extend .btn-3d;
+}
+}
+
+.col-prod{
+	@include media-breakpoint-up(xl) {
+
+		margin-bottom: rem(70);
+	}
+	margin-bottom: 30px;
+}

@@ -43,20 +43,24 @@ body {
 }
 .section { 
 	@include bgs; 
-		padding-top: rem(40px);
-		padding-bottom: rem(40px); 
+		padding-top: rem(55px);
+		padding-bottom: rem(42px); 
 }
 
 .section-title {
 	@extend .h2;
-	padding-bottom: em(10); 
-	>h2 {
-		font-size: inherit;
+	padding-bottom: em(14); 
+	>h2 { 
+		line-height: (62 / 50);
 		
 		@include media-breakpoint-up(md) {}
 	}
 }
-
+.bg-body{
+	h2{
+		color: #ffffff;
+	}
+}
 
 // @include media-breakpoint-up(lg) {
 // 	.container {
@@ -467,4 +471,25 @@ a{
 .bg-wrap{
 	position: relative;
 	z-index: 2;
+}
+
+.btn-primary{
+	@extend .btn;
+}
+$smallest: rem(12);
+.smallest{
+	font-size: $smallest;
+}
+
+
+.btn-3d{
+	box-shadow:  0px rem(4) 0px 0px  #e2760f, 0 4px $h5-font-size rgba(0, 0, 0, 0.25);
+	padding-bottom: rem(8);
+}
+
+.row--sm{
+	@include roww(9);
+}
+.row--lg{
+
 }

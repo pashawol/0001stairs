@@ -1,19 +1,37 @@
 
 mixin mob-mnu()
-	+b.toggle-menu-mobile--js.d-lg-none
-		span
+	
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
 		
-			+mnu()
-			.text-right
+			+mnu() 
+			+e.btn-wrap
+				+e.btn.btn-primary(href="#")
+					+icon("telephone")
+					| Заказать звонок
+				+e.btn.btn-primary(href="#")
+					+icon("rule")
+					| Вызвать замерщика
+			.top-nav__time
+				+icon("time-left")
+				span.smallest.d-none.d-xl-block Мы работаем: 
+				| 
+				strong Пн-Вс 09:00&nbsp;&mdash; 21:00
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
-	+b.top-nav.block-with-lazy
+	+b.top-nav.block-with-lazy.d-none.d-lg-block
 		.container
-			+mnu()
+			.row
+				.col
+					+mnu()
+				.col-auto
+					+e.time
+						+icon("time-left")
+						span.smallest.d-none.d-xl-block Мы работаем: 
+						| 
+						strong Пн-Вс 09:00&nbsp;&mdash; 21:00
 					
 	// end top-nav

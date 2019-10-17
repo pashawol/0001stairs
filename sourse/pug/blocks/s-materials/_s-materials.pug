@@ -1,0 +1,23 @@
+mixin s-materials()
+	// start s-materials
+	+b.SECTION.s-materials.section#s-materials&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 ИСПОЛЬЗУЕМЫЕ МАТЕРИАЛЫ ДЛЯ&nbsp;ЛЕСТНИЦ
+				
+			.row
+				mixin item(i,t,p)
+					+e.col.col-xl-3.col-md-6
+						+e.item
+							+e.item-head(class="bg-wrap")
+								+pic(`s-materials-${i}`,'bg','',0)(class="picture-bg")
+							+e.caption
+								+e.item-title=t
+							+e.item-price= p
+							+e.btn(href="#") ПОСЧИТАТЬ
+					// +e.col.col-xl-3.col-sm-6
+				+item('1','ЛЕСТНИЦЫ НА МЕТАЛЛОКАРКАСЕ','от 39 000 ₽')
+				+item('2','ЛЕСТНИЦЫ ДЕРЕВЯННЫЕ','от 49 000 ₽')
+				+item('3','БЕТОННЫЕ ЛЕСТНИЦЫ','от 39 000 ₽')
+				+item('4','ЛЕСТНИЦЫ ИЗ КАМНЯ','от 39 000 ₽')
+	// end s-materials

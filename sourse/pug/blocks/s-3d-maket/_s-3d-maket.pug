@@ -1,0 +1,20 @@
+mixin s-3d-maket()
+	// start s-3d-maket
+	+b.SECTION.s-3d-maket.section#s-3d-maket.lazy-background&attributes(attributes)
+		.container
+			.row
+				.col-xl-7.col-lg-6
+					+b.section-title
+						h2.ttu 3D макет лестницы
+						.h6 Оставьте заявку и&nbsp;посмотрите как будет выглядеть Ваша лестница в&nbsp;3D 
+						+e.text Предоставим 3D&nbsp;макет в&nbsp;течении дня после обращения
+						.h6.ttu СДЕЛАЕМ 3D&nbsp;МАКЕТ ЛЕСТНИЦЫ  В&nbsp;ПОДАРОК ДО&nbsp;
+							span 09.10.2019
+				.col
+					+form-wrap(class="bg-body ")
+						+e.top-title.text-white ФОРМА ДЛЯ ЗАЯВКИ НА&nbsp;3D&nbsp;МАКЕТ БУДУЩЕЙ ЛЕСТНИЦЫ
+						+e.top-text.text-center.small.text-white Оставьте заявку в&nbsp;этой форме, что&nbsp;бы получить 3D&nbsp;макет лестницы
+						+input-lg('+7( ___ )___-__-__','tel','Ваш телефон:') 
+						+e.btn.btn-3d.btn-primary.btn-block(type="submit") Получить проект и и расчет
+						+polite()
+	// end s-3d-maket

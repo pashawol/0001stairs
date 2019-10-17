@@ -1,0 +1,44 @@
+mixin prod()
+	+b.prod-item
+		+pic("s-examples-img.png",'','lazy',0)
+		+e.caption
+			+e.table
+				mixin tr(t1, t2)
+					.row
+						+e.col.col.fw-500= t1
+						+e.col.col-auto.strong= t2
+				+tr("Ширина:",'до 3 метров')
+				+tr("Длина:",'до 8 метров')
+				+tr("Высота:",'до 4 метров')
+				+tr("Тип: прямая",'прямая')
+				+tr("Покрытие:",' дерево/металл')
+			+e.foot
+				+e.item-price
+					.small.fw-500 Итого от:
+					.h6.strong 24 870 ₽ м/п
+				+e.btn(href="#") Заказать монтаж
+	// /+b.prod-item
+
+mixin s-examples()
+	// start s-examples
+	+b.SECTION.s-examples.section#s-examples&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Примеры стоимости "под ключ" типовых лестниц
+				
+			+b.tabs
+				+e.caption
+					+e.btn.active НА&nbsp;МЕТАЛЛОКАРКАСЕ
+					+e.btn ДЕРЕВЯННЫЕ
+					+e.btn Бетонные
+				+e.wrap
+					mixin cont()
+						+e.content&attributes(attributes)
+							+e.row.row
+								- for (var x = 0; x < 6; x++)
+									.col-prod.col-lg-4.col-md-6
+										+prod
+					+cont()(class="active")
+					+cont()
+					+cont()
+	// end s-examples

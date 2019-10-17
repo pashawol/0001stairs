@@ -1,34 +1,6 @@
 .top-nav {
-	padding-top: 15px;
-	// position: absolute;
-	top: 100%;
-	// @include clearfix;ss
-	z-index: 20;
-	padding-top: 3px;
-	@include mt;
-	padding-bottom: 10px;
-	top: 0;
-	left: 0;
-	width: 100%;
-
-	&.fixed {
-		width: 100vw;
-		bottom: auto;
-		margin-top: 0;
-		background-color: #fff;
-	}
-
-	&__nav {
-		text-align: center;
-		list-style-type: none;
-	}
-
-	&__item {
-		display: inline-block;
-		list-style-type: none;
-	}
-
-	// 
+	background-color: #ffffff;
+	// 	
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}
@@ -63,6 +35,45 @@
 	@include media-breakpoint-down(sm) {}
 
 	@include media-breakpoint-down(xs) {}
+	.row{
+		align-items: center;
+	}
+	
+}
+.top-nav__time{
+	
+	display: flex;
+	align-items: center;
+	margin-left: rem(-7);
+	margin-right: rem(-7);
+	>*{
+		margin-left: rem(7);
+		margin-right: rem(7);
+
+	}
+	.icon{
+		color: $primary;
+		font-size: rem(18);
+	}
+}
+
+.menu{
+	@include media-breakpoint-up(lg) {
+
+		display: flex;
+		margin-left: rem(-14);
+		margin-right: rem(-14);
+	}
+	list-style-type: none;
+	margin-bottom: 0;
+	a{
+		padding: rem(17) rem(14);
+		color: $body-color;
+		text-decoration: none !important;
+		font-weight: bold;
+		display: block;
+		// text-decoration: none;
+	}
 }
 
 // мобильное меню
@@ -73,9 +84,10 @@ $h: em(2);
 .toggle-menu-mobile {
 	display: block;
 	height: $h* 14;
-	margin-top: 15px;
+	margin-top: 5px;
 	margin-left: 0;
-	position: fixed;
+	// position: fixed;
+	position: relative;
 	z-index: 999 !important;
 	right: 0;
 	padding: 3px;
@@ -120,7 +132,7 @@ $h: em(2);
 	}
 
 	&.on {
-		// opacity: 0;
+		opacity: 0;
 	}
 
 	&.on span {
@@ -164,7 +176,7 @@ $h: em(2);
 	}
 
 	&.active {
-		// transform: translate(0, 0);
+		transform: translate(0, 0);
 
 		.toggle-menu-mobile {
 			opacity: 1;
@@ -215,5 +227,29 @@ $h: em(2);
 			display: block;
  
 		}
+	}
+
+	&__btn-wrap{
+    // margin-left: rem(-8);
+    // margin-right: rem(-8);
+    padding-left: rem(4);
+  }
+  &__btn{
+    // 
+@include media-breakpoint-up(xl) {
+
+  min-width: rem(207);
+}
+    margin-left: rem(8);
+    margin-right: rem(8);
+    margin-top: rem(10);
+    .icon{
+      font-size: rem(21);
+      margin-right: rem(12);
+    }
+	}
+	.top-nav__time{
+		margin-top: 10px;
+		margin-left: 10px;
 	}
 }

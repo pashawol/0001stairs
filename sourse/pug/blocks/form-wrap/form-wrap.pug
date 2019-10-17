@@ -7,9 +7,33 @@ mixin input(placeholder,  t='text', label, name= t)
 	mixin t(t='text',placeholder, name= t)
 		if t== "textarea"
 			+e.TEXTAREA.input.form-control(placeholder= placeholder name= name)&attributes(attributes)
+		else if t=="select"
+			+e.SELECT.input.form-control()&attributes(attributes)
+					option()= t 
+					- for (var x = 1; x < 4; x++)
+						option()= t +' ' +  x
+						option()= t +' ' +  x
+						option()= t +' ' +  x
 		else
-			+e.INPUT.input(type= t placeholder= placeholder name= name)&attributes(attributes)
-	+e.input-wrap
+			+e.INPUT.input--sm(type= t placeholder= placeholder name= name)&attributes(attributes)
+	+e.input-wrap--sm
+		if label
+			label
+				+e.SPAN.title--sm= label
+				+t(t,placeholder, name)&attributes(attributes)
+				block
+		else
+			+t(t,placeholder, name)&attributes(attributes)
+		block
+	// +e.input-wrap
+	
+mixin input-lg(placeholder,  t='text', label, name= t)
+	mixin t(t='text',placeholder, name= t)
+		if t== "textarea"
+			+e.TEXTAREA.input--lg.form-control(placeholder= placeholder name= name)&attributes(attributes)
+		else
+			+e.INPUT.input--lg(type= t placeholder= placeholder name= name)&attributes(attributes)
+	+e.input-wrap--lg
 		if label
 			label
 				+e.SPAN.title= label
@@ -19,6 +43,7 @@ mixin input(placeholder,  t='text', label, name= t)
 			+t(t,placeholder, name)&attributes(attributes)
 		block
 	// +e.input-wrap
+
 mixin select(label,pl,...items)
 	+e.input-wrap
 		label
@@ -58,4 +83,4 @@ mixin add-file(n)
 mixin polite()
 	+e.polite
 		+in-c()(checked)
-			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+			+e.SPAN.text Я согласен(а) с условиями передачи информации

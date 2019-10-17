@@ -2,12 +2,26 @@ extends layout/main.pug
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'title'
+	- let  title= 'Главная'
 	title= title
 
 
 include ../blocks/s-content/_s-content.pug
 include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-production/_s-production.pug
+include ../blocks/s-not-know/_s-not-know.pug
+include ../blocks/s-materials/_s-materials.pug
+include ../blocks/s-3d-maket/_s-3d-maket.pug
+include ../blocks/s-cases/_s-cases.pug
+include ../blocks/s-examples/_s-examples.pug
+include ../blocks/s-stocks/_s-stocks.pug
+include ../blocks/s-advantages/_s-advantages.pug
+include ../blocks/s-our-production/_s-our-production.pug
+include ../blocks/s-chats/_s-chats.pug
+include ../blocks/s-type-of-materials/_s-type-of-materials.pug
+include ../blocks/s-khow-order/_s-khow-order.pug
+include ../blocks/s-rews/_s-rews.pug
+include ../blocks/s-sert/_s-sert.pug
 
 block pagecontent
  
@@ -16,7 +30,20 @@ block pagecontent
 		+top-line()
 		+top-nav()
 	+header-block()
-	+s-form()
+	+s-production
+	+s-not-know
+	+s-materials
+	+s-3d-maket
+	+s-cases
+	+s-examples
+	+s-stocks
+	+s-advantages
+	+s-our-production
+	+s-chats
+	+s-type-of-materials
+	+s-khow-order
+	+s-rews
+	+s-sert
 	+s-contact()
 	+footer()
 

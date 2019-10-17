@@ -1,6 +1,80 @@
 .top-line {
+  @include media-breakpoint-up(lg) {
 
-	
+    padding-top: rem(27);
+  }
+  padding-top: rem(5);
+  padding-bottom: rem(5);
+	&__logo-wrapper{
+    @include media-breakpoint-up(sm) {
+
+      display: flex;
+      font-size: rem(12);
+      line-height: (14/12);
+      align-items: center;
+    }
+      a{
+        font-size: rem(18);
+        text-transform: uppercase;
+        // display: block;
+        // display: flex;
+        // align-items: center;
+      font-weight: bold;
+      @extend .text-body;
+      text-decoration: none !important;
+      span{
+        display: block;
+      }
+      @include media-breakpoint-up(sm) {
+        
+        display: flex;
+        width: rem(190);
+        align-items: center;
+        flex-shrink: 0;
+      }
+      img{
+        margin-right: rem(15);
+        max-width: 100%;
+      }
+    }
+  }
+  &__logo-wrapper-caption{
+    max-width: 160px;
+  }
+  &__btn-wrap{
+    margin-left: rem(-8);
+    margin-right: rem(-8);
+    padding-left: rem(4);
+  }
+  &__btn{
+    // 
+@include media-breakpoint-up(xl) {
+
+  min-width: rem(207);
+}
+    margin-left: rem(8);
+    margin-right: rem(8);
+    margin-top: rem(10);
+    .icon{
+      font-size: rem(21);
+      margin-right: rem(12);
+    }
+  }
+  &__tel{
+  display: inline-block;
+  // @extend .h5;
+  @include media-breakpoint-up(sm) {
+    font-size: $h5-font-size;
+  }
+  font-size: $h6-font-size;
+  @extend .text-body;
+  text-decoration: none !important;
+  margin-bottom: rem(0);
+  font-weight: bold;
+  }
+  &__col{
+    text-align: right;
+  }
 // 
 @include media-breakpoint-up(xl) {}
 
@@ -35,5 +109,9 @@
 
 @include media-breakpoint-down(sm) {}
 
-@include media-breakpoint-down(xs) {}
+@include media-breakpoint-down(xs) {
+  .logo-text{
+    display: none;
+  }
+}
 }

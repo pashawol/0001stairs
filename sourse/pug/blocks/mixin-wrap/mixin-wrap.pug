@@ -99,35 +99,28 @@ mixin soc()
 			+icon('vk')
 //- /scial buttons
 //- WP menu
-//- mixin mnu()
-//- 	- var nav= { "Наши работы":"#","Цены":"#","Калькулятор":"#","Акции":"#" ,"Заказать":"#"}
-//- 	ul.menu
-//- 		li.menu-item.menu-item-has-children
-//- 			a(href="#") О нас
-//- 			ul.sub-menu
-//- 				li.menu-item: a(href="#") Строительство загородных домов
-//- 				li.menu-item: a(href="#") Отделка загородных домов
-//- 				li.menu-item: a(href="#") Покраска деревянных домов
-//- 				li.menu-item: a(href="#") Штукатурные фасады загородных домов
-//- 		each linkPatch, linkName in nav
-//- 			li.menu-item: a(href="#")= linkName
-
-//- menu
 mixin mnu()
 	-
-		var nav= {
-			"Продукция ":"#",
-			"Услуги  ":"#",
-			"Подбор септика   ":"#",
-			"Акции ":"#"," О компании  ":"#",
-			" Доставка и оплата ":"#",
-			" Клиентам  ":"#",
-			" Наши работы   ":"#",
-			"Контакты ":"#"
-			}
-	+e.UL.nav
+		var nav= { 
+		"КАТАЛОГ ЛЕСТНИЦ":"#",
+		"ЦЕНЫ НА ЛЕСТНИЦЫ":"#",
+		"НАШИ РАБОТЫ":"#",
+		"ОТЗЫВЫ":"#",
+		"КОНТАКТЫ":"#"}
+	ul.menu
+		li.menu-item.menu-item-has-children 
 		each linkPatch, linkName in nav
-			+e.LI.item: +e.A.link(href= linkPatch)= linkName
+			li.menu-item: a(href="#")= linkName
+
+//- menu
+//- mixin mnu()
+//- 	-
+//- 		var nav= {
+			 
+//- 			}
+//- 	+e.UL.nav
+//- 		each linkPatch, linkName in nav
+//- 			+e.LI.item: +e.A.link(href= linkPatch)= linkName
 //- /menu
 
 
@@ -167,8 +160,26 @@ mixin pic( i, bg, lazy="lazy", media='576px')
 	or
 	+piclazy('consult','png')
 //- +pic('','head-img-4',"")
-
-
+mixin prod()
+	+b.prod-item
+		+pic("s-examples-img.png",'','lazy',0)
+		+e.caption
+			+e.table
+				mixin tr(t1, t2)
+					.row
+						+e.col.col.fw-500= t1
+						+e.col.col-auto.strong= t2
+				+tr("Ширина:",'до 3 метров')
+				+tr("Длина:",'до 8 метров')
+				+tr("Высота:",'до 4 метров')
+				+tr("Тип: прямая",'прямая')
+				+tr("Покрытие:",' дерево/металл')
+			+e.foot
+				+e.item-price
+					.small.fw-500 Итого от:
+					.h6.strong 24 870 ₽ м/п
+				+e.btn(href="#") Заказать монтаж
+	// /+b.prod-item
  
 		 
 //- /picture

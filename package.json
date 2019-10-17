@@ -40,7 +40,7 @@
   },
   "optionalDependencies": {},
   "dependencies": {
-    "@babel/core": "^7.6.3",
+    "@babel/core": "^7.6.4",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "gulp-newer": "^1.4.0",
     "gulp-responsive": "^2.14.0",

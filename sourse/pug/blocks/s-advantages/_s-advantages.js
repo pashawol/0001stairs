@@ -1,0 +1,5 @@
+JSCCommons-advantages();
+	s-advantages() {
+
+	}
+	

@@ -1,0 +1,35 @@
+mixin s-production()
+	// start s-production
+	+b.SECTION.s-production.section#s-production&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 МЫ ПРОИЗВОДИМ 
+			.row
+				mixin item(i,t)
+					+e.col.col-xl-3.col-lg-4.col-sm-6
+						+e.item
+							+e.item-head(class="bg-wrap")
+								+pic(`s-production-${i}`,'bg','',0)(class="picture-bg")
+								+e.item-title=t
+							+e.item-foot
+								+e.item-price От 19 320 ₽
+								+e.btn(href="#") ПОСЧИТАТЬ
+
+							//- +e.item-text--price=p
+				+item("1","Лестницы из металла ")
+				+item("2","Лестницы из дерева ")
+				+item("3","Лестницы из бетона ")
+				+item("4","Лестницы из камня ")
+				+item("5","Каркасы лестниц ")
+				+item("6","Отделка лестниц ")
+				+item("7","Кованые лестницы ")
+				+item("8","Лестницы из нержавейки ")
+				+item("9","Стеклянные лестницы ")
+				+item("10","Лестницы винтовые ")
+				+item("11","Лестницы забежные ")
+				+item("12","Лестницы с площадкой ")
+				+item("9","Наружные лестницы ")
+				+item("10","Пожарные лестницы ")
+				+item("11","Перила и ограждения ")
+				+item("12"," Антресольные этажи")
+	// end s-production

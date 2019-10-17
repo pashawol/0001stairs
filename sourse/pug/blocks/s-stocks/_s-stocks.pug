@@ -1,0 +1,13 @@
+mixin s-stocks()
+	// start s-stocks
+	+b.SECTION.s-stocks.section.bg-body.lazy-background#s-stocks&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Акция на популярные лестницы
+				
+			.row
+				- for (var x = 0; x < 2; x++)
+					+e.col.col-auto
+						+prod('st')
+				
+	// end s-stocks

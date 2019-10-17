@@ -1,0 +1,61 @@
+mixin s-cases()
+	// start s-cases
+	+b.SECTION.s-cases.section#s-cases&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Посмотрите на&nbsp;лестницы, которые мы&nbsp;построили
+			- for (var x = 0; x < 4; x++)
+				+e.main-row.row
+					.col-lg-6
+						+e.gal-wrap
+							.slider-for
+								- for (var x = 1; x < 6; x++)
+									+e.slide
+										+e.gal-link--lg( )
+											img(src="#" data-lazy=`img/@2x/s-cases-1-${x}.jpg`, alt="") 
+							.slider-nav
+								- for (var x = 1; x < 6; x++)
+									+e.slide--sm
+										+e.gal-link--sm( )
+											img(src="#" data-lazy=`img/@2x/s-cases-1-${x}.jpg`, alt="") 
+					.col-lg-6
+						+e.title Лестница на второй этаж в Москве
+						+e.table
+							mixin tr(t1, t2)
+								.row
+									+e.col.col
+										span= t1
+									+e.col.col-auto= t2
+							+tr("Тип",'Открытый каркас')
+							+tr("Конфигурация",'монокосоур с площадкой')
+							+tr("Материал",'профильная труба')
+							+tr("Высота лестницы",'3200 мм')
+							+tr("Ширина марша",'950 мм')
+							+tr("Шаговая часть ступени",'290 мм')
+							+tr("Высота",'160 мм')
+							+tr("Угол подъема",'36 град')
+							+tr("Ступеней",'20 шт')
+							+tr("Макс. нагрузка",'500 кг')
+						+e.row-foot.row
+							.col-auto.fw-500
+								+e.price-item
+									img.res-i(src="img/svg/s-cases-i-1.svg", alt="")
+									div
+										.small Материалы
+										.h6 66 000 ₽
+							
+							.col-auto.fw-500
+								+e.price-item
+									img.res-i(src="img/svg/s-cases-i-2.svg", alt="")
+									div
+										.small Работа:
+										.h6 66 000 ₽
+							.col-auto.fw-500
+								+e.price-item
+									img.res-i(src="img/svg/s-cases-i-3.svg", alt="")
+									div
+										.small Итого:
+										.h6 166 000 ₽
+						a.btn-block.btn-primary.btn-3d(href="#") Узнать стоимость вашей лестницы
+
+	// end s-cases

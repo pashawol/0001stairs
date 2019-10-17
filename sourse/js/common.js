@@ -94,14 +94,24 @@ function 	eventHandler() {
 	const defaultSlide = { 
 		speed: 600,
 		infinite: true,
-		arrows: true,
-		mobileFirst: true,
-		prevArrow: arrr2,
-		nextArrow: arrl2,
-		// autoplay: true,
-		autoplaySpeed: 6000,
-		lazyLoad: 'ondemand',
+		arrows: false,
+		mobileFirst: true, 
 	};
+
+	
+	$('.slider-for').slick({
+		...defaultSlide,
+		slidesToShow: 1,
+		lazyLoad: 'ondemand',
+		asNavFor: '.slider-nav'
+	});
+	$('.slider-nav').slick({
+		...defaultSlide,
+		slidesToShow: 4, 
+		asNavFor: '.slider-for',
+		focusOnSelect: true
+	});
+		
 	$('.s-gal__slider--js').slick({
 		...defaultSlide,
 		
@@ -211,8 +221,8 @@ function 	eventHandler() {
 		});
 		return false;
 	});
-	};
 	// /form
+	};
 	if (document.readyState !== 'loading') {
 		eventHandler();
 	} else {
