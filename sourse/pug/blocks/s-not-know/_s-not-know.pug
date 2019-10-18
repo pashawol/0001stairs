@@ -21,7 +21,7 @@ mixin s-not-know()
 					+e.col.col-lg.col-md-4.col-sm-6
 						+e.item
 							+e.img-wrap
-								img.res-i(src=`img/svg/s-not-know-${i}.svg`, alt="")
+								img.res-i.lazy(src="#" data-src=`img/svg/s-not-know-${i}.svg`, alt="")
 							if t
 								+e.item-title=t
 							else
