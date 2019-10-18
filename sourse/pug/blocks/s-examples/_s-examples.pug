@@ -1,5 +1,5 @@
 
-mixin s-examples()
+mixin s-examples-block()
 	// start s-examples
 	+b.SECTION.s-examples.section#s-examples&attributes(attributes)
 		.container
@@ -7,18 +7,53 @@ mixin s-examples()
 				h2 Примеры стоимости "под ключ" типовых лестниц
 				
 			+b.tabs
-				+e.caption
-					+e.btn.active НА&nbsp;МЕТАЛЛОКАРКАСЕ
-					+e.btn ДЕРЕВЯННЫЕ
-					+e.btn Бетонные
-				+e.wrap
-					mixin cont()
-						+e.content&attributes(attributes)
-							+e.row.row
-								- for (var x = 0; x < 6; x++)
-									.col-prod.col-lg-4.col-md-6
-										+prod
-					+cont()(class="active")
-					+cont()
-					+cont()
+				block
 	// end s-examples
+mixin cont()
+	+e.content&attributes(attributes)
+		+e.row.row
+			- for (var x = 0; x < 6; x++)
+				.col-prod.col-lg-4.col-md-6
+					+prod
+mixin s-examples()
+	+s-examples-block()
+		+e.caption
+			+e.btn.active НА&nbsp;МЕТАЛЛОКАРКАСЕ
+			+e.btn ДЕРЕВЯННЫЕ
+			+e.btn Бетонные
+		+e.wrap
+			+cont()(class="active")
+			+cont()
+			+cont()
+mixin s-examples2()
+	+s-examples-block()
+		+e.caption
+			+e.btn.active Открытые 
+			+e.btn  Закрытые
+			+e.btn  На моно косоуре
+			+e.btn  На тетиве
+		+e.wrap
+			+cont()(class="active")
+			+cont()
+			+cont()
+			+cont()
+mixin s-examples3()
+	+s-examples-block()
+		+e.caption
+			+e.btn.active без подступенков
+			+e.btn  с подступенками
+		+e.wrap
+			+cont()(class="active")
+			+cont()
+mixin s-examples4()
+	+s-examples-block()
+		+e.caption
+			+e.btn.active Открытые
+			+e.btn Закрытые
+			+e.btn На моно косоуре 
+			+e.btn На тетиве
+		+e.wrap
+			+cont()(class="active")
+			+cont()
+			+cont()
+			+cont()

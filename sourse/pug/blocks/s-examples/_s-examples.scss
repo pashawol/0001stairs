@@ -51,7 +51,7 @@
 		margin-bottom: rem(38);
 	}
 	&__btn{
-		@extend .col-sm;
+		@extend .col-md;
 		text-align: center;
 		font-size: $h6-font-size;
 		font-weight: 700;

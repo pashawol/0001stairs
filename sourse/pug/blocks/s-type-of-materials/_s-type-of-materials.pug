@@ -5,7 +5,51 @@ mixin itmat(i,t)
 			img.lazy(src="#" data-src=`img/@2x/s-type-of-materials-${i}.jpg`, alt="")
 		+e.item-title= t
 
-mixin s-type-of-materials()
+mixin block1() 
+	.row
+		-
+			var nav= {
+				"3-1":'Дымчатосервый дуб',
+				"3-2":'Ледниковосерый дуб',
+				"3-3":'Орех',
+				"3-4":'Черный укрывной дуб',
+				"3-5":'Тик',
+				"3-6":'Светлый Орех',
+				"3-7":'Полярный белый дуб',
+				"3-8":'Дуб Венге',
+				"3-9":'Дымчатый дуб',
+				"3-10":'Серый укрывной дуб',
+				"3-11":'Базальт дуб',
+				"3-12":'Безцветный дуб',
+			}
+		each linkPatch, linkName in nav
+			+e.col.col-xl-2.col-lg-3.col-sm-4.col-6
+				+itmat(linkName, linkPatch)
+			// /+e.col.col-xl-2.col-lg-3.col-sm-4.col-6
+	
+mixin block2()  
+	.row
+		-
+			var nav= {
+				"4-1":'Черный',
+				"4-2":'Бронза',
+				"4-3":'Голубой',
+				"4-4":'Графит',
+				"4-5":'Изумруд',
+				"4-6":'Коричневый',
+				"4-7":'Серебристый',
+				"4-8":'Синий',
+				"4-9":'Вишневый',
+				"4-10":'Зеленый',
+				"4-11":'Золотистый',
+				"4-12":'Красный',
+			}
+		each linkPatch, linkName in nav
+			+e.col.col-xl-2.col-lg-3.col-sm-4.col-6
+				+itmat(linkName, linkPatch)
+			// /+e.col.col-xl-2.col-lg-3.col-sm-4.col-6
+
+mixin s-type-of-materials-block()
 	mixin btn()
 		+e.btn.link-modal(href="#modal-call" data-order=`Скачать весь каталог цветов` data-title='Скачать весь каталог цветов' data-text="Оставьте заявку и наш менеджер отправит вам каталог цветов!" data-btn="Заказать каталог цветов")  СКАЧАТЬ ВЕСЬ КАТАЛОГ ЦВЕТОВ
 	// start s-type-of-materials
@@ -53,49 +97,32 @@ mixin s-type-of-materials()
 						+itmat(linkName, linkPatch)
 					// /+e.col5.col-lg.col-md-3.col-sm-4.col-6
 			+btn()
-			h2 24 варианта покраски
-			h6 Деревянные варианты
-			.row
-				-
-					var nav= {
-						"3-1":'Дымчатосервый дуб',
-						"3-2":'Ледниковосерый дуб',
-						"3-3":'Орех',
-						"3-4":'Черный укрывной дуб',
-						"3-5":'Тик',
-						"3-6":'Светлый Орех',
-						"3-7":'Полярный белый дуб',
-						"3-8":'Дуб Венге',
-						"3-9":'Дымчатый дуб',
-						"3-10":'Серый укрывной дуб',
-						"3-11":'Базальт дуб',
-						"3-12":'Безцветный дуб',
-					}
-				each linkPatch, linkName in nav
-					+e.col.col-xl-2.col-lg-3.col-sm-4.col-6
-						+itmat(linkName, linkPatch)
-					// /+e.col.col-xl-2.col-lg-3.col-sm-4.col-6
-			
-			h6 Покраска
-			.row
-				-
-					var nav= {
-						"4-1":'Черный',
-						"4-2":'Бронза',
-						"4-3":'Голубой',
-						"4-4":'Графит',
-						"4-5":'Изумруд',
-						"4-6":'Коричневый',
-						"4-7":'Серебристый',
-						"4-8":'Синий',
-						"4-9":'Вишневый',
-						"4-10":'Зеленый',
-						"4-11":'Золотистый',
-						"4-12":'Красный',
-					}
-				each linkPatch, linkName in nav
-					+e.col.col-xl-2.col-lg-3.col-sm-4.col-6
-						+itmat(linkName, linkPatch)
-					// /+e.col.col-xl-2.col-lg-3.col-sm-4.col-6
+			block
 			+btn()
 	// end s-type-of-materials
+
+mixin s-type-of-materials()
+	+s-type-of-materials-block()
+		h2 24 ВАРИАНТА ПОКРАСКИ
+		h6 ДЕРЕВЯННЫЕ ВАРИАНТЫ
+		+block1() 
+		h6 ПОКРАСКА
+		+block2() 
+mixin s-type-of-materials2()
+	+s-type-of-materials-block()
+		h2 12 вариантов отделки
+		+block2() 
+		//- h6 ПОКРАСКА
+		//- +block2() 
+mixin s-type-of-materials3()
+	+s-type-of-materials-block()
+		h2 12 вариантов отделки
+		+block1() 
+		//- h6 ПОКРАСКА
+		//- +block2() 
+mixin s-type-of-materials4()
+	+s-type-of-materials-block()
+		h2 12 вариантов отделки
+		//- +block1() 
+		//- h6 ПОКРАСКА
+		+block2() 

@@ -1,11 +1,14 @@
-mixin header-block()
+mixin header-block(h1, i='header-bg')
 	// start header-block
 	+b.header-block#header-block.bg-wrap
-		+pic("header-bg",'bg')(class="picture-bg")
+		+pic(i,'bg')(class="picture-bg")
 		.container
 			.row.align-items-center
 				.col-xl-7.col-lg-6
-					h1 Сделаем и&nbsp;установим лестницу любой сложности под ключ с&nbsp;гарантией до&nbsp;15&nbsp;лет
+					if block
+						block
+					else
+						h1 Сделаем и&nbsp;установим лестницу любой сложности под ключ с&nbsp;гарантией до&nbsp;15&nbsp;лет
 					+e.text Выезд замерщика в&nbsp;день обращения!
 					+e.item-wrap.d-none.d-xl-block
 						.row
