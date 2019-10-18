@@ -1,7 +1,18 @@
 .top-line {
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 200;
+  background-color: #ffffff;
+  @include mt;
   @include media-breakpoint-up(lg) {
 
     padding-top: rem(27);
+  }
+  &.fixed{
+    padding-top: 5px;
+    border-bottom: 1px solid #ccc;
   }
   padding-top: rem(5);
   padding-bottom: rem(5);
@@ -25,15 +36,23 @@
       span{
         display: block;
       }
+      @include media-breakpoint-up(lg) {
+
+        width: rem(190);
+      }
       @include media-breakpoint-up(sm) {
         
         display: flex;
-        width: rem(190);
+        width: rem(170);
         align-items: center;
         flex-shrink: 0;
       }
       img{
-        margin-right: rem(15);
+        @include media-breakpoint-up(lg) {
+
+          margin-right: rem(15);
+        }
+        margin-right: rem(5);
         max-width: 100%;
       }
     }

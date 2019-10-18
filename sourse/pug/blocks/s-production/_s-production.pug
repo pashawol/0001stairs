@@ -8,12 +8,14 @@ mixin s-production()
 				mixin item(i,t)
 					+e.col.col-xl-3.col-lg-4.col-sm-6
 						+e.item
-							+e.item-head(class="bg-wrap")
-								+pic(`s-production-${i}`,'bg','',0)(class="picture-bg")
+							+e.item-head.link-modal(href="#modal-call" data-order=`Заказать расчет - ${t}` data-title=' Заказать расчет лестницы' data-text="Оставьте заявку и наш инженер сделает расчет вашей лестницы!" data-btn="ЗАКАЗАТЬ РАСЧЕТ" class="bg-wrap")
+								picture.lazy.picture-bg
+									img.object-fit-js(src="#" data-src=`img/@2x/s-production-${i}.jpg`, alt="")
+								//- +pic(`s-production-${i}`,'bg','lazy',0)(class="picture-bg")
 								+e.item-title=t
 							+e.item-foot
 								+e.item-price От 19 320 ₽
-								+e.btn.link-modal(href="#modal-call" data-order=`Посчитать - ${t}` data-title='Узнать стоимость вашей лестницы' data-text="Оставьте заявку и наш инженер сделает расчет вашей лестницы!" data-btn="УЗНАТЬ СТОИМОСТЬ") ПОСЧИТАТЬ
+								+e.btn.link-modal(href="#modal-call" data-order=`Заказать расчет - ${t}` data-title=' Заказать расчет лестницы' data-text="Оставьте заявку и наш инженер сделает расчет вашей лестницы!" data-btn="ЗАКАЗАТЬ РАСЧЕТ") ПОСЧИТАТЬ
 
 							//- +e.item-text--price=p
 				+item("1","Лестницы из металла ")

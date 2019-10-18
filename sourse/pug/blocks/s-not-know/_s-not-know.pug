@@ -13,7 +13,7 @@ mixin s-not-know()
 						+e.top-title Вызовите замерщика 
 						+e.top-text.text-center.small Подберем для Вас все параметры лестницы и&nbsp;бесплатно посчитаем смету
 						+input-lg('+7( ___ )___-__-__','tel','Ваш телефон:') 
-						+e.btn.btn-3d.btn-primary.btn-block(type="submit") Получить проект и и расчет
+						+e.btn.btn-3d.btn-primary.btn-block(type="submit") Вызвать замерщика
 						+polite()
 			+e.title При расчете лестницы учитываем:
 			+e.row.row
@@ -22,10 +22,15 @@ mixin s-not-know()
 						+e.item
 							+e.img-wrap
 								img.res-i(src=`img/svg/s-not-know-${i}.svg`, alt="")
-							+e.item-title=t
+							if t
+								+e.item-title=t
+							else
+								block
 				+item("1",'Цвет лестницы')
 				+item("2",'Форму и размер лестницы')
-				+item("3",'Кол-во ступеней и маршей')
-				+item("4",'Материал и нагрузки')
+				+item("3")
+					+e.item-title Кол-во ступеней и&nbsp;маршей
+				+item("4",'')
+					+e.item-title Материал и&nbsp;нагрузки
 				+item("5",'Посчитаем точную смету')
 	// end s-not-know

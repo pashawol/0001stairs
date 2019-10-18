@@ -24,17 +24,6 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/main.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
-	// const url = document.location.href;
-	// $.each($(".top-nav__nav a "), function () {
-	// 	if (this.href == url) {
-	// 		if ($(this).hasClass("top-nav__link") == true) {
-	// 			$(this).addClass('top-nav__link-active');
-	// 		}
-	// 		if ($(this).hasClass("footer__link") == true) {
-	// 			$(this).addClass('footer__link-active');
-	// 		} 
-	// 	}; 
-	// }); 
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {
@@ -44,11 +33,12 @@ function eventHandler() {
 		// скрывает моб меню
 
 		var topH = $("header ").innerHeight();
+		$("header ").css("padding-top", $(".top-line").innerHeight());
 		$(window).scroll(function () {
 			if ($(window).scrollTop() > topH) {
-				$('.top-nav  ').addClass('fixed');
+				$('.top-line  ').addClass('fixed');
 			} else {
-				$('.top-nav  ').removeClass('fixed');
+				$('.top-line  ').removeClass('fixed');
 			}
 		}); // конец добавил
 
@@ -67,7 +57,7 @@ function eventHandler() {
 
 	$(" .top-nav li a, .scroll-link").click(function () {
 		var elementClick = $(this).attr("href");
-		var destination = $(elementClick).offset().top;
+		var destination = $(elementClick).offset().top - 50;
 		$('html, body').animate({
 			scrollTop: destination
 		}, 1100);

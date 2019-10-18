@@ -8,10 +8,10 @@ mixin mob-mnu()
 		
 			+mnu() 
 			+e.btn-wrap
-				+e.btn.btn-primary(href="#")
+				+e.btn.btn-primary.link-modal(href="#modal-call" data-order="Заказать звонок" data-title='Заказать звонок' data-text="Оставьте заявку и наш менеджер перезвонит вам!" data-btn="ЗАКАЗАТЬ ЗВОНОК")
 					+icon("telephone")
 					| Заказать звонок
-				+e.btn.btn-primary(href="#")
+				+e.btn.btn-primary.link-modal(href="#modal-call" data-order="Вызвать замерщика" data-title='Вызвать замерщика' data-text="Оставьте заявку и наш замерщик приедет к вам!" data-btn="ВЫЗВАТЬ ЗАМЕРЩИКА")
 					+icon("rule")
 					| Вызвать замерщика
 			.top-nav__time

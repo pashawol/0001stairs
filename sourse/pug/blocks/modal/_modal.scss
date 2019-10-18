@@ -2,6 +2,16 @@
 	display: block;
 	position: relative;
 	max-width: 440px;
+	
+	.form-wrap__input-wrap--sm .form-wrap__input{
+		padding-left: .6875rem;
+    margin-bottom: 0;
+    font-size: .875rem;
+    min-height: calc(1.5em + 1.515rem + 2px);
+		padding-top: .7rem;
+		font-size: rem(20);
+		height: inherit;
+	}
 	.form-wrap__title{
 		line-height: 1.2;
 	}

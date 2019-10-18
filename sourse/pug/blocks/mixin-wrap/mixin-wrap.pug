@@ -102,15 +102,15 @@ mixin soc()
 mixin mnu()
 	-
 		var nav= { 
-		"КАТАЛОГ ЛЕСТНИЦ":"#",
-		"ЦЕНЫ НА ЛЕСТНИЦЫ":"#",
-		"НАШИ РАБОТЫ":"#",
-		"ОТЗЫВЫ":"#",
-		"КОНТАКТЫ":"#"}
+		"КАТАЛОГ ЛЕСТНИЦ":"#s-production",
+		"ЦЕНЫ НА ЛЕСТНИЦЫ":"#s-examples",
+		"НАШИ РАБОТЫ":"#s-cases",
+		"ОТЗЫВЫ":"#s-rew",
+		"КОНТАКТЫ":"#s-contact"}
 	ul.menu
 		li.menu-item.menu-item-has-children 
 		each linkPatch, linkName in nav
-			li.menu-item: a(href="#")= linkName
+			li.menu-item: a(href= linkPatch)= linkName
 
 //- menu
 //- mixin mnu()

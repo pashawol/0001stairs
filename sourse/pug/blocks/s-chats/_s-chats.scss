@@ -55,6 +55,9 @@
 		display: flex;
 		@include roww(7);
 		margin-bottom: rem(15);
+		img{
+			width: rem(50);
+		}
 	}
 		 
 	@include media-breakpoint-up(xl) {}

@@ -6,8 +6,8 @@ mixin modal()
 			.text-center
 				+e.title--js.h3.ttu.strong
 				+e.P.text--js
-			+input("Ваше имя",'text','Ваше имя')
-			+input("Ваш телефон","tel",'Ваш телефон')(required)
+			+input("Ваше имя",'text')
+			+input("Ваш телефон","tel")(required)
 			input.btn-primary.btn-3d.btn-block(type="submit" value="") 
 			+polite()
 		// #modal-call
