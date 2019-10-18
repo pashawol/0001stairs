@@ -146,7 +146,7 @@ mixin pic( i, bg, lazy="lazy", media='576px')
 	// picture
 	picture( class= lazy)&attributes(attributes) 
 		if media !== 0 
-			each val in ["webp",exp] 
+			each val in [exp] 
 				each val2 in [smpath2,smpath1] 
 					+src(i,val,`${val2 + (val ==  "webp" ? "/webp" : "") }`,lazy,"source")(media=(val2 == smpath2 ? "(min-width:"+ media+")" : null))
 		else 
