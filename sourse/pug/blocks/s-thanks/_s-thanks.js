@@ -1,0 +1,5 @@
+JSCCommons-thanks();
+	s-thanks() {
+
+	}
+	
