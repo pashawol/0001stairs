@@ -15,7 +15,7 @@ mixin header-block(h1, i='header-bg')
 							mixin item(i,t,p)
 								+e.col.col-xl-3.col-6
 									+e.item(href="#")
-										+pic(`head-${i}.png`,'bg','',0)
+										+pic(`head-${i}.png`,'bg','lazy',0)
 										+e.DIV.item-text--title=t
 										+e.DIV.item-text--price=p
 							+item("1","Из металла","от 39 640 Р")

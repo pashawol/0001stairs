@@ -10,7 +10,7 @@ mixin s-materials()
 					+e.col.col-xl-3.col-md-6
 						+e.item
 							+e.item-head.link-modal(href="#modal-call" data-order=`Посчитать - ${t}` data-title='Узнать стоимость вашей лестницы' data-text="Оставьте заявку и наш инженер сделает расчет вашей лестницы!" data-btn="УЗНАТЬ СТОИМОСТЬ" class="bg-wrap")
-								+pic(`s-materials-${i}`,'bg','',0)(class="picture-bg")
+								+pic(`s-materials-${i}`,'bg','lazy',0)(class="picture-bg")
 							+e.caption
 								+e.item-title=t
 							+e.item-price= p
