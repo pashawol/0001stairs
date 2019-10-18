@@ -1,4 +1,61 @@
 .s-chats {
+	background-color: #faa901;
+	&__block{
+		padding-top: rem(38);
+		padding-bottom: rem(47);
+		margin-left: auto;
+		max-width: 700px;
+		position: relative;
+		z-index: 2;
+	}
+	position: relative;
+			.bg{
+				z-index: -1;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				// left: rem(250);
+				right: rem(280);
+				// left: 0;
+			}
+	// &.visible  .bg{
+
+	// }
+	&.visible .section-title{
+		// @include bg("")
+		background-image: url(../img/svg/title-bg.svg);
+		// @include bg("title-bg.png");
+	}
+	.section-title{
+		padding: rem(60) rem(52);
+		max-width: rem(526);
+		
+		h2{
+			color: #ffffff;
+			line-height: 1;
+		}
+		&__text{
+			color: $primary;
+			font-weight: bold;
+			@extend h5;
+		}
+	}
+	&__foot{
+		@include media-breakpoint-up(md) {
+
+			padding-left: rem(70);
+		}
+		h6{
+			max-width: 320px;
+			line-height: 1.2;
+			strong{display: block;}
+		}
+	}
+	&__links{
+		display: flex;
+		@include roww(7);
+		margin-bottom: rem(15);
+	}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

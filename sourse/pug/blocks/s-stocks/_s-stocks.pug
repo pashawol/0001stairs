@@ -6,8 +6,20 @@ mixin s-stocks()
 				h2 Акция на популярные лестницы
 				
 			.row
-				- for (var x = 0; x < 2; x++)
-					+e.col.col-auto
-						+prod('st')
-				
+				mixin it(t)
+					+e.col.col-lg-4.col-md-6
+						+b.prod-item-stock
+							+e.title На металлокаркасе
+								span.text-primary= t
+							+pic("s-examples-img.png",'','lazy',0)
+							+e.caption.text-center
+								.small Цена от:
+								+e.old-price 24 870 ₽ м/п
+								+e.new-price 16 500 ₽ м/п
+								+e.btn(href="#") Получить скидку
+						// /+b.prod-item
+				+it(" прямая")
+				+it(" Г-образная") 
+				//- +it(" Г-образная")
+				//- +it(" Г-образная")
 	// end s-stocks

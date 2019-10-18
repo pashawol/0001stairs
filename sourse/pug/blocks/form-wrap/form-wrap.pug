@@ -9,11 +9,11 @@ mixin input(placeholder,  t='text', label, name= t)
 			+e.TEXTAREA.input.form-control(placeholder= placeholder name= name)&attributes(attributes)
 		else if t=="select"
 			+e.SELECT.input.form-control()&attributes(attributes)
-					option()= t 
+					option()= placeholder 
 					- for (var x = 1; x < 4; x++)
-						option()= t +' ' +  x
-						option()= t +' ' +  x
-						option()= t +' ' +  x
+						option()= placeholder +' ' +  x
+						option()= placeholder +' ' +  x
+						option()= placeholder +' ' +  x
 		else
 			+e.INPUT.input--sm(type= t placeholder= placeholder name= name)&attributes(attributes)
 	+e.input-wrap--sm

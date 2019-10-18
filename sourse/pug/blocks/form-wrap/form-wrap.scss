@@ -114,11 +114,14 @@
 				padding-left: rem(11);
 				margin-bottom: 0;
 				font-size: $small;
-				height: calc(1.5em + 1.515rem + 2px);
+				min-height: calc(1.5em + 1.515rem + 2px);
 				// padding: .6075rem .8125rem;
 				padding-top: rem(22);
 				line-height: 1;
 				// padding-bottom: 0;
+			}
+			textarea{
+				height: rem(113);
 			}
 			select.form-wrap__input{
 				padding-top: rem(18);
@@ -136,7 +139,7 @@
 	font-size: $smallest;
 }
 .form-wrap__input{
-	font-weight: bold;
+	// font-weight: bold;
 }
 
 .parsley-error{
@@ -216,7 +219,7 @@
 	&__lab{
 		left: 0;
 		display: block;
-		top: rem(3); 
+		top: rem(-1); 
 		@include mt;
 		width: 22px;
 		height: 21px;

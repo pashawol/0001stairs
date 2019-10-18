@@ -22,6 +22,7 @@ body,
 html {
 	font-size: $em-base;
 	// @include font-size(1rem);
+	// min-height: 18000px;
 }
 
 body {
@@ -43,7 +44,7 @@ body {
 }
 .section { 
 	@include bgs; 
-		padding-top: rem(55px);
+		padding-top: rem(80);
 		padding-bottom: rem(42px); 
 }
 
@@ -273,6 +274,26 @@ transition: all 0.3s ease-out;
 	svg {
 		width: 17px;
 		height: auto;
+	}
+}
+.slick-dots{
+	text-align: center;
+	li{
+		width: 10px;
+		height: 10px;
+		background-color: #c4c4c4;
+		border-radius: 50%;
+		display: inline-block;
+		@include mt;
+		margin: 10px;
+		list-style-type: none;
+		&:hover,
+		&.slick-active{
+			background-color: $primary;
+		}
+	}
+	button{
+		display: none;
 	}
 }
 

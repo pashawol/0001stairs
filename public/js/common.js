@@ -93,14 +93,10 @@ function eventHandler() {
 		asNavFor: '.slider-for',
 		focusOnSelect: true
 	}));
-	$('.s-gal__slider--js').slick(_objectSpread({}, defaultSlide, {
+	$('.s-rews__slider--js').slick(_objectSpread({}, defaultSlide, {
+		dots: true,
 		slidesToShow: 1,
 		responsive: [{
-			breakpoint: 1200,
-			settings: {
-				slidesToShow: 4
-			}
-		}, {
 			breakpoint: 992,
 			settings: {
 				slidesToShow: 3
@@ -108,8 +104,22 @@ function eventHandler() {
 		}, {
 			breakpoint: 576,
 			settings: {
-				slidesToShow: 2,
-				arrows: true
+				slidesToShow: 2
+			}
+		}]
+	}));
+	$('.s-sert__slider--js').slick(_objectSpread({}, defaultSlide, {
+		dots: true,
+		slidesToShow: 1,
+		responsive: [{
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 3
+			}
+		}, {
+			breakpoint: 576,
+			settings: {
+				slidesToShow: 2
 			}
 		}]
 	})); // $('.s-gal__slider\

@@ -1,7 +1,124 @@
 .footer {
-		
+		padding-top: rem(57);
+  .form-wrap{
+    @include media-breakpoint-up(sm) {
 
+      padding: rem(20) rem(36);
+    }
+    padding: rem(20) rem(15);
+    border-radius: 10px;
+background-color: $body-color;
+margin-bottom: rem(50);
+.small{
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.custom-input__text{
+  color: #ffffff;
+}
+  }
 
+  &__logo-wrapper{
+    margin-bottom: 2rem;
+    @include media-breakpoint-up(sm) {
+
+      display: flex;
+      font-size: rem(12);
+      line-height: (14/12);
+      align-items: center;
+    }
+      a{
+        font-size: rem(18);
+        text-transform: uppercase;
+        // display: block;
+        // display: flex;
+        // align-items: center;
+      font-weight: bold;
+      @extend .text-body;
+      text-decoration: none !important;
+      span{
+        display: block;
+      }
+      @include media-breakpoint-up(sm) {
+        
+      }
+      width: rem(190);
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      img{
+        margin-right: rem(15);
+        max-width: 100%;
+      }
+    }
+  }
+  &__logo-wrapper-caption{
+    max-width: 160px;
+   
+  }
+  &__btn-wrap{
+    margin-left: rem(-8);
+    margin-right: rem(-8);
+    padding-left: rem(4);
+    margin-bottom: rem(30);
+  }
+  &__btn{
+    // 
+@include media-breakpoint-up(xl) {
+
+}
+min-width: rem(207);
+    margin-left: rem(8);
+    margin-right: rem(8);
+    margin-top: rem(10);
+    .icon{
+      font-size: rem(21);
+      margin-right: rem(12);
+    }
+  }
+  &__tel{
+  display: inline-block;
+  // @extend .h5;
+  @include media-breakpoint-up(sm) {
+    font-size: $h5-font-size;
+  }
+  font-size: $h6-font-size;
+  @extend .text-body;
+  text-decoration: none !important;
+  margin-bottom: rem(0);
+  font-weight: bold;
+  }
+
+  ul{
+    list-style-type: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    @include media-breakpoint-up(sm) {
+
+      columns: 2;
+    }
+    a{
+      @extend .text-body;
+      text-decoration: none !important;
+      line-height: 1.8;
+
+    }
+  }
+  &__col{
+    @include media-breakpoint-up(lg) {
+
+      text-align: right;
+    }
+  }
+  &__body{
+    padding-bottom: rem(40);
+  }
+  &__foot{
+    font-size: $smallest;
+    padding-top: 1rem;
+    border-top: 1px solid ;
+    padding-bottom: rem(60);
+  }
 // 
 @include media-breakpoint-up(xl) {}
 

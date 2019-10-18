@@ -2,8 +2,57 @@ mixin s-our-production()
 	// start s-our-production
 	+b.SECTION.s-our-production.section#s-our-production&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 s-our-production
+			+b.section-title.text-center.ttu
+				h2 Наше производство
 				
-			.row
+			+e.row-main.row
+				+e.col.col-lg-auto
+
+					p Наша компания проектирует и&nbsp;строит лестницы на&nbsp;металлокаркасе, бетонные, деревянные и&nbsp;из&nbsp;искуственного камня. На&nbsp;нашем сайте представлены наши работы и&nbsp;цены. Вы&nbsp;можете посетить наше производство и&nbsp;оценить качество продукции и&nbsp;работ!
+
+					p Мы&nbsp;выполняем заказы на&nbsp;изготовление лестниц любых размеров и&nbsp;вариантов конструкции, по&nbsp;типовым или индивидуальным проектам. Так&nbsp;же мы&nbsp;готовы доставить и&nbsp;смонтировать лестницу в&nbsp;любой точке Челябинска и&nbsp;Челябинской области.
+
+					p Даём гарантию на&nbsp;лестницы: &mdash;&nbsp;от&nbsp;коррозии&nbsp;&mdash; 15&nbsp;лет
+						br
+						| &mdash;&nbsp;на&nbsp;конструкцию&nbsp;&mdash; 10&nbsp;лет
+						br
+						| &mdash;&nbsp;от&nbsp;воздействия окружающей среды&nbsp;&mdash; 5&nbsp;лет
+						br
+						| &mdash;&nbsp;на&nbsp;целостность конструкции&nbsp;&mdash; 10&nbsp;лет
+						br
+						| &mdash;&nbsp;на&nbsp;сварные работы&nbsp;&mdash; 10&nbsp;лет
+
+					p Посчитаем Ваш вариант конструкции буквально за&nbsp;20&nbsp;мин. Предоставим 3D-эскиз Вашей лестницы, что&nbsp;бы вы&nbsp;увидели со&nbsp;стороны, как она будет выглядеть.
+
+					p При расчёте конструкции учитываются: размер, назначение лестницы, её&nbsp;месторасположение и&nbsp;способ крепления.
+					+form-wrap 
+						+input-lg('Введите имя','text','Ваше имя:') 
+						+input-lg('+7( ___ )___-__-__','tel','Ваш телефон:') 
+						+e.btn.btn-3d.btn-primary.btn-block(type="submit") посетить производство
+						+polite()
+				.col
+					mixin it(i)
+						+e.gal-group
+							h6= i
+							+e.row.row
+								+e.main-img.col-sm-auto
+									+e.link--lg(href=`img/@2x/s-our-production-img-1.jpg` data-fancybox="galprod")
+										+pic("s-our-production-img-1.jpg")
+								.col
+									.row
+										.col-6
+											+e.link--sm(href=`img/@2x/s-our-production-img-2.jpg` data-fancybox="galprod")
+												+pic("s-our-production-img-2.jpg")
+										
+										.col-6
+											+e.link--sm(href=`img/@2x/s-our-production-img-3.jpg` data-fancybox="galprod")
+												+pic("s-our-production-img-3.jpg")
+										.col-6
+											+e.link--sm(href=`img/@2x/s-our-production-img-4.jpg` data-fancybox="galprod")
+												+pic("s-our-production-img-4.jpg")
+										.col-6
+											+e.link--sm(href=`img/@2x/s-our-production-img-5.jpg` data-fancybox="galprod")
+												+pic("s-our-production-img-5.jpg")
+					+it('Сварочный цех')
+					+it('Столярная мастерская')
 	// end s-our-production

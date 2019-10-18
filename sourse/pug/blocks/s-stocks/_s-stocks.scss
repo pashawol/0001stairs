@@ -4,12 +4,23 @@
 	}
 	.row{
 		justify-content: center;
-		@include roww(105 / 2 );
+		@include media-breakpoint-up(lg) {
+
+			@include roww(105 / 2 );
+		}
 	}
 		 h2{
 			 text-transform: uppercase;
+			 margin-bottom: 0;
 		 }
-	@include media-breakpoint-up(xl) {}
+		 &__col{
+			margin-bottom: rem(40);
+			 
+		 }
+	@include media-breakpoint-up(xl) {
+		 
+		padding-bottom: rem(90);
+	}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {}
@@ -34,3 +45,77 @@
 	@include media-breakpoint-down(xs) {} 
 
 }
+
+
+.prod-item-stock{
+	box-shadow: 0 4px 45px rgba(0, 0, 0, 0.13);
+border-radius: 10px;
+background-color: #ffffff;
+padding: rem(23) rem(10)   0;
+height: 100%;
+text-align: center;
+display: flex;
+flex-direction: column;
+picture{
+	text-align: center;
+	border-radius: 3px; 
+	@include media-breakpoint-up(md) {
+
+		@include block(306,257);
+		margin-bottom: rem(12);
+		img{
+			@include a-cent;
+			max-height: 100%;
+		}
+	}
+}
+&__col{
+	margin-bottom: rem(7);
+}
+&__foot{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	.h6{
+		margin-right: 5px;
+	}
+}
+&__btn{
+	@extend .btn-primary;
+	// @extend .btn-block;
+	display: block;
+	margin-left: rem(-10);
+	margin-right: rem(-10);
+	@extend .btn-3d;
+
+}
+&__title{
+	@extend .h6;
+	font-weight: bold;
+	span{
+		display: inline-block;
+	}
+}
+&__caption{
+	padding-top: rem(10);
+	margin-top: auto;
+	.small{
+		font-weight: 500;
+	}
+}
+&__old-price{
+	// line-height: 1.86;
+text-decoration: line-through;
+@extend .h6;
+margin-bottom: 0;
+}
+&__new-price{
+	display: inline-block;
+	@extend h5;
+	font-weight: bold;
+	padding-left: rem(15);
+	padding-right: rem(15);
+	margin-bottom: rem(35);
+
+}
+} 

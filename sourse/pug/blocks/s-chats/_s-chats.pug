@@ -1,9 +1,31 @@
 mixin s-chats()
 	// start s-chats
-	+b.SECTION.s-chats.section#s-chats&attributes(attributes)
+	+b.SECTION.s-chats.lazy-background#s-chats&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 s-chats
-				
-			.row
+
+			+e.block
+				img.bg.lazy(src="#" data-src="img/@2x/left-block.png", alt="")
+				+b.section-title
+					h2 ХОТИТЕ
+						br
+						| УЗНАТЬ ЦЕНУ?
+					+e.text НЕ&nbsp;ВЫЗЫВАЯ ЗАМЕРЩИКА?
+				+e.foot
+					.row
+						.col-auto
+							h6 ОТПРАВЬТЕ ФОТО И&nbsp;РАЗМЕРЫ МЕСТА&nbsp;УСТАНОВКИ НАМ 
+								| 
+								strong В&nbsp;WhatsApp, Viber или Telegram
+						.col-auto
+							+e.links
+								+e.link(href="#")
+									+pic("chat-1.png",'','lazy',0)
+								
+								+e.link(href="#")
+									+pic("chat-2.png",'','lazy',0)
+								
+								+e.link(href="#")
+									+pic("chat-3.png",'','lazy',0)
+							.small переходите в наши месенджеры
+								
 	// end s-chats

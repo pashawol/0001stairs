@@ -1,9 +1,98 @@
+mixin itmat(i,t)
+	+e.item
+		//- +pic(`s-type-of-materials-${i}.jpg`,'bg','lazy',0)
+		picture
+			img.lazy(src="#" data-src=`img/@2x/s-type-of-materials-${i}.jpg`, alt="")
+		+e.item-title= t
 mixin s-type-of-materials()
 	// start s-type-of-materials
 	+b.SECTION.s-type-of-materials.section#s-type-of-materials&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 s-type-of-materials
-				
+				h2 15 вариантов отделки 
+			
+			+e.row5.row
+				-
+					var nav= {
+						"1-1":'Сосна',
+						"1-2":'Лиственница',
+						"1-3":'Бук',
+						"1-4":'Дуб',
+						"1-5":'Ясень',
+						"1-6":'Плитка',
+						"1-7":'Стекло',
+						"1-8":'Ковка',
+						"1-9":'Пластик',
+						"1-10":'ЛДСП',
+						"1-11":'Камень',
+						"1-12":'Металл',
+						"1-13":'Чечевичный лист',
+						"1-14":'ПВЛ лист',
+						"1-15":'Решетчатый настил',
+					}
+				each linkPatch, linkName in nav
+					+e.col5.col-lg.col-md-3.col-sm-4.col-6
+						+itmat(linkName, linkPatch)
+					// /+e.col5.col-lg.col-md-3.col-sm-4.col-6
+			+e.btn(href="#") СКАЧАТЬ ВЕСЬ КАТАЛОГ ЦВЕТОВ
+			h2 5 Вариантов перил
 			.row
+				-
+					var nav= {
+						"2-1":'Кованые',
+						"2-2":'Нержавеющие',
+						"2-3":'Стальные',
+						"2-4":'Стеклянные',
+						"2-5":'Деревянные',
+					}
+				each linkPatch, linkName in nav
+					+e.col5.col-lg.col-md-3.col-sm-4.col-6
+						+itmat(linkName, linkPatch)
+					// /+e.col5.col-lg.col-md-3.col-sm-4.col-6
+			+e.btn(href="#") СКАЧАТЬ ВЕСЬ КАТАЛОГ ЦВЕТОВ
+			h2 24 варианта покраски
+			h6 Деревянные варианты
+			.row
+				-
+					var nav= {
+						"3-1":'Дымчатосервый дуб',
+						"3-2":'Ледниковосерый дуб',
+						"3-3":'Орех',
+						"3-4":'Черный укрывной дуб',
+						"3-5":'Тик',
+						"3-6":'Светлый Орех',
+						"3-7":'Полярный белый дуб',
+						"3-8":'Дуб Венге',
+						"3-9":'Дымчатый дуб',
+						"3-10":'Серый укрывной дуб',
+						"3-11":'Базальт дуб',
+						"3-12":'Безцветный дуб',
+					}
+				each linkPatch, linkName in nav
+					+e.col.col-xl-2.col-lg-3.col-sm-4.col-6
+						+itmat(linkName, linkPatch)
+					// /+e.col.col-xl-2.col-lg-3.col-sm-4.col-6
+			
+			h6 Покраска
+			.row
+				-
+					var nav= {
+						"4-1":'Черный',
+						"4-2":'Бронза',
+						"4-3":'Голубой',
+						"4-4":'Графит',
+						"4-5":'Изумруд',
+						"4-6":'Коричневый',
+						"4-7":'Серебристый',
+						"4-8":'Синий',
+						"4-9":'Вишневый',
+						"4-10":'Зеленый',
+						"4-11":'Золотистый',
+						"4-12":'Красный',
+					}
+				each linkPatch, linkName in nav
+					+e.col.col-xl-2.col-lg-3.col-sm-4.col-6
+						+itmat(linkName, linkPatch)
+					// /+e.col.col-xl-2.col-lg-3.col-sm-4.col-6
+			+e.btn(href="#") СКАЧАТЬ ВЕСЬ КАТАЛОГ ЦВЕТОВ
 	// end s-type-of-materials

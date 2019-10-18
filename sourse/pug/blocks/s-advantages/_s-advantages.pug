@@ -3,7 +3,45 @@ mixin s-advantages()
 	+b.SECTION.s-advantages.section#s-advantages&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 s-advantages
+				h2 Мы&nbsp;&laquo;за&raquo; качество и&nbsp;&laquo;за&raquo; разумную экономию: 
+			+e.row.row
+				mixin item(i)
+					+e.col.col-lg-3.col-md-4.col-sm-6
+						+e.item
+							+e.img-wrap
+								img.res-i(src=`img/svg/s-stocks-i-${i}.svg`, alt="")
+							block
+					// /+e.col.col-lg.col-md-4.col-sm-6
+				+item('1')
+					h6 Собственное производство
+					p Мы&nbsp;не&nbsp;завышаем цены на&nbsp;продукцию. У&nbsp;нас свои материалы и&nbsp;бригады
 				
-			.row
+				+item('2')
+					h6 Выгодные цены на&nbsp;материалы
+					p У&nbsp;нас прямой договор со&nbsp;всеми поставщиками. Экономия от&nbsp;5&nbsp;до&nbsp;15% на&nbsp;материалах
+				
+				+item('3')
+					h6 Работаем по&nbsp;договору
+					p Озвученная стоимость не&nbsp;изменится. Она зафиксирована в&nbsp;договоре
+				
+				+item('4')
+					h6 Гарантия на&nbsp;лестницу 10&nbsp;лет
+					p Гарантия от&nbsp;коррозии. Гарантия на&nbsp;монтаж. Все гарантии прописаны в&nbsp;договоре
+				
+				+item('5')
+					h6 Бесплатный выезд  на&nbsp;участок
+					p Мы&nbsp;не&nbsp;завышаем цены на&nbsp;продукцию. У&nbsp;нас свои материалы и&nbsp;бригады
+				
+				+item('6')
+					h6 Бесплатный расчет сметы
+					p У&nbsp;нас прямой договор со&nbsp;всеми поставщиками. Экономия  от&nbsp;5&nbsp;до&nbsp;15% на&nbsp;материалах
+				
+				+item('7')
+					h6 Работаем по&nbsp;СП, СНИП и&nbsp;ГОСТ
+					p Озвученная стоимость не&nbsp;изменится. Она зафиксирована в&nbsp;договоре
+				
+				+item('8')
+					h6 Работаем без предоплат
+					p Гарантия от&nbsp;коррозии. Гарантия на&nbsp;монтаж. Все гарантии прописаны в&nbsp;договоре
+				
 	// end s-advantages

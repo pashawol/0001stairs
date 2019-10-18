@@ -3,7 +3,11 @@ mixin s-sert()
 	+b.SECTION.s-sert.section#s-sert&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 s-sert
-				
-			.row
+				h2 Сертификаты на нашу продукцию 
+			+e.slider-wrap
+				+e.slider--js
+					- for (var x = 1; x < 4; x++)
+						+e.slide 
+							+e.img-wrap(href=`img/@2x/sert-${x}.jpg` data-fancybox="sert")
+								img.res-i(src="#" data-lazy=`img/@2x/sert-${x}.jpg`, alt="")
 	// end s-sert

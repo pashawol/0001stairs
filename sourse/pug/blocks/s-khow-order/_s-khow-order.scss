@@ -1,5 +1,119 @@
-.s-рow-order {
-		 
+.s-how-order {
+		padding-top: rem(65); 
+		counter-reset: num;
+		color: #ffffff;
+		text-align: center;
+		h2{
+			padding-bottom: rem(10);
+		}
+		picture{
+			margin-left: auto;
+			margin-right: auto;
+			width: rem(164);
+			position: relative;
+			z-index: 4;
+			&::before {
+				content: counter(num);
+				counter-increment: num;
+				@include a-cent(x);
+				width: $h2-font-size;
+				height: $h2-font-size;
+				border-radius: 50%;
+
+				background-color: $primary;
+				font-size: $h6-font-size;
+				font-weight: 700;
+				text-transform: uppercase;
+				color: #ffffff;
+				position: absolute;
+				text-align: center;
+				justify-content: center;
+				align-items: center;
+				display: flex;
+				bottom: rem(-24);
+			}
+		}
+		&__title{
+			font-weight: bold;
+			padding-top: rem(40);
+			margin-bottom: rem(5);
+		}
+		&__title2{
+			display: inline-block;
+			font-size: $small;
+			font-weight: 500;
+			text-transform: uppercase;
+			border-radius: 3px;
+			background-color: #ffd0a4;
+			padding: rem(1) rem(8);
+			color: $body-color;
+
+		}
+		p{
+			font-size: $small; 
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 310px;
+			padding-top: rem(15);
+			line-height: 1.2;
+		}
+		&__item{
+			margin-bottom: rem(90);
+		}
+		padding-bottom: 0;
+
+		&__col{
+			position: relative;
+			z-index: 4;
+			&:first-child,
+			&:last-child{
+				z-index: 2
+			}
+			@include media-breakpoint-up(xl) {
+
+				&:first-child::before{
+					content: '';
+				position: absolute;
+				z-index: -1;
+				border-top: 1px dashed #fff;
+				border-right: 1px dashed #fff;
+				width: rem(1034);
+				top: rem(164);
+				height: calc(100% - #{rem(164 + 45)});
+			}
+			
+			&:last-child::before{
+				content: '';
+				position: absolute;
+				z-index: -1;
+				border-bottom: 1px dashed #fff;
+				border-left: 1px dashed #fff;
+				width: rem(1034);
+				top: rem(-40);
+				right: 50%;
+				height: calc(100% - #{rem(164 + 45)});
+			}
+		}
+
+		}
+		.container{
+			position: relative;
+			z-index: 2;
+			@include media-breakpoint-up(xl) {
+
+				&:first-child::before{
+					content: '';
+					position: absolute;
+					z-index: -1;
+					border-top: 1px dashed #fff; 
+					width: rem(1230);
+					top: calc(50% + #{rem(34 + 5)}); ;
+					height: 1px;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

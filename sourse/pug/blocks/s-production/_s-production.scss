@@ -1,4 +1,6 @@
 .s-production {
+padding-top: rem(55);
+	// @include media-breakpoint-up(чд) {
 
 	&__col{
 		@include media-breakpoint-up(md) {

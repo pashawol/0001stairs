@@ -1,4 +1,62 @@
 .s-contact {
+	&__map-wrap{
+		position: relative;
+		@include media-breakpoint-up(md) {
+
+			height: rem(530px);
+		}
+		height: rem(330px);
+		>*{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100% !important;
+			height: 100% !important;
+		}
+	}
+	.container{
+		position: relative;
+	}
+	&__block{
+		width: 100%;
+		max-width: 490px;
+		/* Note: backdrop-filter has minimal browser support */
+		border-radius: 10px;
+		@include media-breakpoint-up(lg) {
+			
+			background: rgba(255, 255, 255, 0.9);
+			backdrop-filter: blur(10px);
+			top: rem(84);
+			position: absolute;
+		}
+		z-index: 4;
+		padding: rem(28) rem(30);
+	}
+	&__title{
+		@extend .h6;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-bottom: rem(20);
+	}
+	li{
+		list-style-type: none;
+		margin-bottom: rem(9);
+		padding-left: rem(20);
+		position: relative;
+		&::before{
+			content: '';
+			left: 0;
+			top: rem(8);
+			width: rem(6);
+			height: rem(6);
+			background-color: $primary;
+			border-radius: 50%;
+			position: absolute;
+		}
+	}
+	ul{
+		padding-bottom: rem(10);
+	}
 	//
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

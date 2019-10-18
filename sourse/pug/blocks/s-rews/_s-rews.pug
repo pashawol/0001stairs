@@ -2,8 +2,24 @@ mixin s-rews()
 	// start s-rews
 	+b.SECTION.s-rews.section#s-rews&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 s-rews
+			+b.section-title.text-center.ttu
+				h2 Отзывы
+			+e.slider--js
+				- for (var x = 1; x < 4; x++)
+					+e.slide 
+						+e.img-wrap(href="https://www.youtube.com/watch?v=en6gms6e54Q&list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR" data-fancybox="rew")
+							img.res-i(src="#" data-lazy=`img/@2x/rew-${x}.jpg`, alt="")
+							+e.DIV.caption
+								h6.strong Альбина Викторова
+								.small г. Москва
 				
-			.row
+				- for (var x = 1; x < 4; x++)
+					
+					+e.slide
+						+e.img-wrap(href="https://www.youtube.com/watch?v=en6gms6e54Q&list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR" data-fancybox="rew")
+							img.res-i(src="#" data-lazy=`img/@2x/rew-${x}.jpg`, alt="")
+							+e.DIV.caption
+								h6.strong Альбина Викторова
+								.small г. Москва
+					
 	// end s-rews
