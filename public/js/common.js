@@ -110,6 +110,7 @@ function eventHandler() {
 			}
 		}]
 	}));
+	$(".map-wrap-js").html("<script  defer src=\"https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A85a146c8e6a2ac7955ce97953ec90397b21c350fb3063910efe3dcd76227180c&amp;width=100%25&amp;height=517&amp;lang=ru_RU&amp;scroll=false\"></script>");
 }
 
 ;
