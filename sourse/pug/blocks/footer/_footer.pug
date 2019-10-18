@@ -22,10 +22,10 @@ mixin footer()
 								span.logo-text Лестница  под ключ
 							+e.logo-wrapper-caption.d-none.d-xl-block Изготовление и&nbsp;монтаж лестниц любой сложности в&nbsp;Москве и&nbsp;области 
 						+e.btn-wrap
-							+e.btn.btn-primary(href="#")
+							+e.btn.btn-primary.link-modal(href="#modal-call" data-order="Заказать звонок" data-title='Заказать звонок' data-text="Оставьте заявку и наш менеджер перезвонит вам!" data-btn="ЗАКАЗАТЬ ЗВОНОК")
 								+icon("telephone")
 								| Заказать звонок
-							+e.btn.btn-primary(href="#")
+							+e.btn.btn-primary.link-modal(href="#modal-call" data-order="Заказать расчет лестницы" data-title='Заказать расчет лестницы' data-text="Оставьте заявку и наш инженер сделает расчет вашей лестницы!" data-btn="ЗАКАЗАТЬ РАСЧЕТ")
 								+icon("rule")
 								| Вызвать замерщика
 					.col

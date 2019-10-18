@@ -58,6 +58,7 @@ mixin select(label,pl,...items)
 mixin form-wrap()
 	+b.form-wrap&attributes(attributes)
 		form
+			input.order(type="hidden" name="order")
 			block
 //- /wrapper for form
 

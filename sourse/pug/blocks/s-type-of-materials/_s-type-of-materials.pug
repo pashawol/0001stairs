@@ -4,7 +4,10 @@ mixin itmat(i,t)
 		picture
 			img.lazy(src="#" data-src=`img/@2x/s-type-of-materials-${i}.jpg`, alt="")
 		+e.item-title= t
+
 mixin s-type-of-materials()
+	mixin btn()
+		+e.btn.link-modal(href="#modal-call" data-order=`Скачать весь каталог цветов` data-title='Скачать весь каталог цветов' data-text="Оставьте заявку и наш менеджер отправит вам каталог цветов!" data-btn="Заказать каталог цветов")  СКАЧАТЬ ВЕСЬ КАТАЛОГ ЦВЕТОВ
 	// start s-type-of-materials
 	+b.SECTION.s-type-of-materials.section#s-type-of-materials&attributes(attributes)
 		.container
@@ -34,7 +37,7 @@ mixin s-type-of-materials()
 					+e.col5.col-lg.col-md-3.col-sm-4.col-6
 						+itmat(linkName, linkPatch)
 					// /+e.col5.col-lg.col-md-3.col-sm-4.col-6
-			+e.btn(href="#") СКАЧАТЬ ВЕСЬ КАТАЛОГ ЦВЕТОВ
+			+btn()
 			h2 5 Вариантов перил
 			.row
 				-
@@ -49,7 +52,7 @@ mixin s-type-of-materials()
 					+e.col5.col-lg.col-md-3.col-sm-4.col-6
 						+itmat(linkName, linkPatch)
 					// /+e.col5.col-lg.col-md-3.col-sm-4.col-6
-			+e.btn(href="#") СКАЧАТЬ ВЕСЬ КАТАЛОГ ЦВЕТОВ
+			+btn()
 			h2 24 варианта покраски
 			h6 Деревянные варианты
 			.row
@@ -94,5 +97,5 @@ mixin s-type-of-materials()
 					+e.col.col-xl-2.col-lg-3.col-sm-4.col-6
 						+itmat(linkName, linkPatch)
 					// /+e.col.col-xl-2.col-lg-3.col-sm-4.col-6
-			+e.btn(href="#") СКАЧАТЬ ВЕСЬ КАТАЛОГ ЦВЕТОВ
+			+btn()
 	// end s-type-of-materials

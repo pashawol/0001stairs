@@ -16,7 +16,7 @@ mixin s-stocks()
 								.small Цена от:
 								+e.old-price 24 870 ₽ м/п
 								+e.new-price 16 500 ₽ м/п
-								+e.btn(href="#") Получить скидку
+								+e.btn.link-modal(href="#modal-call" data-order=`Получить скидку на - ${t}` data-title=' Акция на лестницу' data-text="Оставьте заявку и наш менеджер произведет точные расчеты вашей лестницы!" data-btn="ОТПРАВИТЬ")  Получить скидку
 						// /+b.prod-item
 				+it(" прямая")
 				+it(" Г-образная") 

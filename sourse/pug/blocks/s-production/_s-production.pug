@@ -13,7 +13,7 @@ mixin s-production()
 								+e.item-title=t
 							+e.item-foot
 								+e.item-price От 19 320 ₽
-								+e.btn(href="#") ПОСЧИТАТЬ
+								+e.btn.link-modal(href="#modal-call" data-order=`Посчитать - ${t}` data-title='Узнать стоимость вашей лестницы' data-text="Оставьте заявку и наш инженер сделает расчет вашей лестницы!" data-btn="УЗНАТЬ СТОИМОСТЬ") ПОСЧИТАТЬ
 
 							//- +e.item-text--price=p
 				+item("1","Лестницы из металла ")
