@@ -1,0 +1,131 @@
+mixin s-calc()
+	// start s-calc
+	+b.SECTION.s-calc.section#s-calc&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 s-calc
+				
+			.row
+				.col-lg-6: +e.block--left
+					form#calc
+						.top
+							.ttl КАЛЬКУЛЯТОР НАВЕСОВ
+							.inner
+								.cm.row
+									.inp.col-6
+										label(for='length') Длина, см
+										input.form-control#length.dlina(type='text', name='length', placeholder='Введите')
+									.inp.rs.col-6
+										label(for='width') Ширина, см
+										input.form-control#width.shirina(type='text', name='shirina', placeholder='Введите')
+									.inp.end.col-6
+										label(for='height') Высота, см
+										input.form-control#height.visota(type='text', name='visota', placeholder='Введите')
+									.inp.end.rs.sels.col-6
+										label(for='krisha') Крыша:
+										select.form-control#krisha_calc(name='krisha')
+											option(disabled='') Выберите
+											option(selected='', value='poli') поликарбонат
+											option(value='prof') профнастил
+											option(value='metal') металлочерепица
+											option(value='soft') мягкая кровля
+									.clear
+								.ttl-sm.text-white Выберите тип крыши Вашего навеса
+								.list_inner_type
+									.sam
+										input#ferma1.radioferma(type='radio', name='ferma', value='type1', checked='', data-price='3300')
+										label.img.ic1(for='ferma1')
+									.sam
+										input#ferma2.radioferma(type='radio', name='ferma', value='type2', data-price='3300')
+										label.img.ic2(for='ferma2')
+									.sam
+										input#ferma3.radioferma(type='radio', name='ferma', value='type3', data-price='3200')
+										label.img.ic3(for='ferma3')
+									.sam
+										input#ferma4.radioferma(type='radio', name='ferma', value='type4', data-price='3200')
+										label.img.ic4(for='ferma4')
+									.sam
+										input#ferma5.radioferma(type='radio', name='ferma', value='type5', data-price='3000')
+										label.img.ic5(for='ferma5')
+									.sam
+										input#ferma6.radioferma(type='radio', name='ferma', value='type6', data-price='3100')
+										label.img.ic6(for='ferma6')
+									.sam
+										input#ferma7.radioferma(type='radio', name='ferma', value='type7', data-price='3000')
+										label.img.ic7(for='ferma7')
+									.sam
+										input#ferma8.radioferma(type='radio', name='ferma', value='type8', data-price='3150')
+										label.img.ic8(for='ferma8')
+									.sam
+										input#ferma9.radioferma(type='radio', name='ferma', value='type9', data-price='2900')
+										label.img.ic9(for='ferma9')
+									.clear
+								a.submit.btn-primary.btn.or_link(href='javascript:') Рассчитать
+
+				.col-lg-6:  +e.block--right
+					.right
+						.bsg(style='display: none;')
+						.ttl Предварительный расчет 
+						.table
+							.item.head_t
+								.sm1 Наименование
+								.sm2 Кол-во
+								.sm3 Ед.из
+							 
+							.line
+								.sm1 Металлические столбы
+								.sm2 4
+								.sm3 шт.
+							.line
+								.sm1 Силовые боковые балки
+								.sm2 2
+								.sm3 шт.
+							.line
+								.sm1 Металлические фермы
+								.sm2 2
+								.sm3 шт.
+							.line
+								.sm1 Обрешетка (лаги)
+								.sm2 3
+								.sm3 шт.
+							.line
+								.sm1 Поликарбонат
+								.sm2 1
+								.sm3 м2
+							.line
+								.sm1 Соединительные профили
+								.sm2 1
+								.sm3 к-т
+							.line
+								.sm1 Окрашивание
+								.sm2 1
+								.sm3 м2
+							.line
+								.sm1 Итого
+								.sm2 4950
+								.sm3 руб.
+							.line.bold.head_t
+								.sm1 Со скидкой
+								.sm2 4500
+								.sm3 руб.
+						.form
+							form.sender
+							 
+								input.par1(type='hidden', name='par1', value='Длина - 1')
+								input.par2(type='hidden', name='par2', value='Ширина - 1')
+								input.par3(type='hidden', name='par3', value='Высота - 1')
+								input.par4(type='hidden', name='par4', value='Крыша - Поликарбонат')
+								input.par5(type='hidden', name='par5', value='Цена - 4950,  Цена со скидкой - 4500')
+								div(style='display:none;')
+									input.utm_source(type='text', value='', name='utm_source')
+									input.utm_medium(type='text', value='', name='utm_medium')
+									input.utm_term(type='text', value='', name='utm_term')
+									input.utm_campaign(type='text', value='', name='utm_campaign')
+									input.utm_content(type='text', value='', name='utm_content')
+								+input("+7(___)___-__-__",'tel')(class="form-control")
+								input.submit.btn-primary.btn(type='submit', value='Получить скидку')
+								.check
+									input#checkbox124.checkbox(type='checkbox', required='', checked='')
+									label(for='checkbox124') Я согласен(а) с условиями передачи информации
+
+	// end s-calc

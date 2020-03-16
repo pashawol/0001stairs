@@ -22,6 +22,8 @@ include ../blocks/s-type-of-materials/_s-type-of-materials.pug
 include ../blocks/s-khow-order/_s-khow-order.pug
 include ../blocks/s-rews/_s-rews.pug
 include ../blocks/s-sert/_s-sert.pug
+include ../blocks/s-price/_s-price.pug
+include ../blocks/s-calc/_s-calc.pug
 
 block pagecontent
  
@@ -30,6 +32,8 @@ block pagecontent
 		+top-line()
 		+top-nav()
 	+header-block()
+	+s-price
+	+s-calc
 	+s-production
 	+s-not-know
 	+s-materials

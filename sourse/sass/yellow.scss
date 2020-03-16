@@ -1,0 +1,361 @@
+$output-bourbon-deprecation-warnings: false;
+// @import "mq";
+@import "bourbon/app/assets/stylesheets/bourbon";
+// @import "../../node_modules/rfs/scss";
+
+@import "mixin";
+
+// Color system 
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$grays: () !default;
+
+
+$blue: #007bff !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge((), $colors);
+
+
+$primary: #ffce54 !default;
+// $primary: #ff7c00 !default;
+$secondary: $gray-600 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: #f2f2f2 !default;
+$dark: #4c5666 !default;
+$body-color: #2b3545 !default;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(("primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    // "warning":    $warning,
+    "danger": $danger,
+    "body": $body-color,
+    // "light":      $light,
+    "dark": $dark, ),
+  $theme-colors);
+
+$body-bg: $white !default;
+
+
+@import "vars";
+// @import "fonts";
+// @import "../../public/img/svg/_sprite";
+// @import "bootstrap-theme/bootstrap";
+
+
+@import "bootstrap-theme/vendor/rfs";
+@import "bootstrap-theme/functions";
+@import "bootstrap-theme/mixins";
+@import "bootstrap-theme/variables";
+@import "bootstrap-theme/reboot";
+@import "bootstrap-theme/forms";
+@import "bootstrap-theme/buttons";
+@import "bootstrap-theme/pagination";
+@import "bootstrap-theme/utilities/background";
+@import "bootstrap-theme/utilities/text";
+
+// @import "base";
+// @import '../pug/blocks/**/*.scss';
+// @import "media"; // Всегда в конце
+
+.slick-dots {
+  li {
+
+    &:hover,
+    &.slick-active {
+      background-color: $primary;
+    }
+  }
+
+}
+
+.swiper-pagination {
+
+  &-bullet {
+    background-color: $secondary;
+
+    &-active,
+    &:hover {
+      background-color: $primary;
+    }
+  }
+}
+
+
+.form-wrap {
+  &__group-head {
+    &::before {
+      background-color: $primary;
+    }
+  }
+
+
+}
+
+.btn-3d {
+  box-shadow: 0px rem(4) 0px 0px darken($color: $primary, $amount: 10), 0 4px $h5-font-size rgba(0, 0, 0, 0.25);
+
+}
+
+.header-block {
+
+  background-color: $body-color;
+
+  h1 {
+    color: #ffffff;
+  }
+
+  &__text {
+    color: $primary;
+  }
+}
+
+
+
+.modal-win {
+
+
+  .mfp-close {
+    color: $primary;
+  }
+}
+
+.mfp-close {
+
+  color: $body-color;
+
+}
+
+.polite {
+  .link {
+    color: $primary;
+
+  }
+}
+
+
+.s-chats {
+  background-color: $primary;
+
+  .section-title {
+
+    &__text {
+      color: $primary;
+    }
+  }
+
+
+}
+
+
+
+.s-contact {
+  li {
+    &::before {
+
+      background-color: $primary;
+    }
+  }
+}
+
+
+
+
+.s-how-order {
+  color: #ffffff;
+
+  picture {
+
+    &::before {
+      background-color: $primary;
+      color: #ffffff;
+
+    }
+  }
+
+  &__title2 {
+    background-color: lighten($color: $primary, $amount: 20);
+    color: $body-color;
+
+  }
+
+  &__col {
+
+    @include media-breakpoint-up(xl) {
+
+      &:first-child::before {
+
+        border-top: 1px dashed #fff;
+        border-right: 1px dashed #fff;
+      }
+
+      &:last-child::before {
+
+        border-bottom: 1px dashed #fff;
+        border-left: 1px dashed #fff;
+      }
+    }
+
+  }
+
+  .container {
+    @include media-breakpoint-up(xl) {
+
+      &:first-child::before {
+
+        border-top: 1px dashed #fff;
+      }
+    }
+  }
+
+}
+
+
+
+.s-materials {
+
+
+  &__caption {
+
+    &::before {
+      content: '';
+      z-index: -1;
+      border: 2px solid $body-color;
+
+    }
+  }
+}
+
+
+
+.s-production {
+
+  &__item {
+    background-color: $light;
+  }
+}
+
+
+
+.s-sert {
+  background-color: #f5f9ff;
+
+
+  img {
+    border: 4px solid #ffe400;
+  }
+
+  &__img-wrap {
+    border: 1px dashed rgba($color: $body-color, $alpha: .4);
+  }
+}
+
+.s-thanks {
+  background-color: $body-color;
+  color: #ffffff;
+
+
+  .section-title__btn {
+    @extend .btn-primary;
+
+  }
+}
+
+
+.s-type-of-materials {
+
+  &__item {
+
+    picture {
+      background-color: #c4c4c4;
+
+    }
+  }
+
+  &__btn {
+
+    @extend .btn-primary;
+  }
+}
+
+.top-nav__time {
+
+  .icon {
+    color: $primary;
+  }
+}
+
+.menu {
+
+
+  a {
+    color: $body-color;
+  }
+}
+
+
+.toggle-menu-mobile {
+
+  span,
+  span:after,
+  span:before {
+    background-color: $primary;
+  }
+
+}
+
+.s-type-of-materials,
+.prod-item-stock,
+.prod-item {
+
+  &__btn {
+
+    @extend .btn-3d;
+  }
+}
+
+.prod-item-stock,
+.prod-item,
+.s-materials,
+.s-production {
+  &__btn {
+    @extend .btn-primary;
+  }
+}
+
+.tabs__btn.active {
+  background-color: $primary;
+}
+
+.tabs__btn {
+  border-bottom-color: $primary;
+
+}

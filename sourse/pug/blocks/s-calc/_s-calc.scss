@@ -1,0 +1,275 @@
+.s-calc {
+
+	.ttl {
+		font-size: 24px;
+		font-weight: 700;
+		// Text style for "КАЛЬКУЛЯТО"
+		letter-spacing: 0.24px;
+		text-align: center;
+		text-transform: uppercase;
+		text-align: center;
+		padding: rem(15);
+	}
+	&__block {
+		border-radius: 5px;
+		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.69);
+	 
+		&--left {
+			background-color: #4C5666;
+	 
+			.ttl{
+				
+				color: #ffffff;
+			 
+		 }
+		}
+		&--right{ 
+			.ttl {  
+				padding-left: 0;
+				padding-top: 0;
+				padding-right: 0;
+			}
+			padding: rem(20);
+			background-color: #d5d5d5; 
+		}
+	}
+
+
+	.inner {
+		border-radius: 0 0 5px 5px;
+		background-color: #2b3545;
+		padding: rem(20);
+		flex-grow: 1;
+	}
+
+	.inp {
+		label {
+			color: #ffffff;
+		}
+	}
+	.submit{
+		// @extend .btn-primary;
+	 
+		@extend .btn-block;
+		margin-left: auto;
+		margin-right: auto;
+		width: rem(245);
+	}
+	.list_inner_type{
+		box-shadow: 0 1px 1px rgba(255, 255, 255, 0.25),
+		inset -1px 1px 4px rgba(75, 29, 29, 0.41),
+		inset 0 0 5px rgba(0, 0, 0, 0.39);
+		border-radius: 5px;
+		background-color: #ffffff;
+	}
+
+	@include media-breakpoint-up(xl) {
+		.container{
+			max-width: 945px;
+		}
+	}
+
+	.ttl-sm.text-white{
+		color: #ffffff; 
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 0.77;
+		// Text style for "Выберите т"
+		letter-spacing: 0.18px;
+		text-align: center;
+		padding-bottom: 10px;
+		padding-top: 10px;
+	}
+
+	.table{
+		display: table;
+		width: 100%;
+		margin-bottom: rem(20);
+	}
+	.line,
+	.head_t{
+		display: table-row;
+	}
+	.sm1,
+	.sm2,
+	.sm3{
+		display: table-cell;
+		padding: 5px 0;
+		border-bottom: 1px solid #fff;
+		padding: rem(8) rem(5);
+	}
+	.head_t{
+			.sm1,
+			.sm2,
+			.sm3 {
+				color: #ffffff; 
+				font-size: $h6-font-size;
+				font-weight: 400;
+				line-height: 0.7;
+				// Text style for "Н, аименов"
+				letter-spacing: 0.2px;
+				border-bottom: none;
+background-color:#2B3545;
+&:first-child{
+	border-radius: 5px 0 0 5px;
+}
+&:last-child{
+	border-radius: 0  5px  5px 0;
+
+}
+			}
+	}
+	.btn{
+		max-width: 245px;
+		margin-bottom: 10px;
+	}
+ 
+	@include media-breakpoint-up(lg) {}
+
+	@include media-breakpoint-up(md) {}
+
+	@include media-breakpoint-up(sm) {}
+
+	@include media-breakpoint-up(xs) {}
+
+	//
+	@include media-breakpoint-between(md, xl) {}
+
+
+	//
+	@include media-breakpoint-only(xs) {}
+
+	@include media-breakpoint-only(sm) {}
+
+	@include media-breakpoint-only(md) {}
+
+	@include media-breakpoint-only(lg) {}
+
+	@include media-breakpoint-only(xl) {}
+
+	//
+	@include media-breakpoint-down(xl) {}
+
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {}
+
+	@include media-breakpoint-down(xs) {}
+.form-control{
+	margin-bottom: 10px;
+}
+}
+
+
+.s-calc .left form .ttl {
+	font-weight: 700;
+	font-size: 20px;
+	padding-bottom: 10px
+}
+
+.s-calc .left form .cm {
+	margin-bottom: 20px
+}
+
+.s-calc .left form .submit {
+	color: #000;
+	text-decoration: none;
+	box-sizing: border-box;
+	padding-top: 13px
+}
+
+.s-calc .list_inner_type {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+	padding: rem(10);
+}
+.s-calc .list_inner_type .sam {
+	width: 33.33%;
+	 
+	position: relative;
+	height: 80px;
+	background: #fff
+}
+
+.s-calc .list_inner_type .sam input {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	opacity: 0;
+}
+
+
+ .s-calc .list_inner_type .sam label {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	cursor: pointer;
+	z-index: 1;
+	@include mt;
+}
+.s-calc.list_inner_type .sam input {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+
+.s-calc .list_inner_type .sam input:checked ~ label{
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.49);
+	border-radius: 5px;
+	// background-color: #ebfaff;
+}
+
+.s-calc .list_inner_type .sam label.ic1 {
+	background: url(../img/calc/1.png) center no-repeat
+}
+
+.s-calc .list_inner_type .sam label.ic2 {
+	background: url(../img/calc/2.png) center no-repeat
+}
+
+.s-calc .list_inner_type .sam label.ic3 {
+	background: url(../img/calc/3.png) center no-repeat
+}
+
+.s-calc .list_inner_type .sam label.ic4 {
+	background: url(../img/calc/4.png) center no-repeat
+}
+
+.s-calc .list_inner_type .sam label.ic5 {
+	background: url(../img/calc/5.png) center no-repeat
+}
+
+.s-calc .list_inner_type .sam label.ic6 {
+	background: url(../img/calc/6.png) center no-repeat
+}
+
+.s-calc .list_inner_type .sam label.ic7 {
+	background: url(../img/calc/7.png) center no-repeat
+}
+
+.s-calc .list_inner_type .sam label.ic8 {
+	background: url(../img/calc/8.png) center no-repeat
+}
+
+.s-calc .list_inner_type .sam label.ic9 {
+	background: url(../img/calc/9.png) center no-repeat
+}

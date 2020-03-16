@@ -11,7 +11,7 @@ mixin s-cases()
 							.slider-for
 								- for (var x = 1; x < 6; x++)
 									+e.slide
-										+e.gal-link--lg( )
+										+e.gal-link--lg(href=`img/@2x/s-cases-1-${x}.jpg` data-fancybox="cases-gal" )
 											img(src="#" data-lazy=`img/@2x/s-cases-1-${x}.jpg`, alt="") 
 							.slider-nav
 								- for (var x = 1; x < 6; x++)

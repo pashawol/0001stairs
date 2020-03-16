@@ -10,7 +10,11 @@
  	}
  	&__btn{
  		cursor: pointer;
- 	}
+	 }
+	 .wpcf7-form-control-wrap{
+		 display: block;
+		 width: 100%;
+	 }
  	label{
  		width: 100%;
  		display: block;
