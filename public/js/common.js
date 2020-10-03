@@ -70,17 +70,17 @@ function eventHandler() {
 		arrows: false,
 		mobileFirst: true
 	};
-	$('.slider-for').slick(_objectSpread({}, defaultSlide, {
+	$('.slider-for').slick(_objectSpread(_objectSpread({}, defaultSlide), {}, {
 		slidesToShow: 1,
 		lazyLoad: 'ondemand',
 		asNavFor: '.slider-nav'
 	}));
-	$('.slider-nav').slick(_objectSpread({}, defaultSlide, {
+	$('.slider-nav').slick(_objectSpread(_objectSpread({}, defaultSlide), {}, {
 		slidesToShow: 4,
 		asNavFor: '.slider-for',
 		focusOnSelect: true
 	}));
-	$('.s-rews__slider--js').slick(_objectSpread({}, defaultSlide, {
+	$('.s-rews__slider--js').slick(_objectSpread(_objectSpread({}, defaultSlide), {}, {
 		dots: true,
 		slidesToShow: 1,
 		responsive: [{
@@ -95,7 +95,7 @@ function eventHandler() {
 			}
 		}]
 	}));
-	$('.s-sert__slider--js').slick(_objectSpread({}, defaultSlide, {
+	$('.s-sert__slider--js').slick(_objectSpread(_objectSpread({}, defaultSlide), {}, {
 		dots: true,
 		slidesToShow: 1,
 		responsive: [{
