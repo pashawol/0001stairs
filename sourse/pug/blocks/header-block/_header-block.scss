@@ -131,6 +131,8 @@
 			font-size: 16px;
 			border-radius: 3px;
 			padding: rem(16) rem(45);
+			color: #EDA65D;
+			box-shadow: 0px rem(4) 0px 0px darken($color: #F7CBA1, $amount: 10), 0 4px $h5-font-size rgba(0, 0, 0, 0.25);
 		}
 	}
 
@@ -210,6 +212,7 @@
 		margin-bottom: rem(18);
 		&::before {
 			margin-bottom: 0;
+			background: #FF7C00;
 		}
 	}
 
@@ -224,14 +227,24 @@
 		@include roww(10px);
 	}
 
-	.form-wrap__input{
+	select.form-wrap__input{
+		background-image: url('../img/svg/cevron-down.svg');
+		background-position: calc(100%  - 10px) 53%;
+		// background-size: 100%;
+		background-repeat: no-repeat;
+		appearance: none !important;
 		@include media-breakpoint-up(xl) {
-		padding-top: rem(5) !important;
-		padding-right: rem(5) !important;
-		min-height: rem(40) !important;
+			padding-top: rem(7) !important;
+			padding-right: rem(27) !important;
 		}
-
-		font-weight: bold;
+	}
+	.form-wrap__input {
+		@include media-breakpoint-up(xl) {
+			padding-top: rem(9) !important;
+			padding-right: rem(15) !important;
+			min-height: rem(40) !important;
+			}
+			font-weight: bold;
 	}
 
 	.form-wrap__btn {
