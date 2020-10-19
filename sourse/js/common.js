@@ -95,6 +95,28 @@ function 	eventHandler() {
 		asNavFor: '.slider-for',
 		focusOnSelect: true
 	});
+
+	$('.photoSlider-js').slick({
+		...defaultSlide,
+		arrows: true,
+		appendArrows: '.sPhotoVideo__slideNav',
+		slidesToShow: 1,
+		lazyLoad: 'ondemand',
+		responsive: [  {
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 3,
+			}
+
+		}, {
+			breakpoint: 576,
+			settings: {
+				slidesToShow: 2, 
+			}
+
+
+		}],
+	});
 		
 	$('.s-rews__slider--js').slick({
 		...defaultSlide,

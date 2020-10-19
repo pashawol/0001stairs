@@ -32,3 +32,31 @@ mixin s-chats()
 							.small переходите в наши месенджеры
 								
 	// end s-chats
+
+mixin s-chats-2()
+	// start s-chats
+	+b.SECTION.s-chats--whatsupp.lazy-background#s-chats&attributes(attributes)
+		.container
+
+			+e.block
+				img.bg.lazy(src="#" data-src="img/@2x/left-block.png", alt="")
+				+b.section-title
+					h2 ХОТИТЕ
+						br
+						| УЗНАТЬ ЦЕНУ?
+					+e.text НЕ&nbsp;ВЫЗЫВАЯ ЗАМЕРЩИКА?
+				+e.foot
+					.row.align-items-center
+						.col-auto
+							h6 ОТПРАВЬТЕ ФОТО И&nbsp;РАЗМЕРЫ МЕСТА&nbsp;УСТАНОВКИ НАМ 
+								| 
+								strong В&nbsp;WhatsApp, Viber или Telegram
+						.col-auto
+							+e.links
+								+e.link(href="#")
+									span Начать общение в What’sApp
+									+e.imgWrap
+										img.res-i.lazy(src="#" data-src="img/svg/whatsapp.svg", alt="")
+									//- +pic("chat-2.png",'','lazy',0)
+
+								

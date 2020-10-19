@@ -1,0 +1,141 @@
+.sPhotoVideo {
+	
+	h6 {
+		margin-bottom: rem(33);
+	}
+
+
+	&__video{
+		@include block(1014,570);
+		max-width: rem(1014);
+		margin-bottom: rem(80);
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		&::after{
+			content: url(../img/svg/play-white.svg);
+			// @include a-cent;
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			margin: auto;
+			width: 91px;
+			height: 91px;
+			@include mt;
+		}
+		img{
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			margin: auto;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&:hover {
+			&::after {
+				transform: scale(1.2);
+			}
+		}
+	}
+
+	&__sliderRow {
+		margin-bottom: rem(23);
+	}
+
+	&__lineWrap {
+		h6 {
+			margin-bottom: 0;
+		}
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		margin-bottom: rem(33);
+	}
+
+	&__slideNav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100px;
+	}
+
+	.slick-arrow {
+		outline: none;
+		width: 26px;
+		height: 14px;
+		padding: 0;
+		border: none;
+		background-color: #fff;
+		color: transparent;
+		font-size: 0;
+		background-image: url('../img/svg/arrow.svg');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 26px 14px;
+		position: static;
+	}
+
+	.slick-prev {
+		background-image: url('../img/svg/arrow-l.svg');
+	}
+
+	&__slide {
+		padding-left: 16.5px;
+		padding-right: 16.5px;
+		margin-bottom: rem(33);
+
+	}
+	.photoSlider-js {
+		margin-left: -16.5px;
+		margin-right: -16.5px;
+	}
+
+	&__row {
+		@include roww(16.5px);
+		.sPhotoVideo__imgWrap {
+			margin-bottom: rem(33);
+		}
+	}
+
+	&__roww {
+		@include roww(2px);
+		.row {
+			@include roww(2px);
+		}
+
+	}
+
+	&__imgWrap {
+		display: block;
+		@include block(593,421);
+		margin-bottom: 2px;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+		}
+	}
+
+
+
+
+
+
+	@include media-breakpoint-up(xs) {}
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xs) {} 
+
+}

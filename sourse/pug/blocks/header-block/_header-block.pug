@@ -69,3 +69,82 @@ mixin header-block(h1, i='header-bg')
 				+item("4","Кованые","от 58 840 ₽")
 
 	// end header-block
+
+
+
+
+mixin header-block-8(h1, i='header-bg')
+	// start header-block
+	+b.header-block--bottomForm#header-block.bg-wrap
+		+pic(i,'bg')(class="picture-bg")
+		.container
+			.row.align-items-center
+				.col-xl-7
+					if block
+						block
+					else
+						h1 МОБИЛЬНЫЕ БАНИ ОТ ПРОИЗВОДИТЕЛЯ С&nbsp;ДОСТАВКОЙ ПО&nbsp;МОСКВЕ И&nbsp;МОСКОВСКОЙ ОБЛАСТИ
+					+e.text ПОЛУЧИТЕ РАСЧЕТ БАНИ!
+					+e.item-wrap.d-none.d-xl-block
+				.col
+						.row
+							mixin item(i,t,p)
+								+e.col.col-xl-4.col-6
+									+e.item(href="#")
+										+pic(`head-${i}.png`,'bg','lazy',0)
+										+e.DIV.item-text--title=t
+										+e.DIV.item-text--price=p
+							+item("1","Открытые","от 39 640 Р")
+							+item("2","Закрытые","от 49 840 ₽")
+							+item("3","На моно косоуре","от 37 840 ₽")
+				+form-wrap(class="form-horizontal")
+					.row
+						+e.formCol.col-lg-8
+							+e.top-title Получите ТОЧНЫЙ РАСЧЕТ лестницы
+							+e.group
+								+e.group-head Оставьте свой номер телефона и&nbsp;наш специалист свяжется с&nbsp;Вами в&nbsp;течение 45&nbsp;минут
+								
+								+e.group-body
+									.row
+										.col-md-6
+											+input-lg('+_(___)___-__-__','tel','Ваш телефон:')
+											.row.row--sm
+												.col-sm-6
+													+input('2 м','text','Длина бани:')
+												
+												.col-sm-6
+													+input('2 м','text','Длина бани:')
+										.col-md
+											.row
+												.col-sm-6
+													+input('Каменка','select','Печка:')
+
+												
+												.col-sm-6
+													+input('100 мм','select','Толщина стен')
+											+e.btn.btn-3d.btn-primary.btn-block(type="submit") Получить проект и и расчет
+						+e.col.col
+							+e.group-head 
+								div
+									strong.text-primary БЕСПЛАТНО  
+									| 
+									| к&nbsp;вам приедет инженер для уточнения размера лестницы 
+							+e.group-head
+								div
+									strong.text-primary БЕСПЛАТНО  
+									| 
+									| отправим Вам наше коммерческое предложение с&nbsp;детальной сметой, 3D&nbsp;эскизов и&nbsp;стоимостью
+							+polite()
+			.row.d-xl-none
+				mixin item(i,t,p)
+					+e.col.col-md-3.col-6
+						+e.item
+							+pic(`head-${i}.png`,'bg','',0)
+							+e.item-text--title=t
+							+e.item-text--price=p
+				+item("1","Из металла","от 39 640 ₽")
+				+item("2","Из дерева","от 49 840 ₽")
+				+item("3","Из бетона","от 37 840 ₽")
+				+item("4","Кованые","от 58 840 ₽")
+
+	// end header-block

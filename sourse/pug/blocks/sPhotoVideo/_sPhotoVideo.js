@@ -1,0 +1,5 @@
+JSCCommonsPhotoVideo();
+	sPhotoVideo() {
+
+	}
+	

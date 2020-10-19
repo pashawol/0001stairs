@@ -1,0 +1,60 @@
+mixin sPhotoVideo()
+	// start sPhotoVideo
+	+b.SECTION.sPhotoVideo.section#sPhotoVideo&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 ВИДЕО ГОТОВОЙ БАНИ
+
+			+e.video(href="https://www.youtube.com/watch?v=en6gms6e54Q&list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR" tabindex="0" data-fancybox="video")
+				+pic('bath','','lazy','')
+			+b.section-title.text-center
+				h2 ФОТО ГОТОВЫХ БАНЬ
+			+e.lineWrap
+				h6 Внешнйи вид
+				+e.slideNav
+			+e.sliderRow
+				.photoSlider-js
+					- for (var x = 1; x < 6; x++)
+						+e.slide
+							+e.imgWrap(href="img/@2x/bath.jpg" tabindex="0" data-fancybox="photo")
+								img.res-i(src="#" data-lazy=`img/@2x/bath.jpg`, alt="")
+			h6 Внешнйи вид
+			+e.row.row
+				.col-sm-6.col-lg-4
+					+e.imgWrap(href="img/@2x/bath.jpg" tabindex="0" data-fancybox="appearance")
+						img.res-i.lazy(src="#" data-src=`img/@2x/bath.jpg`, alt="")
+				.col-sm-6.col-lg-4
+					+e.imgWrap(href="img/@2x/bath.jpg" tabindex="0" data-fancybox="appearance")
+						img.res-i.lazy(src="#" data-src=`img/@2x/bath.jpg`, alt="")
+				.col-sm-6.col-lg-4
+					+e.imgWrap(href="img/@2x/bath.jpg" tabindex="0" data-fancybox="appearance")
+						img.res-i.lazy(src="#" data-src=`img/@2x/bath.jpg`, alt="")
+				.col-sm-6.col-lg-4
+					+e.imgWrap(href="img/@2x/bath.jpg" tabindex="0" data-fancybox="appearance")
+						img.res-i.lazy(src="#" data-src=`img/@2x/bath.jpg`, alt="")
+				.col-sm-6.col-lg-4
+					+e.imgWrap(href="img/@2x/bath.jpg" tabindex="0" data-fancybox="appearance")
+						img.res-i.lazy(src="#" data-src=`img/@2x/bath.jpg`, alt="")
+				.col-sm-6.col-lg-4
+					+e.imgWrap(href="img/@2x/bath.jpg" tabindex="0" data-fancybox="appearance")
+						img.res-i.lazy(src="#" data-src=`img/@2x/bath.jpg`, alt="")
+			h6 ДОСТАВКА И РАЗГРУЗКА
+			+e.roww.row
+				.col-lg-6
+					+e.imgWrap(href="img/@2x/delivery-1.jpg" data-fancybox="img")
+						img.res-i.lazy(src="#" data-src=`img/@2x/delivery-1.jpg`, alt="")
+				.col-lg-6
+					.row
+						.col-sm-6
+							+e.imgWrap(href="img/@2x/delivery-2.jpg" data-fancybox="img")
+								img.res-i.lazy(src="#" data-src=`img/@2x/delivery-2.jpg`, alt="")
+						.col-sm-6
+							+e.imgWrap(href="img/@2x/delivery-2.jpg" data-fancybox="img")
+								img.res-i.lazy(src="#" data-src=`img/@2x/delivery-3.jpg`, alt="")
+						.col-sm-6
+							+e.imgWrap(href="img/@2x/delivery-4.jpg" data-fancybox="img")
+								img.res-i.lazy(src="#" data-src=`img/@2x/delivery-4.jpg`, alt="")
+						.col-sm-6
+							+e.imgWrap(href="img/@2x/delivery-5.jpg" data-fancybox="img")
+								img.res-i.lazy(src="#" data-src=`img/@2x/delivery-5.jpg`, alt="")
+	// end sPhotoVideo
