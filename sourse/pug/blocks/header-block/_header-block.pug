@@ -79,24 +79,24 @@ mixin header-block-8(h1, i='header-bg')
 		+pic(i,'bg')(class="picture-bg")
 		.container
 			.row.align-items-center
-				.col-xl-7
+				.col-lg-6.col-xl-7
 					if block
 						block
 					else
 						h1 МОБИЛЬНЫЕ БАНИ ОТ ПРОИЗВОДИТЕЛЯ С&nbsp;ДОСТАВКОЙ ПО&nbsp;МОСКВЕ И&nbsp;МОСКОВСКОЙ ОБЛАСТИ
 					+e.text ПОЛУЧИТЕ РАСЧЕТ БАНИ!
-					+e.item-wrap.d-none.d-xl-block
-				.col
-						.row
-							mixin item(i,t,p)
-								+e.col.col-xl-4.col-6
-									+e.item(href="#")
-										+pic(`head-${i}.png`,'bg','lazy',0)
-										+e.DIV.item-text--title=t
-										+e.DIV.item-text--price=p
-							+item("1","Открытые","от 39 640 Р")
-							+item("2","Закрытые","от 49 840 ₽")
-							+item("3","На моно косоуре","от 37 840 ₽")
+					//- +e.item-wrap.d-none.d-lg-block
+				.col.d-none.d-lg-block
+					.row
+						mixin item(i,t,p)
+							+e.col.col-md-4.col-6
+								+e.item(href="#")
+									+pic(`head-${i}.png`,'bg','lazy',0)
+									+e.DIV.item-text--title=t
+									+e.DIV.item-text--price=p
+						+item("1","Открытые","от 39 640 Р")
+						+item("2","Закрытые","от 49 840 ₽")
+						+item("3","На моно косоуре","от 37 840 ₽")
 				+form-wrap(class="form-horizontal")
 					.row
 						+e.formCol.col-lg-8
@@ -135,16 +135,15 @@ mixin header-block-8(h1, i='header-bg')
 									| 
 									| отправим Вам наше коммерческое предложение с&nbsp;детальной сметой, 3D&nbsp;эскизов и&nbsp;стоимостью
 							+polite()
-			.row.d-xl-none
+			.row.d-lg-none
 				mixin item(i,t,p)
-					+e.col.col-md-3.col-6
-						+e.item
-							+pic(`head-${i}.png`,'bg','',0)
-							+e.item-text--title=t
-							+e.item-text--price=p
-				+item("1","Из металла","от 39 640 ₽")
-				+item("2","Из дерева","от 49 840 ₽")
-				+item("3","Из бетона","от 37 840 ₽")
-				+item("4","Кованые","от 58 840 ₽")
+					+e.col.col-md-4.col-6
+						+e.item(href="#")
+							+pic(`head-${i}.png`,'bg','lazy',0)
+							+e.DIV.item-text--title=t
+							+e.DIV.item-text--price=p
+				+item("1","Открытые","от 39 640 Р")
+				+item("2","Закрытые","от 49 840 ₽")
+				+item("3","На моно косоуре","от 37 840 ₽")
 
 	// end header-block

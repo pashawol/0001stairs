@@ -62,6 +62,7 @@
 
 	&--whatsupp {
 		.s-chats__link {
+			text-decoration: none !important;
 			background: #55CD6C;
 			display: flex;
 			align-items: center;
@@ -76,8 +77,13 @@
 				font-weight: bold;
 				color: #000000;
 			}
+			&:hover .s-chats__imgWrap{
+				background: #55CD6C;
+
+			}
 		}
 		.s-chats__imgWrap {
+			@include mt;
 			margin-left: rem(25);
 			background: #4DBA62;
 			width: 54px;
