@@ -2,7 +2,7 @@ const $ = jQuery;
 const btnToggle = $(".toggle-menu-mobile--js"),
 	menu = $(".menu-mobile--js")
 
-function 	eventHandler() {
+function eventHandler() {
 	// полифил для object-fit
 	objectFitImages();
 	// Picture element HTML5 shiv
@@ -19,10 +19,10 @@ function 	eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Frame8.png);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/frame10.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
 
- 
+
 
 	// /закрыть/открыть мобильное меню
 
@@ -71,18 +71,18 @@ function 	eventHandler() {
 		return false;
 	});
 
-	
- 
+
+
 	// // карусель
 
-	const defaultSlide = { 
+	const defaultSlide = {
 		speed: 600,
 		infinite: true,
 		arrows: false,
-		mobileFirst: true, 
+		mobileFirst: true,
 	};
 
-	
+
 	$('.slider-for').slick({
 		...defaultSlide,
 		slidesToShow: 1,
@@ -91,7 +91,7 @@ function 	eventHandler() {
 	});
 	$('.slider-nav').slick({
 		...defaultSlide,
-		slidesToShow: 4, 
+		slidesToShow: 4,
 		asNavFor: '.slider-for',
 		focusOnSelect: true
 	});
@@ -102,7 +102,7 @@ function 	eventHandler() {
 		appendArrows: '.sPhotoVideo__slideNav',
 		slidesToShow: 1,
 		lazyLoad: 'ondemand',
-		responsive: [  {
+		responsive: [{
 			breakpoint: 992,
 			settings: {
 				slidesToShow: 3,
@@ -111,18 +111,18 @@ function 	eventHandler() {
 		}, {
 			breakpoint: 576,
 			settings: {
-				slidesToShow: 2, 
+				slidesToShow: 2,
 			}
 
 
 		}],
 	});
-		
+
 	$('.s-rews__slider--js').slick({
 		...defaultSlide,
 		dots: true,
 		slidesToShow: 1,
-		responsive: [  {
+		responsive: [{
 			breakpoint: 992,
 			settings: {
 				slidesToShow: 3,
@@ -131,19 +131,19 @@ function 	eventHandler() {
 		}, {
 			breakpoint: 576,
 			settings: {
-				slidesToShow: 2, 
+				slidesToShow: 2,
 			}
 
 
 		}],
-		
+
 	});
-	
+
 	$('.s-sert__slider--js').slick({
 		...defaultSlide,
 		dots: true,
 		slidesToShow: 1,
-		responsive: [  {
+		responsive: [{
 			breakpoint: 992,
 			settings: {
 				slidesToShow: 3,
@@ -152,26 +152,38 @@ function 	eventHandler() {
 		}, {
 			breakpoint: 576,
 			settings: {
-				slidesToShow: 2, 
+				slidesToShow: 2,
 			}
 
 
 		}],
-		
+
 	});
 	setTimeout(() => {
-		
+
 		$(".map-wrap-js").html($(".map-wrap-js").data('map'));
 	}, 3000);
 
-	};
-	if (document.readyState !== 'loading') {
-		eventHandler();
+	$(".toggle-btn-js").click(function () {
+		$(this).next().slideToggle(function () {
+			$(this).toggleClass("active");
+		});
+	});
+
+	$(".f-toggle-js").click(function () {
+		$(".f-toggle-js").toggleClass("d-none");
+		$(".filter--js").slideToggle(function () {
+			$(this).toggleClass("active");
+		});
+	});
+};
+if (document.readyState !== 'loading') {
+	eventHandler();
 
 
-	} else {
-		document.addEventListener('DOMContentLoaded', eventHandler);
-	}
+} else {
+	document.addEventListener('DOMContentLoaded', eventHandler);
+}
 const JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
 	// функции для запуска lazy
@@ -180,7 +192,7 @@ const JSCCommon = {
 	// /LazyFunction
 
 	modalCall() {
-	 
+
 		$(".link-modal").fancybox({
 			arrows: false,
 			infobar: false,
@@ -190,14 +202,14 @@ const JSCCommon = {
 		$(".modal-close-js").click(function () {
 			$.fancybox.close();
 		})
-		$(".link-modal").click(function(){
+		$(".link-modal").click(function () {
 			var th = $(this);
 			$(th.attr('href')).find(".order").val(th.data('order'));
-			$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title')); 
-			$(th.attr('href')).find(".form-wrap__text--js").html(th.data('text')); 
+			$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title'));
+			$(th.attr('href')).find(".form-wrap__text--js").html(th.data('text'));
 			$(th.attr('href')).find(".btn-primary").val(th.data('btn'));
 			if ($(this).hasClass("s-doc__btn")) {
-				 
+
 			}
 		})
 	},
@@ -241,7 +253,7 @@ const JSCCommon = {
 		});
 	},
 	// /табы  . 
- 
+
 
 	// /CustomYoutubeBlock
 	inputMask() {
@@ -251,6 +263,6 @@ const JSCCommon = {
 	// /inputMask
 
 };
- 
+
 // JSCCommon.LazyFunction();
 /***/

@@ -22,8 +22,8 @@ function eventHandler() {
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Frame8.png);"></div>')
-	// /добавляет подложку для pixel perfect
+
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/frame10.jpg);"></div>'); // /добавляет подложку для pixel perfect
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {
@@ -130,6 +130,17 @@ function eventHandler() {
 	setTimeout(function () {
 		$(".map-wrap-js").html($(".map-wrap-js").data('map'));
 	}, 3000);
+	$(".toggle-btn-js").click(function () {
+		$(this).next().slideToggle(function () {
+			$(this).toggleClass("active");
+		});
+	});
+	$(".f-toggle-js").click(function () {
+		$(".f-toggle-js").toggleClass("d-none");
+		$(".filter--js").slideToggle(function () {
+			$(this).toggleClass("active");
+		});
+	});
 }
 
 ;

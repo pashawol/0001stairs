@@ -24,10 +24,23 @@ $output-bourbon-deprecation-warnings: false;
 // @import "../libs/ion.rangeSlider/css/ion.rangeSlider.min.css";
 
 // @import "base";
+.invisible {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
 @import '../pug/blocks/sStandartEquipment/_sStandartEquipment.scss';
 @import '../pug/blocks/header-block/_header-block.scss';
 @import '../pug/blocks/footer/_footer.scss';
 @import '../pug/blocks/sShipping/_sShipping.scss';
 @import '../pug/blocks/sPhotoVideo/_sPhotoVideo.scss';
 @import '../pug/blocks/s-chats/_s-chats.scss';
+@import '../pug/blocks/catalog/_catalog.scss';
+@import '../pug/blocks/card/_card.scss';
+
 // @import "media"; // Всегда в конце

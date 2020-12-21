@@ -1,0 +1,213 @@
+mixin card()
+	// start card
+	+b.SECTION.card.section#card&attributes(attributes)
+		.container
+			+b.section-title
+				.row
+					.col-auto
+						+b.link-back(href="#")
+							+icon("arrow-back")
+					.col.d-flex.align-items-center
+						h1 Баня 6&times;6
+			.row
+				.col-xl-6
+					+e.imgWrap--lg(href="img/@2x/bath.jpg" tabindex="0" data-fancybox="appearance")
+						img(src=`img/@2x/bath.jpg`, loading="lazy" alt="")
+					+e.row.row
+						.col-3.col-lg-6
+							+e.imgWrap(href="img/@2x/bath.jpg" tabindex="0" data-fancybox="appearance")
+								img(src=`img/@2x/bath.jpg`, loading="lazy" alt="")
+						.col-3.col-lg-6
+							+e.imgWrap(href="img/@2x/bath.jpg" tabindex="0" data-fancybox="appearance")
+								img(src=`img/@2x/bath.jpg`, loading="lazy" alt="")
+						.col-3.col-lg-6
+							+e.imgWrap(href="img/@2x/bath.jpg" tabindex="0" data-fancybox="appearance")
+								img(src=`img/@2x/bath.jpg`, loading="lazy" alt="")
+						.col-3.col-lg-6
+							+e.imgWrap(href="img/@2x/bath.jpg" tabindex="0" data-fancybox="appearance")
+								img(src=`img/@2x/bath.jpg`, loading="lazy" alt="")
+				.col-xl-6
+					.row
+						.col-4
+							+e.DIV.size--top Размер:
+							+e.DIV.value 7&times;2,3&nbsp;м
+						.col-4
+							+e.DIV.size--top Площадь:
+							+e.DIV.value 150м2
+						.col-4
+							+e.DIV.size--top Сроки:
+							+e.DIV.value 14&nbsp;дней
+
+					+e.c-complect Выберите комплектацию:
+					.row
+						.col-lg-4
+							+b.LABEL.btn-input-bath
+								+e.INPUT.input(type="radio" name="cut")
+								+e.DIV.text
+									+e.size Сечение <br/> 90&times;140
+									+e.value 170&nbsp;000&nbsp;P.
+						.col-lg-4
+							+b.LABEL.btn-input-bath
+								+e.INPUT.input(type="radio" name="cut")
+								+e.DIV.text
+									+e.size Сечение <br/> 90&times;140
+									+e.value 170&nbsp;000&nbsp;P.
+						.col-lg-4
+							+b.LABEL.btn-input-bath
+								+e.INPUT.input(type="checkbox")
+								+e.DIV.text
+									+e.size Доставка <br/> и&nbsp;разгрузка
+									+e.deliv-price
+										+e.value--sm 23&nbsp;000&nbsp;P.
+										+e.reach в&nbsp;пределах 500&nbsp;км от&nbsp;г. Пестово
+					.row
+						.col-6.d-none.d-xl-block
+							+e.A.btn.btn-3d.btn-primary(href="#") Заказать
+						.col-6.d-none.d-xl-block
+							+e.A.btn.btn-3d.btn-primary--light(href="#") Сохранить себе
+
+			+b.complectation
+				.row
+					.col-xl-6
+						.tabs
+							.tabs__caption
+								+e.DIV.addit-standard.tabs__btn.active 
+									span Дополнительные <br/> услуги
+								+e.DIV.addit-standard.tabs__btn 
+									span Стандартная <br/> комплектация
+							.tabs__wrap
+								.tabs__content.active
+									+e.header
+										+e.tittle
+											H3 Дополнительные услуги
+										+e.instruction
+											p Выберите необходимое сечение бруса (100&times;150&nbsp;мм или 150&times;150&nbsp;мм). Далее нажмите на&nbsp;необходимые пункты в&nbsp;таблице для добавления в&nbsp;комплектацию и&nbsp;расчета стоимости.
+									+e.TABLE.ad-body
+										mixin ad-body(d,p,f)
+												+e.TR.t-row
+													+e.TD.t-cell
+														+b.LABEL.btn-input-table
+															+e.INPUT.input(type="checkbox")
+															+e.lab
+													+e.TD.t-cell
+														+e.descrption
+															a(href="#")= d
+													+e.TD.t-cell.text-right
+														+e.price= p
+														if f
+															+e.A.foto(href="img/@2x/bath.jpg" tabindex="0" data-fancybox="appear") Смотреть фото
+										+ad-body('Замена кровли - оцинкованный проф. лист на ондулин','3 000 руб', 'f')
+										+ad-body('Замена кровли - оцинкованный проф. лист на металлочерепицу','5 000 руб', 'f')
+										+ad-body('Установка в парную двери с матовым стеклом','6 000 руб', 'f')
+										+ad-body('Замена бруса 150х150мм, обвязочный брус включен','15%')
+										+ad-body('Вывод трубы через кровлю','5 000 руб')
+										+ad-body('Замена стандартной печи на печь «Ермак12» с выводом трубы в крышу','15 000 руб')
+										+ad-body('Замена осиновой вагонки класса «Б» на класс «А»','9 000 руб')
+										+ad-body('Обработка основания бани','0 руб')
+										+ad-body('Замена одного деревянного окна на окно ПВХ 40х40','1 500 руб')
+										+ad-body('Замена одного деревянного окна на окно ПВХ 80х80','2 500 руб')
+								.tabs__content
+									+e.header
+										+e.tittle
+											H3 Стандартная комплектация
+										+e.instruction
+											p Выберите необходимое сечение бруса (100&times;150&nbsp;мм или 150&times;150&nbsp;мм). Далее нажмите на&nbsp;необходимые пункты в&nbsp;таблице для добавления в&nbsp;комплектацию и&nbsp;расчета стоимости.
+									+e.TABLE.st-body
+										mixin st-body(d,f)
+												+e.TR.t-row
+													+e.TD.t-cell
+														+e.descrption
+															a(href="#")= d
+													+e.TD.t-cell.text-right
+														if f
+															+e.A.foto(href="img/@2x/bath.jpg" tabindex="0" data-fancybox="appear") Смотреть фото
+										+st-body('Замена кровли - оцинкованный проф. лист на ондулин','3 000 руб', 'f')
+										+st-body('Замена кровли - оцинкованный проф. лист на металлочерепицу', 'f')
+										+st-body('Установка в парную двери с матовым стеклом','f')
+										+st-body('Замена бруса 150х150мм, обвязочный брус включен')
+										+st-body('Вывод трубы через кровлю')
+										+st-body('Замена стандартной печи на печь «Ермак12» с выводом трубы в крышу')
+										+st-body('Замена осиновой вагонки класса «Б» на класс «А»')
+										+st-body('Обработка основания бани')
+										+st-body('Замена одного деревянного окна на окно ПВХ 40х40')
+										+st-body('Замена одного деревянного окна на окно ПВХ 80х80')
+					.col-xl-6.d-none.d-xl-block
+						+e.c-complect Выберите комплектацию:
+						.row
+							.col-lg-4
+								+b.LABEL.btn-input-bath
+									+e.INPUT.input(type="radio" name="cut")
+									+e.DIV.text
+										+e.size Сечение <br/> 90&times;140
+										+e.value 170&nbsp;000&nbsp;P.
+							.col-lg-4
+								+b.LABEL.btn-input-bath
+									+e.INPUT.input(type="radio" name="cut")
+									+e.DIV.text
+										+e.size Сечение <br/> 90&times;140
+										+e.value 170&nbsp;000&nbsp;P.
+							.col-lg-4
+								+b.LABEL.btn-input-bath
+									+e.INPUT.input(type="checkbox")
+									+e.DIV.text
+										+e.size Доставка и&nbsp;разгрузка
+										+e.value--sm 23&nbsp;000&nbsp;P.
+										+e.reach в&nbsp;пределах 500&nbsp;км от&nbsp;г. Пестово
+						.row
+							.col-6
+								+e.add-opt
+									+e.SPAN.count.text-primary 1
+									+e.STRONG.add дополнительная опция
+									+e.BUTTON.reset(type="button") Сбросить
+							.col-6
+								+e.value.text-right Итого: 173&nbsp;000&nbsp;р.
+						.row
+							.col-6.d-none.d-xl-block
+								+e.A.btn.btn-3d.btn-primary(href="#") Заказать
+							.col-6.d-none.d-xl-block
+								+e.A.btn.btn-3d.btn-primary--light(href="#") Сохранить себе
+			+b.fixed-block.d-xl-none
+				.container
+					.row
+						.col
+							+e.DIV.text
+								+e.size Сечение: 90&times;140
+								+e.value 170&nbsp;000&nbsp;P.
+							+e.add-opt
+								+e.SPAN.count.text-primary 1
+								+e.BUTTON.reset(type="button")
+									strong дополнительная опция
+						.col-auto.d-flex.align-items-center
+							+e.A.btn.btn-3d.btn-primary(href="#") Заказать
+
+			+e.H2.foot-tittle Реальные фото бани
+			+e.sliderRow
+					.photoSlider-js
+						- for (var x = 1; x < 6; x++)
+							+e.slide
+								+e.imgWrap(href="img/@2x/bath.jpg" tabindex="0" data-fancybox="photo")
+									img.res-i(src="#" data-lazy=`img/@2x/bath.jpg`, alt="")
+			+e.H2.foot-tittle Вас могут заинтересовать
+			.row
+				- for (var x = 0; x < 3; x++)
+					.col-xl-4.col-md-6
+						+b.catalog-item
+							+e.head
+								.row
+									.col-6
+										+e.img-wrap
+											img(src="img/@2x/catalog-1.jpg", alt="")
+									.col-6
+										+e.img-wrap
+											img(src="img/@2x/catalog-2.jpg", alt="")
+							+e.H4.tittle Название дома из&nbsp;бруса 4*4
+							+e.pricing
+								+e.text
+									+e.DIV.params Размер: <br>7&times;2,3&nbsp;м</br>
+									+e.DIV.params Площадь: <b>150м2</b>
+									+e.DIV.params Сроки постройки: <b>14&nbsp;дней</b>
+									+e.DIV.params Доставка и&nbsp;выгрузка: <b>Индивидуально</b>
+								+e.details
+									+e.price 170 000&nbsp;P.
+									+e.A.btn.btn-3d.btn-primary(href="#") Подробнее
+	// end card

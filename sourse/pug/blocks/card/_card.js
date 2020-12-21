@@ -1,0 +1,5 @@
+JSCCommoncard();
+	card() {
+
+	}
+	

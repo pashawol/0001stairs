@@ -1,0 +1,205 @@
+mixin catalog()
+	// start catalog
+	+b.SECTION.catalog.section#catalog&attributes(attributes)
+		.container
+			+b.section-title
+				.row
+					.col
+						H1 Каталог
+					.col-auto.d-xl-none.d-flex.align-items-center
+						.f-toggle-js.f-show Фильтр
+						.f-toggle-js.f-hide.d-none Закрыть
+						
+
+		.container
+			.row
+				.col
+					+b.filter--js.d-xl-block
+						.row
+							.col.d-flex.align-items-center
+								+e.tittle
+									H3 Фильтры
+							.col-auto.d-flex.align-items-center
+								+e.BUTTON.reset-all--top(type="button") Сбросить
+						mixin item(t)
+							+e.item
+								+e.item-head.toggle-btn-js= t
+								+e.item-body.toggle-block-js.active
+									block
+						+item("Выберите объект")
+							.row
+								.col-auto
+									+b.LABEL.btn-input
+										+e.INPUT.input(type="checkbox")
+										+e.text Дома из&nbsp;бруса
+								.col-auto
+									+b.LABEL.btn-input
+										+e.INPUT.input(type="checkbox")
+										+e.text Каркасные дома
+								.col-auto
+									+b.LABEL.btn-input
+										+e.INPUT.input(type="checkbox")
+										+e.text Бани
+								.col-auto
+									+b.LABEL.btn-input
+										+e.INPUT.input(type="checkbox")
+										+e.text Мобильные бани
+						+item("Размер")
+							.row
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "Все")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "4х4")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "4х4")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "5х4")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "5х4")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "5х4")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "6х4")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "6х4")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "6х4")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "6х5")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "6х5")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "6х5")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "6х6")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "6х6")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "6х6")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "6х7")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "6х7")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "6х7")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "6х7,5")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "6х7,5")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "6х7,5")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "6х8")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "6х8")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "6х8")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "6х9")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "6х9")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "6х9")
+						+item("Количество этажей")
+							.row
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "Все")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "1")
+								.col-4.col-sm-4.col-xl-4.col-md-2
+									+in-c("checkbox", "2")
+						+item("Терраса или крыльцо")
+							.row
+								.col-auto.px-2.py-1
+									+b.LABEL.btn-input
+										+e.INPUT.input(type="checkbox")
+										+e.text Все
+								.col-auto.px-2.py-1
+									+b.LABEL.btn-input
+										+e.INPUT.input(type="checkbox")
+										+e.text Да
+								.col-auto.px-2.py-1
+									+b.LABEL.btn-input
+										+e.INPUT.input(type="checkbox")
+										+e.text Нет
+						+item("Площадь")
+							.row
+								.col-auto.px-2.py-1
+									+b.LABEL.btn-input
+										+e.INPUT.input(type="checkbox")
+										+e.text Все
+								.col-auto.px-2.py-1
+									+b.LABEL.btn-input
+										+e.INPUT.input(type="checkbox")
+										+e.text до&nbsp;20&nbsp;м2
+								.col-auto.px-2.py-1
+									+b.LABEL.btn-input
+										+e.INPUT.input(type="checkbox")
+										+e.text 20&nbsp;&mdash; 50&nbsp;м2
+								.col-auto.px-2.py-1
+									+b.LABEL.btn-input
+										+e.INPUT.input(type="checkbox")
+										+e.text 50&nbsp;&mdash; 100&nbsp;м2
+								.col-auto.px-2.py-1
+									+b.LABEL.btn-input
+										+e.INPUT.input(type="checkbox")
+										+e.text 100&nbsp;&mdash; 150&nbsp;м2
+								.col-auto.px-2.py-1
+									+b.LABEL.btn-input
+										+e.INPUT.input(type="checkbox")
+										+e.text более 150&nbsp;м2
+						.row
+							+e.bottom-buttons
+								.col.pr-0.d-flex.align-items-center
+									+e.BUTTON.reset-all--bottom(type="button") Сбросить
+								.col.p-0.text-right
+									+e.BUTTON.btn.filter__btn--wide.btn-3d.btn-primary(type="button") Показать
+				.col-xl-9
+					+e.list
+						.row
+							.col
+								+e.DIV.sorting-form
+									+e.SPAN.sorting-tittle Отображать
+									+e.SELECT.form-select(name="sort" aria-label="")
+										option(selected="") Самые дорогие
+										option(value="2") Самые дешевые
+										option(value="3") Самые популярные
+						.row
+							- for (var x = 0; x < 8; x++)
+								.col-md-6
+									+b.catalog-item
+										+e.head
+											.row
+												.col-6
+													+e.img-wrap
+														img(src="img/@2x/catalog-1.jpg", alt="")
+												.col-6
+													+e.img-wrap
+														img(src="img/@2x/catalog-2.jpg", alt="")
+										+e.H4.tittle Название дома из&nbsp;бруса 4*4
+										+e.pricing
+											+e.text
+												+e.DIV.params Размер: <b>7&times;2,3&nbsp;м</b>
+												+e.DIV.params Площадь: <b>150м2</b>
+												+e.DIV.params Сроки постройки: <b>14&nbsp;дней</b>
+												+e.DIV.params Доставка и&nbsp;выгрузка: <b>Индивидуально</b>
+											+e.details
+												+e.price 170 000&nbsp;P.
+												+e.A.btn.btn-3d.btn-primary(href="#") Подробнее
+						+b.NAV.page-navigation(aria-label="Page navigation")
+							+e.UL.pagination
+								+e.LI.page-item
+									+e.A.page-link.disabled(href="#" aria-label="Previous")
+										+icon('prev')
+								+e.LI.page-item
+									+e.A.page-link.active(href="#") 1
+								+e.LI.page-item
+									+e.A.page-link(href="#") 2
+								+e.LI.page-item
+									+e.A.page-link(href="#") 3
+								+e.LI.page-item
+									+e.A.page-link(href="#") 4
+								+e.LI.page-item
+									+e.A.page-link(href="#" aria-label="Next")
+										+icon('next')
+	// end catalog

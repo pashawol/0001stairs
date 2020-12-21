@@ -10,3 +10,7 @@
 <br/>
 4 <a href="https://pashawol.github.io/0001stairs/public/frame8.html">https://pashawol.github.io/0001stairs/public/frame8.html</a>
 <br/>
+5 <a href="https://pashawol.github.io/0001stairs/public/frame9.html">https://pashawol.github.io/0001stairs/public/frame9.html</a>
+<br/>
+6 <a href="https://pashawol.github.io/0001stairs/public/frame10.html">https://pashawol.github.io/0001stairs/public/frame10.html</a>
+<br/>
