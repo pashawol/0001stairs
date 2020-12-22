@@ -179,8 +179,9 @@ function eventHandler() {
 
 	$('.sticky-js').hcSticky({
 		stickTo: $('.card')[0],
-		top: 100,
-		innerTop: 50
+		top: 140,
+		innerTop: 50,
+		bottomEnd: 1065
 	});
 
 };
