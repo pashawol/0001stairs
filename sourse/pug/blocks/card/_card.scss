@@ -377,6 +377,12 @@
 	// &__c-complect {
 	// 	padding: rem(108) 0 rem(16) 0;
 	// }
+	
+	&__st-body {
+		.complectation__t-row {
+			padding-left: 0;
+		}
+	}
 
 	&__descrption {
 		font-weight: 500;
