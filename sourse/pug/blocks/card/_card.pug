@@ -27,44 +27,53 @@ mixin card()
 							+e.imgWrap(href="img/@2x/bath.jpg" tabindex="0" data-fancybox="appearance")
 								img(src=`img/@2x/bath.jpg`, loading="lazy" alt="")
 				.col-xl-6
-					.row
-						.col-4
-							+e.DIV.size--top Размер:
-							+e.DIV.value 7&times;2,3&nbsp;м
-						.col-4
-							+e.DIV.size--top Площадь:
-							+e.DIV.value 150м2
-						.col-4
-							+e.DIV.size--top Сроки:
-							+e.DIV.value 14&nbsp;дней
+					.sticky-js
+						.row
+							.col-4
+								+e.DIV.size--top Размер:
+								+e.DIV.value 7&times;2,3&nbsp;м
+							.col-4
+								+e.DIV.size--top Площадь:
+								+e.DIV.value 150м2
+							.col-4
+								+e.DIV.size--top Сроки:
+								+e.DIV.value 14&nbsp;дней
 
-					+e.c-complect Выберите комплектацию:
-					.row
-						.col-lg-4
-							+b.LABEL.btn-input-bath
-								+e.INPUT.input(type="radio" name="cut")
-								+e.DIV.text
-									+e.size Сечение <br/> 90&times;140
-									+e.value 170&nbsp;000&nbsp;P.
-						.col-lg-4
-							+b.LABEL.btn-input-bath
-								+e.INPUT.input(type="radio" name="cut")
-								+e.DIV.text
-									+e.size Сечение <br/> 90&times;140
-									+e.value 170&nbsp;000&nbsp;P.
-						.col-lg-4
-							+b.LABEL.btn-input-bath
-								+e.INPUT.input(type="checkbox")
-								+e.DIV.text
-									+e.size Доставка <br/> и&nbsp;разгрузка
-									+e.deliv-price
-										+e.value--sm 23&nbsp;000&nbsp;P.
-										+e.reach в&nbsp;пределах 500&nbsp;км от&nbsp;г. Пестово
-					.row
-						.col-6.d-none.d-xl-block
-							+e.A.btn.btn-3d.btn-primary(href="#") Заказать
-						.col-6.d-none.d-xl-block
-							+e.A.btn.btn-3d.btn-primary--light(href="#") Сохранить себе
+						+e.c-complect Выберите комплектацию:
+						.row
+							.col-lg-4
+								+b.LABEL.btn-input-bath
+									+e.INPUT.input(type="radio" name="cut")
+									+e.DIV.text
+										+e.size Сечение <br/> 90&times;140
+										+e.value 170&nbsp;000&nbsp;P.
+							.col-lg-4
+								+b.LABEL.btn-input-bath
+									+e.INPUT.input(type="radio" name="cut")
+									+e.DIV.text
+										+e.size Сечение <br/> 90&times;140
+										+e.value 170&nbsp;000&nbsp;P.
+							.col-lg-4
+								+b.LABEL.btn-input-bath
+									+e.INPUT.input(type="checkbox")
+									+e.DIV.text
+										+e.size Доставка <br/> и&nbsp;разгрузка
+										+e.deliv-price
+											+e.value--sm 23&nbsp;000&nbsp;P.
+											+e.reach в&nbsp;пределах 500&nbsp;км от&nbsp;г. Пестово
+						.row
+								.col-6.d-none.d-xl-block
+									+e.add-opt
+										+e.SPAN.count.text-primary 1
+										+e.STRONG.add дополнительная опция
+										+e.BUTTON.reset(type="button") Сбросить
+								.col-6.d-none.d-xl-block
+									+e.value.text-right Итого: 173&nbsp;000&nbsp;р.
+						.row
+							.col-6.d-none.d-xl-block
+								+e.A.btn.btn-3d.btn-primary(href="#") Заказать
+							.col-6.d-none.d-xl-block
+								+e.A.btn.btn-3d.btn-primary--light(href="#") Сохранить себе
 
 			+b.complectation
 				.row
@@ -106,7 +115,7 @@ mixin card()
 										+ad-body('Обработка основания бани','0 руб')
 										+ad-body('Замена одного деревянного окна на окно ПВХ 40х40','1 500 руб')
 										+ad-body('Замена одного деревянного окна на окно ПВХ 80х80','2 500 руб')
-								.tabs__content
+								.tabs__content.active
 									+e.header
 										+e.tittle
 											H3 Стандартная комплектация
@@ -131,41 +140,42 @@ mixin card()
 										+st-body('Обработка основания бани')
 										+st-body('Замена одного деревянного окна на окно ПВХ 40х40')
 										+st-body('Замена одного деревянного окна на окно ПВХ 80х80')
-					.col-xl-6.d-none.d-xl-block
-						+e.c-complect Выберите комплектацию:
-						.row
-							.col-lg-4
-								+b.LABEL.btn-input-bath
-									+e.INPUT.input(type="radio" name="cut")
-									+e.DIV.text
-										+e.size Сечение <br/> 90&times;140
-										+e.value 170&nbsp;000&nbsp;P.
-							.col-lg-4
-								+b.LABEL.btn-input-bath
-									+e.INPUT.input(type="radio" name="cut")
-									+e.DIV.text
-										+e.size Сечение <br/> 90&times;140
-										+e.value 170&nbsp;000&nbsp;P.
-							.col-lg-4
-								+b.LABEL.btn-input-bath
-									+e.INPUT.input(type="checkbox")
-									+e.DIV.text
-										+e.size Доставка и&nbsp;разгрузка
-										+e.value--sm 23&nbsp;000&nbsp;P.
-										+e.reach в&nbsp;пределах 500&nbsp;км от&nbsp;г. Пестово
-						.row
-							.col-6
-								+e.add-opt
-									+e.SPAN.count.text-primary 1
-									+e.STRONG.add дополнительная опция
-									+e.BUTTON.reset(type="button") Сбросить
-							.col-6
-								+e.value.text-right Итого: 173&nbsp;000&nbsp;р.
-						.row
-							.col-6.d-none.d-xl-block
-								+e.A.btn.btn-3d.btn-primary(href="#") Заказать
-							.col-6.d-none.d-xl-block
-								+e.A.btn.btn-3d.btn-primary--light(href="#") Сохранить себе
+					.col-xl-6
+					//-.d-none.d-xl-block
+						//- +e.c-complect Выберите комплектацию:
+						//- .row
+						//- 	.col-lg-4
+						//- 		+b.LABEL.btn-input-bath
+						//- 			+e.INPUT.input(type="radio" name="cut")
+						//- 			+e.DIV.text
+						//- 				+e.size Сечение <br/> 90&times;140
+						//- 				+e.value 170&nbsp;000&nbsp;P.
+						//- 	.col-lg-4
+						//- 		+b.LABEL.btn-input-bath
+						//- 			+e.INPUT.input(type="radio" name="cut")
+						//- 			+e.DIV.text
+						//- 				+e.size Сечение <br/> 90&times;140
+						//- 				+e.value 170&nbsp;000&nbsp;P.
+						//- 	.col-lg-4
+						//- 		+b.LABEL.btn-input-bath
+						//- 			+e.INPUT.input(type="checkbox")
+						//- 			+e.DIV.text
+						//- 				+e.size Доставка и&nbsp;разгрузка
+						//- 				+e.value--sm 23&nbsp;000&nbsp;P.
+						//- 				+e.reach в&nbsp;пределах 500&nbsp;км от&nbsp;г. Пестово
+						//- .row
+						//- 	.col-6
+						//- 		+e.add-opt
+						//- 			+e.SPAN.count.text-primary 1
+						//- 			+e.STRONG.add дополнительная опция
+						//- 			+e.BUTTON.reset(type="button") Сбросить
+						//- 	.col-6
+						//- 		+e.value.text-right Итого: 173&nbsp;000&nbsp;р.
+						//- .row
+						//- 	.col-6.d-none.d-xl-block
+						//- 		+e.A.btn.btn-3d.btn-primary(href="#") Заказать
+						//- 	.col-6.d-none.d-xl-block
+						//- 		+e.A.btn.btn-3d.btn-primary--light(href="#") Сохранить себе
 			+b.fixed-block.d-xl-none
 				.container
 					.row

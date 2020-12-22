@@ -37,7 +37,7 @@
 		}
 	}
 
-	.link-back {		
+	.link-back {
 		color: #000000;
 		.icon {
 			stroke: currentColor;
@@ -53,7 +53,7 @@
 			@include roww(5);
 		}
 		
-	}	
+	}
 
 	&__imgWrap {
 		display: block;
@@ -92,13 +92,13 @@
 	&__value {
 		font-size: rem(28);
 		font-weight: 700;
-		color: #EDA65D;		
+		color: #EDA65D;
 	}
 
 	&__size {
 		&--top {
 			padding-bottom: rem(5);
-		}		
+		}
 	}
 
 	&__c-complect {
@@ -109,12 +109,43 @@
 
 	}
 
-
-	table {
-		width: 100%;		
+	&__add-opt {
+		padding: rem(10) 0 rem(7) 0;
 	}
 
-	td {		
+	&__count	{
+		font-weight: rem(16);
+		padding-right: rem(5);
+	}
+
+	&__reset {
+		position: relative;
+		border: none;
+		background-color: transparent;
+		padding-right: rem(15);
+		padding-left: 0;
+		font-size: rem(14);
+		outline: none !important;
+		&:hover {
+			color: #EDA65D;
+		}
+		
+		&::after {
+			content: "";
+			position: absolute;
+			width: rem(8);
+			height: rem(8);
+			right: rem(1);
+			top: rem(8);
+			background: url(../img/svg/filter-reset.svg) no-repeat;
+			z-index: 1;
+		}
+	}
+	table {
+		width: 100%;
+	}
+
+	td {
 		vertical-align: middle;
 		border-bottom: 1px solid #BDBDBD;
 	}
@@ -259,7 +290,6 @@
 	}
 
 	
-		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -333,9 +363,9 @@
 	}
 
 	
-	&__c-complect {
-		padding: rem(108) 0 rem(16) 0;
-	}
+	// &__c-complect {
+	// 	padding: rem(108) 0 rem(16) 0;
+	// }
 
 	&__descrption {
 		font-weight: 500;
@@ -372,29 +402,29 @@
 			text-decoration: none;
 		}
 	}
-	&__reset {
-		position: relative;
-		border: none;
-		background-color: transparent;
-		padding-right: rem(15);
-		padding-left: 0;
-		font-size: rem(14);
-		outline: none !important;
-		&:hover {
-			color: #EDA65D;
-		}		
+	// &__reset {
+	// 	position: relative;
+	// 	border: none;
+	// 	background-color: transparent;
+	// 	padding-right: rem(15);
+	// 	padding-left: 0;
+	// 	font-size: rem(14);
+	// 	outline: none !important;
+	// 	&:hover {
+	// 		color: #EDA65D;
+	// 	}		
 		
-		&::after {
-			content: "";
-			position: absolute;
-			width: rem(8);
-			height: rem(8);
-			right: rem(1);
-			top: rem(8);
-			background: url(../img/svg/filter-reset.svg) no-repeat;
-			z-index: 1;
-		}
-	}
+	// 	&::after {
+	// 		content: "";
+	// 		position: absolute;
+	// 		width: rem(8);
+	// 		height: rem(8);
+	// 		right: rem(1);
+	// 		top: rem(8);
+	// 		background: url(../img/svg/filter-reset.svg) no-repeat;
+	// 		z-index: 1;
+	// 	}
+	// }
 	&__value {
 		font-size: rem(24);
 		font-weight: 700;
@@ -403,34 +433,34 @@
 		text-transform: uppercase;
 		padding-top: rem(5);
 	}
-	&__add-opt {
-		padding: rem(14) 0 rem(7) 0;
-	}
-	&__btn {
-		width: 100%;
-		height: rem(56);
-		font-size: rem(16);
-		margin-top: rem(20);
-		line-height: calc(20 / 16);
-		padding: rem(19) 0;
-	}
+	// &__add-opt {
+	// 	padding: rem(14) 0 rem(7) 0;
+	// }
+	// &__btn {
+	// 	width: 100%;
+	// 	height: rem(56);
+	// 	font-size: rem(16);
+	// 	margin-top: rem(20);
+	// 	line-height: calc(20 / 16);
+	// 	padding: rem(19) 0;
+	// }
 
-	.btn-primary {
-		&--light {
-			background-color: #FFF7EE;
-			border: none;
-			color: #EDA65D;
-			width: 100%;
-			&:hover {
-				background-color: #ffffff;
-				color: #000000;
-			}
-		}
-	}
-	&__count	{
-		font-weight: rem(16);
-		padding-right: rem(5);
-	}
+	// .btn-primary {
+	// 	&--light {
+	// 		background-color: #FFF7EE;
+	// 		border: none;
+	// 		color: #EDA65D;
+	// 		width: 100%;
+	// 		&:hover {
+	// 			background-color: #ffffff;
+	// 			color: #000000;
+	// 		}
+	// 	}
+	// }
+	// &__count	{
+	// 	font-weight: rem(16);
+	// 	padding-right: rem(5);
+	// }
 	&__instruction {
 		font-size: 14px;
 		line-height: calc(18 / 14);
@@ -477,7 +507,6 @@
 		}
 		@include media-breakpoint-down(md) {
 			display: block;
-			// max-width: rem(140);
 		}
 		@include media-breakpoint-up(lg) {
 			br {
@@ -549,7 +578,7 @@
 		&:hover {
 			color: #EDA65D;
 		}
-				
+
 		&::after {
 			content: "";
 			position: absolute;
@@ -563,8 +592,11 @@
 	}
 }
 
-
-
-.screen {
-	// opacity: 0.6;
+@include media-breakpoint-down(lg) {
+	.sticky-js {
+		position: static !important;		
+	}
+	.sticky-spacer {
+		display: none !important;
+	}
 }

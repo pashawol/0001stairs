@@ -176,6 +176,13 @@ function eventHandler() {
 			$(this).toggleClass("active");
 		});
 	});
+
+	$('.sticky-js').hcSticky({
+		stickTo: $('.card')[0],
+		top: 100,
+		innerTop: 50
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
