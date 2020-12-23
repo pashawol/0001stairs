@@ -67,7 +67,7 @@ mixin card()
 								.col-auto
 									+e.SPAN.count.text-primary 1
 								.col
-									+e.STRONG.add 	Стандартная комплектация #[strong Брус 150*150]
+									+e.add 	Стандартная комплектация #[strong Брус 150*150]
 								.col-auto.strong.text-primaryl 3 000 руб
 								.col-auto
 									+e.BUTTON.reset(type="button") Сбросить
@@ -75,7 +75,7 @@ mixin card()
 								.col-auto
 									+e.SPAN.count.text-primary 2
 								.col
-									+e.STRONG.add Доставка и разгрузка
+									+e.add Доставка и разгрузка
 								.col-auto.strong.text-primaryl 3 000 руб
 								.col-auto
 									+e.BUTTON.reset(type="button") Сбросить
@@ -83,7 +83,7 @@ mixin card()
 								.col-auto
 									+e.SPAN.count.text-primary 3
 								.col
-									+e.STRONG.add 	 Замена кровли - оцинкованный проф. лист на ондулин 
+									+e.add 	 Замена кровли - оцинкованный проф. лист на ондулин 
 								.col-auto.strong.text-primaryl 3 000 руб
 								.col-auto
 									+e.BUTTON.reset(type="button") Сбросить
@@ -142,8 +142,8 @@ mixin card()
 									+e.header
 										+e.tittle
 											H3 Стандартная комплектация
-										+e.instruction
-											p Выберите необходимое сечение бруса (100&times;150&nbsp;мм или 150&times;150&nbsp;мм). Далее нажмите на&nbsp;необходимые пункты в&nbsp;таблице для добавления в&nbsp;комплектацию и&nbsp;расчета стоимости.
+										//- +e.instruction
+										//- 	p Выберите необходимое сечение бруса (100&times;150&nbsp;мм или 150&times;150&nbsp;мм). Далее нажмите на&nbsp;необходимые пункты в&nbsp;таблице для добавления в&nbsp;комплектацию и&nbsp;расчета стоимости.
 									+e.TABLE.st-body
 										mixin st-body(d,f)
 												+e.TR.t-row

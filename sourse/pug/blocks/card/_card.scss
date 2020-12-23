@@ -147,6 +147,7 @@
 	}
 	table {
 		width: 100%;
+		margin-bottom: rem(30);
 	}
 
 	td {
@@ -372,7 +373,8 @@
 	h3 {
 		// font-size: rem(30);
 		@include rfs(30px);
-		line-height: calc(30 / 16);
+		// line-height: calc(30 / 16);
+		margin-bottom: rem(20);
 		@include media-breakpoint-down(xs) {
 			// display: none;
 		}
@@ -648,7 +650,9 @@
 		}
 	}
 }
-
+.sticky-js{
+	z-index: 1000;
+}
 @include media-breakpoint-down(lg) {
 	.sticky-js {
 		position: static !important;		
