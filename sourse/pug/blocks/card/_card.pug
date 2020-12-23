@@ -61,12 +61,35 @@ mixin card()
 										+e.deliv-price
 											+e.value--sm 23&nbsp;000&nbsp;P.
 											+e.reach в&nbsp;пределах 500&nbsp;км от&nbsp;г. Пестово
+						+e.add-opt.d-none.d-lg-block
+							.strong Выбранная комплектация:
+							.row.row--sm
+								.col-auto
+									+e.SPAN.count.text-primary 1
+								.col
+									+e.STRONG.add 	Стандартная комплектация #[strong Брус 150*150]
+								.col-auto.strong.text-primaryl 3 000 руб
+								.col-auto
+									+e.BUTTON.reset(type="button") Сбросить
+							.row.row--sm
+								.col-auto
+									+e.SPAN.count.text-primary 2
+								.col
+									+e.STRONG.add Доставка и разгрузка
+								.col-auto.strong.text-primaryl 3 000 руб
+								.col-auto
+									+e.BUTTON.reset(type="button") Сбросить
+							.row.row--sm
+								.col-auto
+									+e.SPAN.count.text-primary 3
+								.col
+									+e.STRONG.add 	 Замена кровли - оцинкованный проф. лист на ондулин 
+								.col-auto.strong.text-primaryl 3 000 руб
+								.col-auto
+									+e.BUTTON.reset(type="button") Сбросить
 						.row
 								.col-6.d-none.d-xl-block
-									+e.add-opt
-										+e.SPAN.count.text-primary 1
-										+e.STRONG.add дополнительная опция
-										+e.BUTTON.reset(type="button") Сбросить
+								 
 								.col-6.d-none.d-xl-block
 									+e.value.text-right Итого: 173&nbsp;000&nbsp;р.
 						.row
@@ -187,6 +210,9 @@ mixin card()
 								+e.SPAN.count.text-primaryl 1
 								+e.BUTTON.reset(type="button")
 									strong дополнительная опция&nbsp;&nbsp;
+							+e.add-opt 
+								+e.BUTTON.reset(type="button")
+									strong Доставка
 						.col-auto.d-flex.align-items-center
 							+e.A.btn.btn-3d.btn-primary(href="#") Заказать
 

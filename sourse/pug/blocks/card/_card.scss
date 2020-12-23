@@ -191,7 +191,7 @@
 		}
 
 		.btn-input-bath__input[type="checkbox"] ~ .btn-input-bath__text {
-			border: none;
+			// border: none;
 		}
 		
 		.btn-input-bath__input[type="checkbox"]:checked ~ .btn-input-bath__text {
@@ -414,16 +414,16 @@
 		text-decoration: underline;
 		&::before {
 			content: "";
-			position: absolute;
+			 
 			width: rem(14);
-			height: rem(12);
-			left: rem(1);
-			top: rem(2);
+			height: rem(12); 
+			display: inline-block;
+			margin-right: rem(5);
+			position: relative;
+			top: em(3);
 			background: url(../img/svg/photo.svg) no-repeat center;
 			z-index: 1;
-			@include media-breakpoint-down(md) {
-				top: rem(4);
-			}
+			 
 		}
 		&:hover {
 			text-decoration: none;
@@ -660,4 +660,8 @@
 .text-primaryl{
 	color: #EDA65D;
 
+}
+
+.row--sm{
+	@include roww(5);
 }
