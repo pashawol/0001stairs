@@ -34,6 +34,77 @@ $output-bourbon-deprecation-warnings: false;
 	clip: rect(0 0 0 0);
 	overflow: hidden;
 }
+
+
+.top-line {
+
+	@include media-breakpoint-down(xs) {
+		.s-chats--whatsupp_h {
+			width: 100%;
+			justify-content: space-between;
+		}
+
+		.s-chats--whatsupp_h a {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			background-color: #55CD6C;
+			margin-left: rem(-7);
+			text-decoration: none;
+			&:hover{
+				background-color: #60E67A;
+			}
+		}
+
+		.s-chats--whatsupp_h span:nth-child(1) {
+			display: block;
+			margin: 0 auto;
+			font-weight: 700;
+		}
+
+		.s-chats__imgWrap {
+			display: flex;
+			width: rem(60);
+			height: rem(40);
+			justify-content: center;
+			align-items: center;
+			background-color: #4DBA62;
+			margin-right: rem(-7);
+		}
+
+		.s-chats__imgWrap img {
+			width: rem(26);
+			height: rem(26);
+		}
+	}
+
+
+	.s-chats--whatsupp_h a {
+		@include media-breakpoint-up(sm) {
+			position: fixed;
+			bottom: 150px;
+			right: 5px;
+		}
+
+		@include media-breakpoint-up(xl) {
+			right: 25px;
+		}
+		
+	}
+	.s-chats--whatsupp_h span:nth-child(1) {
+		@include media-breakpoint-up(sm) {
+			display: none;
+		}
+	}
+	
+	.s-chats--whatsupp_h span:nth-child(1) {
+		@include media-breakpoint-down(lg) {
+			color: #000;
+		}
+	}
+		
+}
 @import '../pug/blocks/sStandartEquipment/_sStandartEquipment.scss';
 @import '../pug/blocks/header-block/_header-block.scss';
 @import '../pug/blocks/footer/_footer.scss';

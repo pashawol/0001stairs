@@ -94,6 +94,14 @@
   &__col{
     text-align: right;
   }
+
+  .s-chats--whatsupp_h {
+
+    span:nth-child(1) {
+      display: none;
+    }
+
+  }
 // 
 @include media-breakpoint-up(xl) {}
 
