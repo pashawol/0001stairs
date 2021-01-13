@@ -43,7 +43,7 @@ mixin card()
 						.row
 							.col-lg-4
 								+b.LABEL.btn-input-bath
-									+e.INPUT.input(type="radio" name="cut")
+									+e.INPUT.input(type="radio" name="cut" checked)
 									+e.DIV.text
 										+e.size Сечение <br/> 90&times;140
 										+e.value 170&nbsp;000&nbsp;P.
@@ -55,18 +55,41 @@ mixin card()
 										+e.value 170&nbsp;000&nbsp;P.
 							.col-lg-4
 								+b.LABEL.btn-input-bath
-									+e.INPUT.input(type="checkbox")
+									+e.INPUT.input(type="checkbox" checked)
 									+e.DIV.text
 										+e.size Доставка <br/> и&nbsp;разгрузка
 										+e.deliv-price
 											+e.value--sm 23&nbsp;000&nbsp;P.
 											+e.reach в&nbsp;пределах 500&nbsp;км от&nbsp;г. Пестово
+						+e.add-opt.d-none.d-lg-block
+							.strong Выбранная комплектация:
+							.row.row--sm
+								.col-auto
+									+e.SPAN.count.text-primary 1
+								.col
+									+e.add 	Стандартная комплектация  Брус 150*150
+								.col-auto.strong.text-primaryl 3 000 руб
+								.col-auto
+									+e.BUTTON.reset(type="button") Сбросить
+							.row.row--sm
+								.col-auto
+									+e.SPAN.count.text-primary 2
+								.col
+									+e.add Доставка и разгрузка
+								.col-auto.strong.text-primaryl 3 000 руб
+								.col-auto
+									+e.BUTTON.reset(type="button") Сбросить
+							.row.row--sm
+								.col-auto
+									+e.SPAN.count.text-primary 3
+								.col
+									+e.add 	 Замена кровли - оцинкованный проф. лист на ондулин 
+								.col-auto.strong.text-primaryl 3 000 руб
+								.col-auto
+									+e.BUTTON.reset(type="button") Сбросить
 						.row
 								.col-6.d-none.d-xl-block
-									+e.add-opt
-										+e.SPAN.count.text-primary 1
-										+e.STRONG.add дополнительная опция
-										+e.BUTTON.reset(type="button") Сбросить
+								 
 								.col-6.d-none.d-xl-block
 									+e.value.text-right Итого: 173&nbsp;000&nbsp;р.
 						.row
@@ -119,8 +142,8 @@ mixin card()
 									+e.header
 										+e.tittle
 											H3 Стандартная комплектация
-										+e.instruction
-											p Выберите необходимое сечение бруса (100&times;150&nbsp;мм или 150&times;150&nbsp;мм). Далее нажмите на&nbsp;необходимые пункты в&nbsp;таблице для добавления в&nbsp;комплектацию и&nbsp;расчета стоимости.
+										//- +e.instruction
+										//- 	p Выберите необходимое сечение бруса (100&times;150&nbsp;мм или 150&times;150&nbsp;мм). Далее нажмите на&nbsp;необходимые пункты в&nbsp;таблице для добавления в&nbsp;комплектацию и&nbsp;расчета стоимости.
 									+e.TABLE.st-body
 										mixin st-body(d,f)
 												+e.TR.t-row
@@ -182,11 +205,14 @@ mixin card()
 						.col
 							+e.DIV.text
 								+e.size Сечение: 90&times;140
-								+e.value 170&nbsp;000&nbsp;P.
+								+e.value.strong.text-primaryl 170&nbsp;000&nbsp;P.
 							+e.add-opt
-								+e.SPAN.count.text-primary 1
+								+e.SPAN.count.text-primaryl 1
 								+e.BUTTON.reset(type="button")
-									strong дополнительная опция
+									strong дополнительная опция&nbsp;&nbsp;
+							+e.add-opt 
+								+e.BUTTON.reset(type="button")
+									strong Доставка
 						.col-auto.d-flex.align-items-center
 							+e.A.btn.btn-3d.btn-primary(href="#") Заказать
 
