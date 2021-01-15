@@ -36,6 +36,9 @@ $output-bourbon-deprecation-warnings: false;
 	overflow: hidden;
 }
 
+.catalog  {
+	padding-top: rem(5) !important;
+}
 
 .top-line {
 
@@ -43,6 +46,7 @@ $output-bourbon-deprecation-warnings: false;
 		.s-chats--whatsupp_h {
 			width: 100%;
 			justify-content: space-between;
+			margin-bottom: 0;
 		}
 
 		.s-chats--whatsupp_h a {
