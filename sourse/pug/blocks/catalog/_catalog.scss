@@ -324,8 +324,13 @@
 	padding: rem(20);
 	margin: 0 auto;
 	min-height: calc(100% - #{rem(30)});
-	margin-bottom: rem(25);
-	&:hover {
+	margin-bottom: rem(25);	
+	@include media-breakpoint-down(sm) {
+		padding: rem(15) rem(15) rem(10) rem(15);
+		margin-bottom: rem(20);
+	}
+
+	&__caption:hover {
 		.catalog-item__btn {
 			background-color: #F7CBA1;
 			border-color: #F7CBA1;
@@ -334,11 +339,6 @@
 		.catalog-item__tittle {
 			text-decoration: underline;
 		}
-	}
-	@include media-breakpoint-down(sm) {
-		padding: rem(15) rem(15) rem(10) rem(15);
-		margin-bottom: rem(20);
-
 	}
 
 	.row {
