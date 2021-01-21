@@ -415,6 +415,7 @@
 		position: relative;
 		// padding-left: rem(22);
 		text-decoration: underline;
+		white-space: nowrap;
 		&::before {
 			content: "";
 			 
