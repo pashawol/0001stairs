@@ -216,8 +216,11 @@ mixin card()
 									strong Доставка
 						.col-auto.d-flex.align-items-center
 							+e.A.btn.btn-3d.btn-primary(href="#") Заказать
-
-			+e.H2.foot-tittle Реальные фото бани
+			.row
+				.col
+					+e.H2.foot-tittle Реальные фото бани
+				.col-auto
+					.sPhotoVideo__slideNav
 			+e.sliderRow
 					.photoSlider-js
 						- for (var x = 1; x < 6; x++)

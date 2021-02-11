@@ -76,33 +76,34 @@
 		align-items: center;
 		justify-content: space-between;
 		width: 100px;
-	}
-
-	.slick-arrow {
-		outline: none;
-		width: 26px;
-		height: 14px;
-		padding: 0;
-		border: none;
-		background-color: #fff;
-		color: transparent;
-		font-size: 0;
-		background-image: url('../img/svg/arrow.svg');
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: 26px 14px;
-		position: static;
-	}
-
-	.slick-prev {
-		background-image: url('../img/svg/arrow-l.svg');
-	}
-
-	&__slide {
-		padding-left: 16.5px;
-		padding-right: 16.5px;
-		margin-bottom: rem(33);
-
+		
+			.slick-arrow {
+				outline: none;
+				width: 26px;
+				height: 14px;
+				padding: 0;
+				border: none;
+				background-color: #fff;
+				color: transparent;
+				font-size: 0;
+				background-image: url('../img/svg/arrow.svg');
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 26px 14px;
+				position: static;
+			}
+		
+			.slick-prev {
+				background-image: url('../img/svg/arrow-l.svg');
+			}
+		
+			&__slide {
+				padding-left: 16.5px;
+				padding-right: 16.5px;
+				margin-bottom: rem(33);
+		
+			}
+			
 	}
 	.photoSlider-js {
 		margin-left: -16.5px;

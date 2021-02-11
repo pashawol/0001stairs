@@ -142,7 +142,7 @@ function eventHandler() {
 		});
 	});
 	$('.sticky-js').hcSticky({
-		stickTo: $('.card__inner')[0],
+		stickTo: $('.card')[0],
 		top: 140,
 		innerTop: 50,
 		bottomEnd: 1065

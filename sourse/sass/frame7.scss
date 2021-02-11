@@ -111,6 +111,18 @@ $output-bourbon-deprecation-warnings: false;
 	}
 		
 }
+.header-block__item{
+	display: flex !important;
+  flex-direction: column;
+	min-height: calc(100% - 20px);
+}
+.header-block__item-text--title{
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 @import '../pug/blocks/sStandartEquipment/_sStandartEquipment.scss';
 @import '../pug/blocks/header-block/_header-block.scss';
 @import '../pug/blocks/footer/_footer.scss';
