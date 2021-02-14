@@ -23,7 +23,7 @@ function eventHandler() {
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/frame10.jpg);"></div>'); // /добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Frame10-1.jpg);"></div>'); // /добавляет подложку для pixel perfect
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {
@@ -143,9 +143,9 @@ function eventHandler() {
 	});
 	$('.sticky-js').hcSticky({
 		stickTo: $('.card')[0],
-		top: 140,
+		top: 150,
 		innerTop: 50,
-		bottomEnd: 1065
+		bottomEnd: 948
 	});
 }
 
