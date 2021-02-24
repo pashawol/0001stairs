@@ -28,99 +28,99 @@ mixin card()
 							//- 	+e.imgWrap(href="img/@2x/bath.jpg" tabindex="0" data-fancybox="appearance")
 							//- 		img(src=`img/@2x/bath.jpg`, loading="lazy" alt="")
 					.col-xl-6
-						.sticky-js
-							.row
-								.col-4.col-xl-3
-									+e.DIV.size--top Размер:
-									+e.DIV.value 7&times;2,3&nbsp;м
-								.col-4.col-xl-3
-									+e.DIV.size--top Площадь:
-									+e.DIV.value 150м2
-								.col-4.col-xl-3
-									+e.DIV.size--top Сроки:
-									+e.DIV.value 14&nbsp;дней
+						.row
+							.col-4.col-xl-3
+								+e.DIV.size--top Размер:
+								+e.DIV.value 7&times;2,3&nbsp;м
+							.col-4.col-xl-3
+								+e.DIV.size--top Площадь:
+								+e.DIV.value 150м2
+							.col-4.col-xl-3
+								+e.DIV.size--top Сроки:
+								+e.DIV.value 14&nbsp;дней
 
-							+e.c-complect.pt-4 Выберите комплектацию:
+						+e.c-complect.pt-4 Выберите комплектацию:
+						.row
+							.col-lg-6
+								+b.LABEL.btn-input-bath
+									+e.INPUT.input(type="radio" name="cut" checked)
+									+e.SPAN.text
+										+e.SPAN.size Под усадку
+										+e.SPAN.value 170&nbsp;000&nbsp;P.
+							.col-lg-6
+								+b.LABEL.btn-input-bath
+									+e.INPUT.input(type="radio" name="cut")
+									+e.SPAN.text
+										+e.SPAN.size Под ключ
+										+e.SPAN.value 170&nbsp;000&nbsp;P.
+						+e.c-complect Выберите сечение:
+						.row
+							.col-lg-6
+								+b.LABEL.btn-input-bath
+									+e.INPUT.input(type="radio" name="cut-1" checked)
+									+e.SPAN.text
+										+e.SPAN.size 110*140
+										+e.SPAN.value 170&nbsp;000&nbsp;P.
+							.col-lg-6
+								+b.LABEL.btn-input-bath
+									+e.INPUT.input(type="radio" name="cut-1")
+									+e.SPAN.text
+										+e.SPAN.size 110*140
+										+e.SPAN.value 170&nbsp;000&nbsp;P.
+							.col-auto
+								+b.LABEL.btn-input-delivery
+									+e.INPUT.input(type="checkbox")
+									+e.lab
+									+e.SPAN.text
+										+e.SPAN.size Доставка и&nbsp;разгрузка
+										+e.deliv-price
+										+e.reach в&nbsp;пределах 500&nbsp;км от&nbsp;г. Пестово
+									+e.value--sm 23&nbsp;000&nbsp;P.
+						//- +e.add-opt.d-none.d-lg-block
+						//- 	.strong Выбранная комплектация:
+						//- 	.row.row--sm
+						//- 		.col-auto
+						//- 			+e.SPAN.count.text-primary 1
+						//- 		.col
+						//- 			+e.add 	Стандартная комплектация  Брус 150*150
+						//- 		.col-auto.strong.text-primaryl 3 000 руб
+						//- 		.col-auto
+						//- 			+e.BUTTON.reset(type="button") Сбросить
+						//- 	.row.row--sm
+						//- 		.col-auto
+						//- 			+e.SPAN.count.text-primary 2
+						//- 		.col
+						//- 			+e.add Доставка и разгрузка
+						//- 		.col-auto.strong.text-primaryl 3 000 руб
+						//- 		.col-auto
+						//- 			+e.BUTTON.reset(type="button") Сбросить
+						//- 	.row.row--sm
+						//- 		.col-auto
+						//- 			+e.SPAN.count.text-primary 3
+						//- 		.col
+						//- 			+e.add 	 Замена кровли - оцинкованный проф. лист на ондулин 
+						//- 		.col-auto.strong.text-primaryl 3 000 руб
+						//- 		.col-auto
+						//- 			+e.BUTTON.reset(type="button") Сбросить
+						
+						+e.final-price.d-none.d-xl-block.sticky-js
 							.row
-								.col-lg-6
-									+b.LABEL.btn-input-bath
-										+e.INPUT.input(type="radio" name="cut" checked)
-										+e.SPAN.text
-											+e.SPAN.size Под усадку
-											+e.SPAN.value 170&nbsp;000&nbsp;P.
-								.col-lg-6
-									+b.LABEL.btn-input-bath
-										+e.INPUT.input(type="radio" name="cut")
-										+e.SPAN.text
-											+e.SPAN.size Под ключ
-											+e.SPAN.value 170&nbsp;000&nbsp;P.
-							+e.c-complect Выберите сечение:
+								.col-6.d-none.d-xl-block
+									+e.add-opt.d-none.d-lg-block
+										.row.row--sm
+											.col-auto
+												+e.SPAN.count.text-primary 1
+											.col
+												+e.add дополнительная опция
+											.col-auto
+												+e.BUTTON.reset(type="button") Сбросить
+								.col-6.d-none.d-xl-block
+									+e.value--sm.text-right ИТОГО: 173&nbsp;000&nbsp;р.
 							.row
-								.col-lg-6
-									+b.LABEL.btn-input-bath
-										+e.INPUT.input(type="radio" name="cut-1" checked)
-										+e.SPAN.text
-											+e.SPAN.size 110*140
-											+e.SPAN.value 170&nbsp;000&nbsp;P.
-								.col-lg-6
-									+b.LABEL.btn-input-bath
-										+e.INPUT.input(type="radio" name="cut-1")
-										+e.SPAN.text
-											+e.SPAN.size 110*140
-											+e.SPAN.value 170&nbsp;000&nbsp;P.
-								.col-auto
-									+b.LABEL.btn-input-delivery
-										+e.INPUT.input(type="checkbox")
-										+e.lab
-										+e.SPAN.text
-											+e.SPAN.size Доставка и&nbsp;разгрузка
-											+e.deliv-price
-											+e.reach в&nbsp;пределах 500&nbsp;км от&nbsp;г. Пестово
-										+e.value--sm 23&nbsp;000&nbsp;P.
-							//- +e.add-opt.d-none.d-lg-block
-							//- 	.strong Выбранная комплектация:
-							//- 	.row.row--sm
-							//- 		.col-auto
-							//- 			+e.SPAN.count.text-primary 1
-							//- 		.col
-							//- 			+e.add 	Стандартная комплектация  Брус 150*150
-							//- 		.col-auto.strong.text-primaryl 3 000 руб
-							//- 		.col-auto
-							//- 			+e.BUTTON.reset(type="button") Сбросить
-							//- 	.row.row--sm
-							//- 		.col-auto
-							//- 			+e.SPAN.count.text-primary 2
-							//- 		.col
-							//- 			+e.add Доставка и разгрузка
-							//- 		.col-auto.strong.text-primaryl 3 000 руб
-							//- 		.col-auto
-							//- 			+e.BUTTON.reset(type="button") Сбросить
-							//- 	.row.row--sm
-							//- 		.col-auto
-							//- 			+e.SPAN.count.text-primary 3
-							//- 		.col
-							//- 			+e.add 	 Замена кровли - оцинкованный проф. лист на ондулин 
-							//- 		.col-auto.strong.text-primaryl 3 000 руб
-							//- 		.col-auto
-							//- 			+e.BUTTON.reset(type="button") Сбросить
-							+e.final-price.d-none.d-xl-block
-								.row
-									.col-6.d-none.d-xl-block
-										+e.add-opt.d-none.d-lg-block
-											.row.row--sm
-												.col-auto
-													+e.SPAN.count.text-primary 1
-												.col
-													+e.add дополнительная опция
-												.col-auto
-													+e.BUTTON.reset(type="button") Сбросить
-									.col-6.d-none.d-xl-block
-										+e.value--sm.text-right ИТОГО: 173&nbsp;000&nbsp;р.
-								.row
-									.col-6.d-none.d-xl-block
-										+e.A.btn.btn-3d.btn-primary(href="#") Заказать
-									.col-6.d-none.d-xl-block
-										+e.A.btn.btn-3d.btn-primary--light(href="#") Сохранить себе
+								.col-6.d-none.d-xl-block
+									+e.A.btn.btn-3d.btn-primary(href="#") Заказать
+								.col-6.d-none.d-xl-block
+									+e.A.btn.btn-3d.btn-primary--light(href="#") Сохранить себе
 
 				+b.complectation
 					.row

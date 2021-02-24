@@ -141,12 +141,17 @@ function eventHandler() {
 			$(this).toggleClass("active");
 		});
 	});
-	$('.sticky-js').hcSticky({
-		stickTo: $('.card')[0],
-		top: 150,
-		innerTop: 50,
-		bottomEnd: 948
-	});
+
+	if ($('.sticky-js').length) {
+		$('.sticky-js').hcSticky({
+			stickTo: $('.card__inner')[0],
+			top: 140,
+			innerTop: 50,
+			bottomEnd: 65
+		});
+	}
+
+	;
 }
 
 ;
