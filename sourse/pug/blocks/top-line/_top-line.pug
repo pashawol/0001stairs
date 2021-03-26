@@ -30,3 +30,41 @@ mixin top-line()
 						img.res-i(src="img/svg/whatsapp.svg" data-src="img/svg/whatsapp.svg" alt="")
 
 	// end .top-line
+
+mixin top-line-canopy()
+	// start .top-line
+	+b.top-line.block-with-lazy
+		.container
+			.row
+				+e.col-logo.col-lg.col-auto
+					.row
+						.col-lg-auto
+							+e.logo-wrapper
+								a(href="/")
+									img(src="img/svg/canopy.svg", alt="")
+						.col
+							+e.logo-wrapper-caption Изготовление и&nbsp;монтаж навесов в&nbsp;Москве и&nbsp;Московской Области
+				.col-lg-auto.col
+					+e.row.row
+						.col-auto.text-right.order-lg-last
+							+e.tel(href="tel:+74952122320") +7 495 212 23 20
+							+time().d-none.d-lg-block
+						.col-auto.order
+							+e.btn.btn-primary.link-modal(href="#modal-call" data-order="Заказать звонок" data-title='Заказать звонок' data-text="Оставьте заявку и наш менеджер перезвонит вам!" data-btn="ЗАКАЗАТЬ ЗВОНОК")
+								+icon("telephone")
+								| Заказать звонок
+						.col-auto.measure
+							+e.btn.btn-primary.link-modal(href="#modal-call" data-order="Вызвать замерщика" data-title='Вызвать замерщика' data-text="Оставьте заявку и наш замерщик приедет к вам!" data-btn="ВЫЗВАТЬ ЗАМЕРЩИКА")
+								+icon("rule")
+								| Вызвать замерщика
+						.col-auto.d-lg-none
+							+b.toggle-menu-mobile--js
+								span
+						+time().col-12.d-lg-none.text-right
+
+mixin time()
+	.top-nav__time&attributes(attributes)
+		+icon("time-left")
+		span.smallest Мы работаем:
+		| 
+		strong Пн-Вс 09:00&nbsp;&mdash; 21:00

@@ -27,7 +27,7 @@ html {
 }
 
 body {
-	min-width: 320px;
+	min-width: 375px;
 	position: relative;
 
 	&::before {
@@ -78,7 +78,7 @@ body {
 
 .bg-body {
 	h2 {
-		color: #ffffff;
+		color: $white;
 	}
 }
 

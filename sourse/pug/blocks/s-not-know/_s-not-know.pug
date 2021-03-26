@@ -34,3 +34,32 @@ mixin s-not-know()
 					+e.item-title Материал и&nbsp;нагрузки
 				+item("5",'Посчитаем точную смету')
 	// end s-not-know
+
+mixin s-not-know2()
+	// start s-not-know
+	+b.SECTION.s-not-know2.bg-body#s-not-know&attributes(attributes)
+		.container
+			.row
+				.col-lg-6
+				.col-lg-6
+					+b.form-wrap
+						+b.section-title--sm
+							h2 НЕ&nbsp;ЗНАЕТЕ #[br.d-none.d-lg-block]КАКОЙ #[br.d-md-none] НАВЕС ВЫБРАТЬ?#[br] #[span.text-primary МЫ&nbsp;ПОМОЖЕМ!]
+						+e.text Мы&nbsp;направим к&nbsp;вам замерщика, который снимет все размеры и&nbsp;предложит конструкцию навеса, подходящую именно вам.
+						.row
+							.col-lg-12.col-md-6
+								.row.row--sm
+									.col-lg
+										+e.INPUT.input(type='tel' placeholder='+7___ ___ __ __' name='tel')
+									.col-lg-auto.text-center.text-md-left
+										+e.btn.btn-primary(type="submit") Вызвать замерщика
+								+b.polite-canopy
+									+b.LABEL.custom-input-2
+										+e.INPUT.input(type="checkbox" checked)
+										+e.SPAN.label
+										+e.SPAN.text Я согласен(а) с условиями передачи информации
+								+e.free.text-primary Выезд замерщика&nbsp;&minus; БЕСПЛАТЕН!
+							.col-lg-12.col-md-6.order-md-first
+								+e.img-wrap
+									img(src="img/@2x/s-not-know-1.png", alt="")
+	// end s-not-know

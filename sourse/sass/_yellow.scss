@@ -38,7 +38,8 @@ $colors: () !default;
 $colors: map-merge((), $colors);
 
 
-$primary: #ffce54 !default;
+$primary: #FFCF64 !default;
+// $primary: #ffce54 !default;
 // $primary: #ff7c00 !default;
 $secondary: $gray-600 !default;
 $success: $green !default;

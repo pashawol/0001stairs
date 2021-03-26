@@ -102,11 +102,22 @@ mixin soc()
 mixin mnu()
 	-
 		var nav= { 
-		"КАТАЛОГ ЛЕСТНИЦ":"#s-production",
-		"ЦЕНЫ НА ЛЕСТНИЦЫ":"#s-examples",
-		"НАШИ РАБОТЫ":"#s-cases",
-		"ОТЗЫВЫ":"#s-rew",
-		"КОНТАКТЫ":"#s-contact"}
+		"КАЛЬКУЛЯТОР":"#",
+		"ПРАЙС-ЛИСТ":"#",
+		"КАТАЛОГ":"#",
+		"НАШИ РАБОТЫ":"#",
+		"УСЛУГИ":"#"}
+	ul.menu
+		li.menu-item.menu-item-has-children 
+		each linkPatch, linkName in nav
+			li.menu-item: a(href= linkPatch)= linkName
+
+mixin mnu2()
+	-
+		var nav= { 
+		"АКЦИИ":"#",
+		"КОНТАКТЫ":"#s-contact"
+		}
 	ul.menu
 		li.menu-item.menu-item-has-children 
 		each linkPatch, linkName in nav
@@ -180,6 +191,28 @@ mixin prod(st)
 					.h6.strong 24 870 ₽ м/п
 				+e.btn.link-modal(href="#modal-call" data-order=`Заказать монтаж - ${t}` data-title='Закажите лестницу' data-text=" Оставьте заявку и наш менеджер произведет точные расчеты вашей лестницы!" data-btn="ОТПРАВИТЬ")  Заказать монтаж
 	// /+b.prod-item
+
+mixin prod2(st)
+	+b.prod-item-popular
+		+pic("s-popular-img.png",'','lazy',0)
+		+e.caption
+			+e.table
+				mixin tr(t1, t2)
+					.row
+						+e.col.col.fw-500= t1
+						+e.col.col-auto.strong= t2
+				+tr("Наименование:",'НАВЕС Н-1630')
+				+tr("Ширина:",'3 метра')
+				+tr("Длина:",'6 метров')
+				+tr("Высота:",'2,5 метра')
+				+tr("Тип навеса:",'арочный')
+				+tr("Материал кровли:",'поликарбонат')
+			+e.foot
+				+e.item-price
+					.strong от&nbsp;57&nbsp;600&nbsp;₽
+				+e.btn.link-modal(href="#modal-call" data-order="Заказать навес" data-title="Закажите навес" data-text="Оставьте заявку, и наш менеджер направит к вам инженера-замерщика для подписания договора!" data-btn="Заказать навес") Заказать
+			+e.link.text-center(href="#") Примеры работ
+	// /+b.prod2-item
  
 		 
 //- /picture

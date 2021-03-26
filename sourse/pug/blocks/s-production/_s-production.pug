@@ -35,3 +35,32 @@ mixin s-production()
 				+item("15","Перила и ограждения ")
 				+item("16"," Антресольные этажи")
 	// end s-production
+
+mixin s-production-canopy()
+	// start s-production-canopy
+	+b.SECTION.s-production-canopy.section&attributes(attributes)
+		.container
+			+b.section-title--sm.text-center
+				h2 ПРОИЗВОДИМ НАВЕСЫ ДЛЯ ЛЮБЫХ НУЖД
+			.row.justify-content-center.justify-content-sm-start.roww
+				mixin item(l, t)
+					.col-auto.col-xl-2.col-lg-3.col-md-4.col-sm-6
+						+e.item(href=`${l}`)!= t
+				+item(`#`, `Навесы для авто и&nbsp;парковок`)
+				+item(`#`, `Навесы для дачи`)
+				+item(`#`, `Навесы к&nbsp;дому`)
+				+item(`#`, `Навес и&nbsp;террасы <br/> под ключ`)
+				+item(`#`, `Навесы <br/> для бассейна`)
+				+item(`#`, `Беседки`)
+				+item(`#`, `Навесы для <br/> мангала и&nbsp;барбекю`)
+				+item(`#`, `Крыльцо <br/> и&nbsp;козырьки`)
+				+item(`#`, `Ангары`)
+				+item(`#`, `Изготовление металлоконструкций`)
+				+item(`#`, `Кованые <br/> изделия`)
+				+item(`#`, `Лестницы`)
+				+item(`#`, `Ворота откатные, <br/> распашные`)
+				+item(`#`, `Заборы, <br/> ограждения`)
+				+item(`#`, `Деревянные <br/> навесы`)
+				+item(`#`, `Беседки из&nbsp;дерева`)
+
+	// end s-production-canopy

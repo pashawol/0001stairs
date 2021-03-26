@@ -6,7 +6,7 @@ mixin mob-mnu()
 			span
 		+e.inner
 		
-			+mnu() 
+			+mnu()
 			+e.btn-wrap
 				+e.btn.btn-primary.link-modal(href="#modal-call" data-order="Заказать звонок" data-title='Заказать звонок' data-text="Оставьте заявку и наш менеджер перезвонит вам!" data-btn="ЗАКАЗАТЬ ЗВОНОК")
 					+icon("telephone")
@@ -20,6 +20,7 @@ mixin mob-mnu()
 				| 
 				strong Пн-Вс 09:00&nbsp;&mdash; 21:00
 	//  мобильное меню
+	
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy.d-none.d-lg-block
@@ -28,10 +29,6 @@ mixin top-nav()
 				.col
 					+mnu()
 				.col-auto
-					+e.time
-						+icon("time-left")
-						span.smallest.d-none.d-xl-block Мы работаем: 
-						| 
-						strong Пн-Вс 09:00&nbsp;&mdash; 21:00
+					+mnu2()
 					
 	// end top-nav

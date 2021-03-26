@@ -147,3 +147,19 @@ mixin header-block-8(h1, i='header-bg-new')
 				+item("3","На моно косоуре","от 37 840 ₽")
 
 	// end header-block
+
+
+mixin header-block-canopy(h1, i='header-bg-canopy')
+	// start header-block
+	+b.header-block-c#header-block.bg-wrap
+		+pic(i,'bg')(class="picture-bg")
+		.container
+			.text-center.text-md-left
+				h1 ИЗГОТОВИМ И&nbsp;УСТАНОВИМ <br>
+					span.text-primary НАВЕС НА&nbsp;ЗАКАЗ
+				+e.text В&nbsp;МОСКВЕ И&nbsp;МО
+				+e.btn-wrap
+					+e.btn.btn-primary(href="#") РАССЧИТАТЬ СТОИМОСТЬ
+					+e.btn.btn-primary--outline.link-modal(href="#modal-call" data-order="Вызвать замерщика" data-title="Вызвать замерщика" data-text="Оставьте заявку и наш замерщик приедет к вам!" data-btn="ВЫЗВАТЬ ЗАМЕРЩИКА") ВЫЗВАТЬ ЗАМЕРЩИКА
+
+	// end header-block

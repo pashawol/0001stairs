@@ -34,16 +34,6 @@ function eventHandler() {
 		// $(".otz__item .text-wrap ").height('auto').equalHeights();
 		// 
 		// скрывает моб меню
-
-		const topH = $("header ").innerHeight();
-		$("header ").css("padding-top", $(".top-line").innerHeight())
-		$(window).scroll(function () {
-			if ($(window).scrollTop() > topH) {
-				$('.top-line  ').addClass('fixed');
-			} else {
-				$('.top-line  ').removeClass('fixed');
-			}
-		});
 		// конец добавил
 		if (window.matchMedia("(min-width: 992px)").matches) {
 
@@ -53,13 +43,33 @@ function eventHandler() {
 			$("body").removeClass("fixed");
 		}
 	}
-
 	$(window).resize(function () {
 		heightses();
 
 	});
 
 	heightses();
+
+	function whenResize() {
+		let topNav = document.querySelector('header');
+		if (!topNav) return;
+		// document.querySelector('body').style.paddingTop = topNav.offsetHeight + 'px';
+		console.log(topNav.offsetHeight);
+		
+		window.addEventListener('scroll', function (e) {
+			this.scrollY > 0
+				? topNav.classList.add('fixed')
+				: topNav.classList.remove('fixed');
+		}, { passive: true })
+
+	}
+
+	window.addEventListener('resize', () => {
+		whenResize();
+
+	}, { passive: true });
+
+	whenResize();
 
 	// листалка по стр
 	$(" .top-nav li a, .scroll-link").click(function () {
@@ -153,6 +163,32 @@ function eventHandler() {
 			breakpoint: 576,
 			settings: {
 				slidesToShow: 2,
+			}
+
+
+		}],
+
+	});
+	$('.s-sert-canopy__slider--js').slick({
+		...defaultSlide,
+		dots: false,
+		slidesToShow: 1,
+		arrows: true,
+		prevArrow: '<button type = "button" class = "slick-prev"></ button>',
+		nextArrow: '<button type = "button" class = "slick-next"></ button>',
+		responsive: [
+		// 	{
+		// 	breakpoint: 992,
+		// 	settings: {
+		// 		slidesToShow: 3,
+		// 	}
+
+		// },
+		 {
+			breakpoint: 576,
+			settings: {
+				slidesToShow: 3,
+				arrows: true,
 			}
 
 
@@ -273,6 +309,33 @@ const JSCCommon = {
 	// /inputMask
 
 };
+
+$(document).ready(function () {
+
+	let priceItem = document.querySelectorAll(".price__item--js");
+	let priceItemToggle = document.querySelectorAll(".s-price-canopy__header");
+	if (priceItem) {
+		priceItemToggle.forEach(function (el) {
+			el.addEventListener('click', function () {
+				let priceItemToggle = document.querySelectorAll('.s-price-canopy__header');
+				let self = this;
+
+				for (let item of priceItemToggle) {
+					let currContent = item.nextElementSibling;
+
+					if (item === self) {
+						item.classList.toggle('active');
+						currContent.classList.toggle('active');
+					}
+					else {
+						item.classList.remove('active');
+						currContent.classList.remove('active');
+					}
+				}
+			})
+		});
+	}
+});
 
 // JSCCommon.LazyFunction();
 /***/

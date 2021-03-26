@@ -1,5 +1,11 @@
 "use strict";
 
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -31,16 +37,7 @@ function eventHandler() {
 		// $(".otz__item .text-wrap ").height('auto').equalHeights();
 		// 
 		// скрывает моб меню
-
-		var topH = $("header ").innerHeight();
-		$("header ").css("padding-top", $(".top-line").innerHeight());
-		$(window).scroll(function () {
-			if ($(window).scrollTop() > topH) {
-				$('.top-line  ').addClass('fixed');
-			} else {
-				$('.top-line  ').removeClass('fixed');
-			}
-		}); // конец добавил
+		// конец добавил
 
 		if (window.matchMedia("(min-width: 992px)").matches) {
 			btnToggle.removeClass("on"); // $("body").removeClass("fixed");
@@ -53,7 +50,26 @@ function eventHandler() {
 	$(window).resize(function () {
 		heightses();
 	});
-	heightses(); // листалка по стр
+	heightses();
+
+	function whenResize() {
+		var topNav = document.querySelector('header');
+		if (!topNav) return; // document.querySelector('body').style.paddingTop = topNav.offsetHeight + 'px';
+
+		console.log(topNav.offsetHeight);
+		window.addEventListener('scroll', function (e) {
+			this.scrollY > 0 ? topNav.classList.add('fixed') : topNav.classList.remove('fixed');
+		}, {
+			passive: true
+		});
+	}
+
+	window.addEventListener('resize', function () {
+		whenResize();
+	}, {
+		passive: true
+	});
+	whenResize(); // листалка по стр
 
 	$(" .top-nav li a, .scroll-link").click(function () {
 		var elementClick = $(this).attr("href");
@@ -124,6 +140,26 @@ function eventHandler() {
 			breakpoint: 576,
 			settings: {
 				slidesToShow: 2
+			}
+		}]
+	}));
+	$('.s-sert-canopy__slider--js').slick(_objectSpread(_objectSpread({}, defaultSlide), {}, {
+		dots: false,
+		slidesToShow: 1,
+		arrows: true,
+		prevArrow: '<button type = "button" class = "slick-prev"></ button>',
+		nextArrow: '<button type = "button" class = "slick-next"></ button>',
+		responsive: [// 	{
+		// 	breakpoint: 992,
+		// 	settings: {
+		// 		slidesToShow: 3,
+		// 	}
+		// },
+		{
+			breakpoint: 576,
+			settings: {
+				slidesToShow: 3,
+				arrows: true
 			}
 		}]
 	}));
@@ -224,6 +260,41 @@ var JSCCommon = {
 		$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+9(999)999-99-99");
 	} // /inputMask
 
-}; // JSCCommon.LazyFunction();
+};
+$(document).ready(function () {
+	var priceItem = document.querySelectorAll(".price__item--js");
+	var priceItemToggle = document.querySelectorAll(".s-price-canopy__header");
+
+	if (priceItem) {
+		priceItemToggle.forEach(function (el) {
+			el.addEventListener('click', function () {
+				var priceItemToggle = document.querySelectorAll('.s-price-canopy__header');
+				var self = this;
+
+				var _iterator = _createForOfIteratorHelper(priceItemToggle),
+						_step;
+
+				try {
+					for (_iterator.s(); !(_step = _iterator.n()).done;) {
+						var item = _step.value;
+						var currContent = item.nextElementSibling;
+
+						if (item === self) {
+							item.classList.toggle('active');
+							currContent.classList.toggle('active');
+						} else {
+							item.classList.remove('active');
+							currContent.classList.remove('active');
+						}
+					}
+				} catch (err) {
+					_iterator.e(err);
+				} finally {
+					_iterator.f();
+				}
+			});
+		});
+	}
+}); // JSCCommon.LazyFunction();
 
 /***/

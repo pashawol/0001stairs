@@ -1,0 +1,42 @@
+mixin s-popular()
+	// start s-popular
+	+b.SECTION.s-popular.section#s-popular&attributes(attributes)
+		.container
+			+b.section-title--sm.text-center
+				h2 КАТАЛОГ ПОПУЛЯРНЫХ НАВЕСОВ
+				+e.text Мы&nbsp;строим навесы на&nbsp;заказ #[b по&nbsp;индивидуальным параметрам] каждого заказчика.
+
+			+b.filter
+				+e.top
+					.row.row--medium.justify-content-center.d-none.d-lg-flex
+						.col-auto
+							+b.LABEL.btn-input-filter
+								+e.INPUT.input(type="radio" name="dimension" checked)
+								+e.SPAN.text--primary По&nbsp;длине
+						.col-auto
+							+b.LABEL.btn-input-filter
+								+e.INPUT.input(type="radio" name="dimension")
+								+e.SPAN.text--primary По&nbsp;ширине
+					.row.justify-content-center.d-lg-none
+						.col-auto 
+							+b.input-wrap-filter
+								+select('', 'По длине', 'По ширине')
+
+				+e.bottom
+					.row.row--wide.justify-content-center
+						.col-auto
+							+b.LABEL.btn-input-filter
+								+e.INPUT.input(type="radio" name="dimension2" checked)
+								+e.SPAN.text--transparent 6&nbsp;метров
+						.col-auto
+							+b.LABEL.btn-input-filter
+								+e.INPUT.input(type="radio" name="dimension2")
+								+e.SPAN.text--transparent до&nbsp;8-10 метров
+						.col-sm-auto.text-center
+							+b.LABEL.btn-input-filter
+								+e.INPUT.input(type="radio" name="dimension2")
+								+e.SPAN.text--transparent 4-5 метров
+			+e.row.row
+				- for (var x = 0; x < 6; x++)
+					.col-prod.col-xl-4.col-md-6
+						+prod2

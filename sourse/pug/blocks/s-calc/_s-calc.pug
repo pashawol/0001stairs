@@ -129,3 +129,82 @@ mixin s-calc()
 									label(for='checkbox124') Я согласен(а) с условиями передачи информации
 
 	// end s-calc
+
+mixin s-calc2-body()
+	// start s-calc2
+	+b.SECTION.s-calc2.section#s-calc&attributes(attributes)
+		.container
+			+b.section-title--sm.text-center
+				h2 РАСCЧИТАЙТЕ СТОИМОСТЬ СВОЕГО НАВЕСА!
+			.row
+				.col-lg-5
+					+b.form-wrap
+						.row
+							.col-sm-5
+								+e.input-wrap--small
+									label
+										+e.SPAN.title * Длина (м):
+										+e.INPUT.input(type='text' placeholder='' name='text')
+								+e.input-wrap--small
+									label
+										+e.SPAN.title * Ширина (м):
+										+e.INPUT.input(type='text' placeholder='' name='text')
+							.col-sm-7
+								+select('Тип навеса:', 'Арочный', 'Арочный')
+								+select('* Материал кровли:', 'Поликарбонат', 'Поликарбонат')
+								+e.text Посчитать примерную стоимость навеса:
+								+e.btn.btn-primary(type="submit") Рассчитать
+				.col-lg-7
+					.row
+						.col-md-8.col-lg-7.col-xl-8
+							+e.table
+								mixin item(t1, t2)
+									.row
+										.col
+											+e.it!= t1
+										.col-auto
+											+e.it--strong!= t2
+								+item(`Ширина:`, `3&nbsp;м.`)
+								+item(`Длина:`, `6&nbsp;м.`)
+								+item(`Высота (по&nbsp;столбам):`, `2,5&nbsp;м.`)
+								+item(`Тип:`, `арочный`)
+								+item(`Покрытие:`, `поликарбонат`)
+								+item(`Металлических столбов:`, `5&nbsp;шт.`)
+								+item(`Силовых боковых балок:`, `3&nbsp;шт.`)
+								+item(`Металлических ферм:`, `3&nbsp;шт.`)
+								+item(`Обрешёток:`, `12&nbsp;шт.`)
+
+						.col-md-4.col-lg-5.col-xl-4
+							+e.total
+								.row.align-items-center.justify-content-center.justify-content-md-start
+									block
+								
+								+e.text Примерная стоимость. Для&nbsp;уточнения цены свяжитесь с&nbsp;нашим менеджером.
+								+e.btn.btn-primary.link-modal(href="#modal-call" data-order="Вызвать замерщика" data-title="Вызвать замерщика" data-text="Оставьте заявку и наш замерщик приедет к вам!" data-btn="ВЫЗВАТЬ ЗАМЕРЩИКА") СВЯЗАТЬСЯ С&nbsp;МЕНЕДЖЕРОМ
+								+e.link(href="#") Примеры выполненных навесов 
+
+	// end s-calc2
+
+mixin s-calc2()
+	+s-calc2-body()
+		.col-lg-12.col-auto
+			+e.result.text-primary 
+				span Итого:
+				+e.SPAN.discount.bg-primary -5%
+		.col-md-12.col-auto
+			+e.price 120 450 ₽
+
+
+mixin s-calc3()
+	+s-calc2-body()
+		.col-lg-12.col-auto
+			+e.result.text-primary 
+				span Итого:
+		.col-md-12.col-auto
+			+e.price 120 450 ₽
+
+mixin s-calc4()
+	+s-calc2-body()
+		.col
+			+e.top-text.text-primary Вы&nbsp;ещё не&nbsp;указали ни&nbsp;один из предложенных параметров
+

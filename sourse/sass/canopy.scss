@@ -1,0 +1,211 @@
+$output-bourbon-deprecation-warnings: false;
+// @import "mq";
+@import "bourbon/app/assets/stylesheets/bourbon";
+// @import "../../node_modules/rfs/scss";
+
+@import "mixin";
+@import "_yellow";
+// @import "vars";
+@import "fonts";
+@import "../../public/img/svg/_sprite";
+@import "bootstrap-theme/bootstrap";
+// @import "../libs/animate";
+// @import "fontawesome-pro-5.0.8/web-fonts-with-css/scss/fontawesome";
+// @import "fontawesome-pro-5.0.8/web-fonts-with-css/scss/fa-brands";
+// @import "fontawesome-pro-5.0.8/web-fonts-with-css/scss/fa-regular";
+// @import "fontawesome-pro-5.0.8/web-fonts-with-css/scss/fa-solid";
+// @import "fontawesome-pro-5.0.8/web-fonts-with-css/scss/fa-light";
+// @import "../libs/magnificPopup/magnific-popup.sass";
+// @import "../libs/swiper/swiper.min.css";
+// @import "../libs/select2-4.0.6-rc.1/dist/css/select2.min";
+// @import "../libs/dropzone";
+// @import "../libs/gijgo-master/dist/combined/css/gijgo";
+// @import "../libs/gijgo-master/dist/combined/css/demo.min";
+
+// @import "../libs/ion.rangeSlider/css/ion.rangeSlider.min.css";
+
+@import "base";
+.invisible {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.section-title {
+	&--sm {
+		h2 {
+			// color: $black;
+			font-size: rem(27);
+			font-weight: bold;
+			line-height: (36 / 30);
+			@include media-breakpoint-up(xl) {
+				font-size: rem(30);
+			}
+		}
+	}
+}
+
+.slick-arrow {
+	outline: none;
+	width: rem(24);
+	height: rem(38);
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	background-image: url("../img/svg/cevron-left.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	&:focus {
+		outline: none;
+	}
+}
+
+.slick-prev {
+}
+.slick-next {
+	background-image: url("../img/svg/cevron-right.svg");
+}
+
+.btn-primary {
+	@include mt;
+	&--outline {
+		max-width: rem(216);
+		padding: rem(11);
+		border-width: 3px;
+		color: $white;
+		background-color: transparent;
+		&:hover {
+			color: $black;
+			background-color: $primary;
+		}
+	}
+	&--download {
+		position: relative;
+		max-width: rem(227);
+		font-style: normal;
+		font-weight: bold;
+		font-size: rem(14);
+		line-height: (17 / 14);
+		color: black;
+		padding: rem(10) rem(30) rem(10) rem(52);
+		background-color: transparent;
+		text-transform: none;
+		border-width: 2px;
+		.icon-arrow-download {
+			@include mt;
+			position: absolute;
+			width: rem(12);
+			height: rem(15);
+			top: 50%;
+			left: rem(24);
+			transform: translateY(-50%);
+			color: $primary;
+		}
+		&:hover {
+			.icon-arrow-download {
+				color: $black;
+			}
+		}
+	}
+	
+}
+
+// .catalog  {
+// 	padding-top: rem(5) !important;
+// }
+
+// .top-line {
+
+// 	@include media-breakpoint-down(xs) {
+// 		.s-chats--whatsupp_h {
+// 			width: 100%;
+// 			justify-content: space-between;
+// 			margin-bottom: 0;
+// 		}
+
+// 		.s-chats--whatsupp_h a {
+// 			display: flex;
+// 			justify-content: space-between;
+// 			align-items: center;
+// 			width: 100%;
+// 			background-color: #55CD6C;
+// 			margin-left: rem(-7);
+// 			margin-top: rem(10);
+// 			text-decoration: none;
+// 			&:hover{
+// 				background-color: #60E67A;
+// 			}
+// 		}
+
+// 		.s-chats--whatsupp_h span:nth-child(1) {
+// 			display: block;
+// 			margin: 0 auto;
+// 			font-weight: 700;
+// 		}
+
+// 		.s-chats__imgWrap {
+// 			display: flex;
+// 			width: rem(60);
+// 			height: rem(40);
+// 			justify-content: center;
+// 			align-items: center;
+// 			background-color: #4DBA62;
+// 			margin-right: rem(-7);
+// 		}
+
+// 		.s-chats__imgWrap img {
+// 			width: rem(26);
+// 			height: rem(26);
+// 		}
+// 	}
+
+// 	.s-chats--whatsupp_h a {
+// 		@include media-breakpoint-up(sm) {
+// 			position: fixed;
+// 			bottom: 150px;
+// 			right: 5px;
+// 		}
+
+// 		@include media-breakpoint-up(xl) {
+// 			right: 25px;
+// 		}
+
+// 	}
+// 	.s-chats--whatsupp_h span:nth-child(1) {
+// 		@include media-breakpoint-up(sm) {
+// 			display: none;
+// 		}
+// 	}
+
+// 	.s-chats--whatsupp_h span:nth-child(1) {
+// 		@include media-breakpoint-down(lg) {
+// 			color: #000;
+// 		}
+// 	}
+
+// }
+// .header-block__item{
+// 	display: flex !important;
+//   flex-direction: column;
+// 	min-height: calc(100% - 20px);
+// }
+// .header-block__item-text--title{
+// 	flex-grow: 1;
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// }
+
+// @import "../pug/blocks/header-block/_header-block-canopy.scss";
+// @import "../pug/blocks/s-production/_s-production-canopy.scss";
+// @import "../pug/blocks/s-sert/_s-sert-canopy.scss";
+// @import "../pug/blocks/s-price/_s-price-canopy.scss";
+@import "../pug/blocks/**/*.scss";
+
+// @import "media"; // Всегда в конце

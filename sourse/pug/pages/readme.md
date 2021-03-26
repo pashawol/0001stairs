@@ -14,3 +14,5 @@
 <br/>
 6 <a href="https://pashawol.github.io/0001stairs/public/frame10.html">https://pashawol.github.io/0001stairs/public/frame10.html</a>
 <br/>
+7 <a href="https://pashawol.github.io/0001stairs/public/canopy-main.html">https://pashawol.github.io/0001stairs/public/canopy-main.html</a>
+<br/>

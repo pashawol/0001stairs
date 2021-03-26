@@ -1,0 +1,248 @@
+.s-popular {
+	background-color: rgba($color: $black, $alpha: 0.02);
+	padding-top: rem(60);
+	padding-bottom: rem(60);
+	@include media-breakpoint-up(sm) {
+		padding-bottom: rem(65);
+	}
+	@include media-breakpoint-up(lg) {
+		padding-top: rem(80);
+		padding-bottom: rem(95);
+	}
+
+	.section-title {
+		margin-bottom: 0;
+		padding-bottom: rem(50);
+		@include media-breakpoint-up(sm) {
+			padding-bottom: rem(30);
+		}
+		@include media-breakpoint-up(lg) {
+			padding-bottom: rem(60);
+		}
+		h2 {
+			margin-bottom: 0;
+			padding-bottom: rem(30);
+			@include media-breakpoint-up(sm) {
+				padding-bottom: rem(35);
+			}
+		}
+		&__text {
+			font-weight: normal;
+			font-size: rem(20);
+			line-height: 130%;
+			text-transform: none;
+			margin: 0 auto;
+			max-width: rem(375);
+			@include media-breakpoint-up(lg) {
+				max-width: rem(600);
+			}
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-up(xs) {
+	}
+
+	//
+	@include media-breakpoint-between(md, xl) {
+	}
+
+	//
+	@include media-breakpoint-only(xs) {
+	}
+	@include media-breakpoint-only(sm) {
+	}
+	@include media-breakpoint-only(md) {
+	}
+	@include media-breakpoint-only(lg) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+
+	//
+	@include media-breakpoint-down(xl) {
+	}
+	@include media-breakpoint-down(lg) {
+	}
+	@include media-breakpoint-down(md) {
+	}
+	@include media-breakpoint-down(sm) {
+	}
+	@include media-breakpoint-down(xs) {
+	}
+}
+
+.prod-item-popular {
+	border-radius: $border-radius-lg;
+	background-color: $white;
+	padding: rem(25) rem(25) rem(35) rem(25);
+	height: 100%;
+	@include media-breakpoint-up(sm) {
+		padding: rem(35) rem(25) rem(35) rem(35);
+	}
+	@include media-breakpoint-up(md) {
+		padding: rem(25) rem(25) rem(35) rem(25);
+	}
+	picture {
+		text-align: center;
+		margin-bottom: rem(12);
+		background-color: $white;
+
+		@include media-breakpoint-up(md) {
+			@include block(298, 207);
+			img {
+				@include a-cent;
+				max-height: 100%;
+			}
+		}
+	}
+	&__col {
+		margin-bottom: rem(7);
+	}
+	&__table {
+		font-size: rem(16);
+		line-height: 185.8%;
+		margin-bottom: rem(18);
+	}
+	&__foot {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__item-price {
+		.strong {
+			font-size: rem(20);
+			line-height: 185.8%;
+			@include media-breakpoint-up(sm) {
+				font-size: rem(23);
+			}
+		}
+	}
+	&__btn {
+		min-width: rem(140);
+		@extend .btn-primary;
+		background-color: transparent;
+		border-width: 2px;
+	}
+	&__link {
+		display: block;
+		color: $body-color;
+		text-decoration: underline;
+		padding-top: rem(30);
+		font-weight: 500;
+		font-size: rem(15);
+		line-height: (18 / 15);
+	}
+}
+
+.col-prod {
+	margin-bottom: rem(35);
+}
+
+.filter {
+	padding-bottom: rem(30);
+	@include media-breakpoint-up(sm) {
+		padding-bottom: rem(57);
+	}
+	@include media-breakpoint-up(lg) {
+		padding-bottom: rem(62);
+	}
+	.row {
+		&--medium {
+			@include roww(94 / 2);
+		}
+		&--wide {
+			@include roww(35 / 2);
+			@include media-breakpoint-up(lg) {
+				@include roww(180 / 2);
+			}
+		}
+	}
+	&__top {
+		padding-bottom: rem(32);
+		@include media-breakpoint-up(lg) {
+			padding-bottom: rem(42);
+		}
+	}
+}
+
+.input-wrap-filter {
+	&__input {
+		appearance: none;
+		display: block;
+		color: $body-color;
+		font-weight: 600;
+		font-size: rem(18);
+		line-height: (21 / 18);
+		padding: rem(15) rem(35) rem(15) rem(30);
+		min-width: rem(197);
+		max-width: 100%;
+		margin: 0;
+		border: 2px solid $primary;
+		border-radius: $border-radius;
+		background-color: transparent;
+		background-image: url(../img/svg/triangle-down.svg);
+		background-repeat: no-repeat;
+		background-position: right rem(20) top 50%;
+		background-size: rem(9) rem(9);
+		&:focus {
+			outline: 0 !important;
+		}
+	}
+	&:hover {
+		background-color: $white;
+	}
+	option {
+		font-weight: 600;
+		font-size: rem(18);
+	}
+}
+
+.btn-input-filter {
+	margin-bottom: rem(20);
+	@include media-breakpoint-up(sm) {
+		margin-bottom: rem(8);
+	}
+	&__input {
+		position: absolute;
+		@extend .invisible;
+	}
+	&__text {
+		@include mt;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: rem(5);
+		font-weight: 600;
+		font-size: rem(18);
+		&--primary {
+			width: rem(197);
+			height: rem(54);
+			background-color: $white;
+			color: $black;
+		}
+		&--transparent {
+			min-height: rem(33);
+			background-color: transparent;
+			color: $body-color;
+		}
+	}
+
+	.btn-input-filter__input[type="radio"]:checked ~ .btn-input-filter__text {
+		&--primary {
+			background-color: $primary;
+		}
+		&--transparent {
+			font-weight: bold;
+			font-size: rem(22);
+		}
+	}
+}
