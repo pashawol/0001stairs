@@ -149,13 +149,17 @@ function eventHandler() {
 		arrows: true,
 		prevArrow: '<button type = "button" class = "slick-prev"></ button>',
 		nextArrow: '<button type = "button" class = "slick-next"></ button>',
-		responsive: [// 	{
-		// 	breakpoint: 992,
-		// 	settings: {
-		// 		slidesToShow: 3,
-		// 	}
-		// },
-		{
+		responsive: [{
+			breakpoint: 1400,
+			settings: {
+				slidesToShow: 5
+			}
+		}, {
+			breakpoint: 1200,
+			settings: {
+				slidesToShow: 4
+			}
+		}, {
 			breakpoint: 576,
 			settings: {
 				slidesToShow: 3,
@@ -315,5 +319,26 @@ $(document).ready(function () {
 				$(this).fadeIn();
 			}
 		});
+	});
+	$(".sSliderGal--js").slick({
+		dots: false,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 1,
+		centerMode: true,
+		variableWidth: true,
+		arrows: false
+	});
+	$(".sSteps__slider--js").slick({
+		dots: true,
+		lazyLoad: 'ondemand',
+		infinite: true,
+		speed: 300,
+		slidesToShow: 1,
+		prevArrow: '<button type = "button" class = "slick-prev"></ button>',
+		nextArrow: '<button type = "button" class = "slick-next"></ button>' // centerMode: true,
+		// variableWidth: true,
+		// arrows: false,
+
 	});
 }); // JSCCommon.LazyFunction();

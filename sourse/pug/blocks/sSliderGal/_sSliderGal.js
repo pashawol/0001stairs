@@ -1,0 +1,5 @@
+JSCCommonsSliderGal();
+	sSliderGal() {
+
+	}
+	
