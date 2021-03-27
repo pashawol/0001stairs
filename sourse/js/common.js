@@ -335,7 +335,28 @@ $(document).ready(function () {
 			})
 		});
 	}
+
+
+	$(".case-item__link").click(function(){
+		let id = $(this).attr('href');
+		console.log(id);
+		setTimeout(() => {
+			$(id).find('.slider-for, .slider-nav').slick("refresh")
+		}, 10);
+	});
+	$(".btn-more").click(function(){
+		let th = $(this);
+		th.hide();
+		th.prev().addClass("show").find(".sCases__col:hidden").fadeIn();
+		th.parents('.tabs__content').addClass("show");
+		let item = th.parents('.tabs__content').find(".sCases__col");
+		console.log(item);
+		item.each(function(){ 
+			if ($(this).is(":hidden")) {
+					$(this).fadeIn(); 
+				}
+		});
+	});
 });
 
 // JSCCommon.LazyFunction();
-/***/

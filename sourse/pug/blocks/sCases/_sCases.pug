@@ -1,0 +1,91 @@
+mixin caseItem(prew, l, tmod, id)
+	+b.case-item 
+		+e.row.row 
+			+e.col-left&attributes(attributes)
+				+e.wrap
+					+e.date  2012 год
+					if prew
+						+e.preview.bg-wrap
+							img(src="img/@2x/prew.png" loading="lazy", alt="").img-bg
+					else
+						+e.gal-wrap
+							.slider-for
+								- for (var x = 1; x < 6; x++)
+									+e.slide
+										+e.gal-link--lg(data-fancybox="cases-gal" href=`img/@2x/s-cases-1-1.jpg`)
+											img(data-lazy=`img/@2x/s-cases-1-1.jpg`, src="#", alt="") 
+							.slider-nav
+								- for (var x = 1; x < 6; x++)
+									+e.slide--sm
+										+e.gal-link--sm( )
+											img(data-lazy=`img/@2x/s-cases-1-1.jpg`, src="#", alt="") 
+			.col
+				+e.caption 
+					+e.title Навес из поликарбоната 6 х 6 м высота 2,4 м 
+					+e.table
+							mixin tr(t1, t2)
+								.row
+									+e.col.col.text-md-left.text-center
+										span= t1
+									+e.col.col-md-auto.strong.text-md-right.text-center= t2
+							+tr("Металлические столбы:",'2,4 м.')
+							+tr("Силовые боковые балки:",'80 х 80 х 3 мм, 6 шт.')
+							+tr("Металлические фермы:",'80 х 80 х 3 мм.') 
+							if tmod
+								+tr("Металлические фермы: ",'60 х 30 х 2 мм, 4 шт.')
+								+tr("Обрешетка (лаги): ",'40 х 20 х 1,5 мм.')
+								+tr("Форма крыши: ",'арочная')
+								+tr("Материал кровли: ",'сотовый поликарбонат 8 мм. КАРБОGLASS КРИСТАЛЛ')
+								+tr("Цвет кровли: ",'бронзовый')
+								+tr(" Монтаж к земле:",'заглубление на 1200 мм с бутованием щебнем') 
+					if l 
+						.text-center.mb-4
+							+e.link.link-modal(href= id) Подробнее о проекте
+					+e.calc
+						.row 
+							.col.text-md-left.text-center 
+								.mb-1 Материалы:  86 400 ₽
+								div Работа:  28 800 ₽
+							.col-md-auto.text-md-right.text-center 
+								.text-primary ИТОГО: 
+								+e.total 115 200 ₽
+					+e.footer
+						.row
+							.col.text-md-left.text-center.mb-2
+								+e.text Вы можете связаться с нашим менеджером, чтобы расчитать подобный проект
+							.col-md-auto.text-md-right.text-center
+								+e.btn(href="#") Связаться с менеджером
+	
+mixin sCases()
+	// start sCases
+	+b.SECTION.sCases.section#sCases&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 ПРИМЕРЫ ВЫПОЛНЕННЫХ РАБОТ
+			.tabs
+				.tabs__caption 
+					.tabs__btn.btn.active 6 метров
+					.tabs__btn.btn до 8-10 метров
+					.tabs__btn.btn 4-5 метров
+				.tabs__wrap
+					mixin content()
+						.tabs__content&attributes(attributes)
+							.row
+								- for (var x = 0; x < 3; x++)
+									+e.col.col-xl-6
+										+caseItem('1','l','','#case-1')
+										.case-wrap.modal-win(id="case-1" style="display: none")
+											+caseItem('','', 'tmod')
+									+e.col.col-xl-6
+										+caseItem('1','l','','#case-2')
+										.case-wrap.modal-win(id="case-2"  style="display: none")
+											+caseItem('','', 'tmod')
+								
+							.text-center
+								+b.btn-more--js Показать ещё
+							.bottom
+					+content.active
+					+content
+					+content
+
+	// end sCases

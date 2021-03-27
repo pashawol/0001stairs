@@ -1,0 +1,5 @@
+JSCCommonsAbout();
+	sAbout() {
+
+	}
+	

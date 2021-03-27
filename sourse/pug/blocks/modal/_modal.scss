@@ -134,3 +134,11 @@ a {
 @include media-breakpoint-down(sm) {}
 
 @include media-breakpoint-down(xs) {}
+
+
+.case-wrap{
+	padding: 0;
+	background-color: transparent;
+	max-width: rem(1225);
+	width: 100%;
+}

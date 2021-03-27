@@ -1,0 +1,30 @@
+mixin sAbout()
+	// start sAbout
+	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
+		.container
+			+e.row-lg.row
+				.col-lg-6.text-lg-left.text-center
+					h2 О КОМПАНИИ И ПРОИЗВОДСТВЕ
+					p Компания #[strong «НАВЕС НА ЗАКАЗ»] работает в сфере производства и монтажа навесов с #[strong 2012 года]. 
+
+					p На текущий момент времени, в наш состав входит #[strong 6 цехов] по производству металлоконструкций в Московской области, что обеспечивает #[strong оперативный замер] и #[strong производство навесов], а также #[strong минимальные издержки на доставку].
+
+					p Благодаря огромному опыту в производстве навесов, наши навесы не падают и служат долгие годы.
+
+					p Мы даем честную гарантию на нашу продукцию и монтаж 1 год. #[strong Гарантия прописана в договоре].
+				.col-lg-6
+					+b.form-wrap 
+						p.text-lg-left.text-center Мы приглашаем вас посетить наше производство, чтобы вы могли лично убедиться в качестве наших навесов. Оставьте ваши данные, чтобы мы могли с вами связаться и назначить встречу.
+						form
+							.row
+								.col
+									+e.INPUT.input(name='tel' type='tel' placeholder='+7___ ___ __ __')
+								.col-md-auto.text-center
+									+e.btn(type="submit") ЗАПИСАТЬСЯ
+							+b.polite-canopy
+								+b.LABEL.custom-input-2
+									+e.INPUT.input(type="checkbox" checked)
+									+e.SPAN.label
+									+e.SPAN.text Я согласен(а) с условиями передачи информации
+				
+	// end sAbout
