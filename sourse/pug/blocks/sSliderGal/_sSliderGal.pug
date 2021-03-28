@@ -3,5 +3,8 @@ mixin sSliderGal()
 	+b.SECTION.sSliderGal--js
 		- for (var x = 1; x < 6; x++)
 			+e.slide(href=`img/@2x/slide-${x}.png` data-fancybox="slidegal") 
-				img(src=`img/@1x/webp/slide-${x}.webp` loading="lazy", alt="")
+				img(src=`img/@1x/webp/slide-${x}.webp`, alt="")
+		- for (var x = 1; x < 6; x++)
+			+e.slide(href=`img/@2x/slide-${x}.png` data-fancybox="slidegal") 
+				img(src=`img/@1x/webp/slide-${x}.webp`, alt="")
 	// end sSliderGal

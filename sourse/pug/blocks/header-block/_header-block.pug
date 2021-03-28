@@ -27,19 +27,19 @@ mixin header-block(h1, i='header-bg')
 						+e.top-title Получите ТОЧНЫЙ РАСЧЕТ лестницы
 						+e.group
 							+e.group-head Оставьте свой номер телефона и&nbsp;наш специалист свяжется с&nbsp;Вами в&nbsp;течение 45&nbsp;минут
-							
+
 							+e.group-body
 								+input-lg('+_(___)___-__-__','tel','Ваш телефон:')
 								.row.row--sm
 									.col-sm-6
 										+input('2 метра','text','Высота лестницы:')
-									
+
 									.col-sm-6
 										+input('800 мм','text','Ширина:')
-									
+
 									.col-sm-6
 										+input('210 мм','text','Подъем:')
-									
+
 									.col-sm-6
 										+input('Металл','select','Материал:')
 								+e.btn.btn-3d.btn-primary.btn-block(type="submit") Получить проект и и расчет
@@ -103,7 +103,7 @@ mixin header-block-8(h1, i='header-bg-new')
 							+e.top-title ПОЛУЧИТЕ ТОЧНЫЙ РАСЧЕТ БАНИ
 							+e.group
 								+e.group-head Оставьте свой номер телефона и&nbsp;наш специалист свяжется с&nbsp;Вами в&nbsp;течение 45&nbsp;минут
-								
+
 								+e.group-body
 									.row
 										.col-md-6
@@ -111,7 +111,7 @@ mixin header-block-8(h1, i='header-bg-new')
 											.row.row--sm
 												.col-sm-6
 													+input('2 м','text','Длина бани:')
-												
+
 												.col-sm-6
 													+input('2 м','text','Длина бани:')
 										.col-md
@@ -119,7 +119,7 @@ mixin header-block-8(h1, i='header-bg-new')
 												.col-sm-6
 													+input('Каменка','select','Печка:')
 
-												
+
 												.col-sm-6
 													+input('100 мм','select','Толщина стен')
 											+e.btn.btn-3d.btn-primary.btn-block(type="submit") Получить проект и и расчет
@@ -149,10 +149,15 @@ mixin header-block-8(h1, i='header-bg-new')
 	// end header-block
 
 
-mixin header-block-canopy(h1, i='header-bg-canopy')
+mixin header-block-canopy(h1)
 	// start header-block
 	+b.header-block-c#header-block.bg-wrap
-		+pic(i,'bg')(class="picture-bg")
+		//- +pic(i,'bg')(class="picture-bg")
+		<picture class="picture-bg">
+			<source srcset="img/@2x/header-bg-canopy.jpg" media="(min-width: 768px)">
+			<source srcset="img/@2x/header-bg-canopy2.jpg" media="(min-width: 576px)">
+			<img class="object-fit-js" src="img/@2x/header-bg-canopy1.jpg" alt="">
+		</picture>
 		.container
 			.text-center.text-md-left
 				h1 ИЗГОТОВИМ И&nbsp;УСТАНОВИМ <br>

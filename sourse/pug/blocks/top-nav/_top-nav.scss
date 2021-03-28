@@ -93,11 +93,11 @@
 // мобильное меню
 
 // мобильное меню
-$h: em(2);
+$h: rem(3);
 
 .toggle-menu-mobile {
 	display: block;
-	height: $h * 16;
+	height: $h * 12;
 	margin-left: 0;
 	position: relative;
 	z-index: 999 !important;

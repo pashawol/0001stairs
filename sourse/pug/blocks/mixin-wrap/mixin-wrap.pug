@@ -165,7 +165,7 @@ mixin pic( i, bg, lazy="lazy", media='576px')
 			//- // /webp images  
 		+src(i, exp,smpath2, lazy,"",bg) 
 	// /picture
-		 
+
 //- /picture with lazy
 	example
 	or
@@ -194,7 +194,8 @@ mixin prod(st)
 
 mixin prod2(st)
 	+b.prod-item-popular
-		+pic("s-popular-img.png",'','lazy',0)
+		a(href="img/@2x/s-popular-img.png" data-fancybox="popular")
+			+pic("s-popular-img.png",'','lazy',0)
 		+e.caption
 			+e.table
 				mixin tr(t1, t2)
@@ -213,8 +214,7 @@ mixin prod2(st)
 				+e.btn.link-modal(href="#modal-call" data-order="Заказать навес" data-title="Закажите навес" data-text="Оставьте заявку, и наш менеджер направит к вам инженера-замерщика для подписания договора!" data-btn="Заказать навес") Заказать
 			+e.link.text-center(href="#") Примеры работ
 	// /+b.prod2-item
- 
-		 
+
 //- /picture
 	example
 	+piclazy('consult','png','bg')

@@ -74,7 +74,7 @@
 			width: 100%;
 			left: 0;
 			bottom: 0;
-			height: 50%;
+			height: 20%;
 			background: linear-gradient(0deg, #FFFFFF 12.83%, rgba(255, 255, 255, 0) 100%);
 			z-index: 4;
 			position: absolute;
@@ -265,7 +265,7 @@
 }
 
 .case-wrap {
-	.case-item__col {
+	.case-item__col-left {
 		@include media-breakpoint-up(xl) {
 			max-width: 50%;
 			width: 50%;
@@ -275,6 +275,7 @@
 	.case-item {
 		@include media-breakpoint-up(xl) {
 			padding-left: rem(40);
+			padding-right: rem(40);
 		}
 	}
 	--align: left;

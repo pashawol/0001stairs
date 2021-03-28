@@ -4,18 +4,17 @@
 		margin-bottom: rem(60);
 		@include media-breakpoint-up(sm){
 
-			display: inline-flex;
-			align-items: center;
+			// display: inline-flex;
+			// align-items: center;
 		}
 		text-align: center;
 		span{
-			@include media-breakpoint-up(lg){
-				display: inline;
-				margin-right: .2em;
-			}
-			display: block;
+			display: inline;
+			// margin-right: .2em;
 			color: $primary;
 			font-size: 1.8em;
+			position: relative;
+			top: 0.12em;
 		}
 	}
 	.slick-list {
@@ -164,17 +163,18 @@
 		position: relative;
 		&:not(:last-child){
 			@include media-breakpoint-up(lg){
-
 				margin-right:  rem(54);
 			}
-			margin-right:  rem(15);
+			margin-right:  rem(25);
+			@include media-breakpoint-down(xs){
+				margin-right: 0;
+			}
 			&::before{
 				content: '';
 				@include media-breakpoint-up(lg){
-
 					width: rem(64);
 				}
-				width: rem(24);
+				width: rem(44);
 				height: 2px;
 				position: absolute;
 				top: 50%;
@@ -188,6 +188,7 @@
 	.slick-dots button{
 		display: block;
 		background: #FFFFFF;
+		z-index: 2;
 		/* з2 */
 
 		border: 3px solid #35455C;
@@ -196,6 +197,7 @@
 		height:  var(--dot-s);
 		border-radius: 50%;
 		display: flex;
+		flex: 0 0 auto;
 		justify-content: center;
 		align-items: center;
 		@include mt;
@@ -231,8 +233,23 @@
 	//
 	@include media-breakpoint-down(xl) {}
 	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(md) {
+		&__slider {
+			display: flex;
+			flex-direction: column;
+		}
+		.slick-dots {
+			order: -1;
+			width: 100%;
+			margin-bottom: rem(50);
+		}
+		.slick-arrow {
+			top: 0;
+			z-index: 15;
+		}
+	}
+	@include media-breakpoint-down(sm) {
+	}
 	@include media-breakpoint-down(xs) {} 
 
 }
