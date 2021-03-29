@@ -316,7 +316,9 @@ $(document).ready(function () {
 		console.log(item);
 		item.each(function () {
 			if ($(this).is(":hidden")) {
-				$(this).fadeIn();
+				$(this).fadeIn(function () {
+					$(this).find('.slider-for, .slider-nav').slick("refresh");
+				});
 			}
 		});
 	});

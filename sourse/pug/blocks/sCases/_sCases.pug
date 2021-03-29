@@ -70,17 +70,9 @@ mixin sCases()
 				.tabs__wrap
 					mixin content()
 						.tabs__content&attributes(attributes)
-							.row
-								- for (var x = 0; x < 3; x++)
-									+e.col.col-xl-6
-										+caseItem('1','l','','#case-1')
-										.case-wrap.modal-win(id="case-1" style="display: none")
-											+caseItem('','', 'tmod')
-									+e.col.col-xl-6
-										+caseItem('1','l','','#case-2')
-										.case-wrap.modal-win(id="case-2"  style="display: none")
-											+caseItem('','', 'tmod')
-								
+							- for (var x = 0; x < 7; x++)
+								+e.col.case-wrap
+									+caseItem('','', 'tmod')
 							.text-center
 								+b.btn-more--js Показать ещё
 							.bottom
