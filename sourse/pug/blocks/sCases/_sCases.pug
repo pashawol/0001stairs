@@ -21,13 +21,14 @@ mixin caseItem(prew, l, tmod, id)
 											img(data-lazy=`img/@2x/s-cases-1-1.jpg`, src="#", alt="") 
 			.col
 				+e.caption 
-					+e.title Навес из поликарбоната 6 х 6 м высота 2,4 м 
+					+e.title Навес из&nbsp;поликарбоната 6&nbsp;x&nbsp;6&nbsp;м
 					+e.table
 							mixin tr(t1, t2)
 								.row
-									+e.col.col.text-md-left.text-center
+									+e.col.col.text-sm-left.text-center
 										span= t1
-									+e.col.col-md-auto.strong.text-md-right.text-center= t2
+									+e.col.col-md-auto.strong.text-sm-right.text-center= t2
+							+tr("Высота:",'2,4 м.')
 							+tr("Металлические столбы:",'2,4 м.')
 							+tr("Силовые боковые балки:",'80 х 80 х 3 мм, 6 шт.')
 							+tr("Металлические фермы:",'80 х 80 х 3 мм.') 
@@ -38,9 +39,8 @@ mixin caseItem(prew, l, tmod, id)
 								+tr("Материал кровли: ",'сотовый поликарбонат 8 мм. КАРБОGLASS КРИСТАЛЛ')
 								+tr("Цвет кровли: ",'бронзовый')
 								+tr(" Монтаж к земле:",'заглубление на 1200 мм с бутованием щебнем') 
-					if l 
-						.text-center.mb-4
-							+e.link.link-modal(href= id) Подробнее о проекте
+					.text-center.mb-2.d-lg-none
+						+e.link.link-modal(href= id) Подробнее о проекте
 					+e.calc
 						.row 
 							.col.text-md-left.text-center 
@@ -70,9 +70,16 @@ mixin sCases()
 				.tabs__wrap
 					mixin content()
 						.tabs__content&attributes(attributes)
-							- for (var x = 0; x < 7; x++)
-								+e.col.case-wrap
-									+caseItem('','', 'tmod')
+							.row
+								- for (var x = 0; x < 3; x++)
+									+e.col.case-wrap
+										+caseItem('','', 'tmod', '#case-1')
+										.case-wrap.modal-win.modal-win--case(id="case-1" style="display: none")
+											+caseItem('','', 'tmod')
+									//- +e.col.col-lg-6
+									//- 	+caseItem('1','l','','#case-2')
+									//- 	.case-wrap.modal-win(id="case-2"  style="display: none")
+									//- 		+caseItem('','', 'tmod')
 							.text-center
 								+b.btn-more--js Показать ещё
 							.bottom
