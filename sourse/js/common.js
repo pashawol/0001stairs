@@ -409,7 +409,6 @@ $(document).ready(function () {
 		}
 		prevScrollpos = currentScrollPos;
 	};
-	console.log(nav);
 });
 
 // JSCCommon.LazyFunction();
