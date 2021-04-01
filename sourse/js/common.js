@@ -97,7 +97,16 @@ function eventHandler() {
 		...defaultSlide,
 		slidesToShow: 1,
 		lazyLoad: 'ondemand',
-		asNavFor: '.slider-nav'
+		asNavFor: '.slider-nav',
+		arrows: true,
+		prevArrow: '<button type = "button" class = "slick-prev"></ button>',
+		nextArrow: '<button type = "button" class = "slick-next"></ button>',
+		responsive: [{
+			breakpoint: 992,
+			settings: {
+				arrows: false,
+			}
+		}],
 	});
 	$('.slider-nav').slick({
 		...defaultSlide,
@@ -374,6 +383,8 @@ $(document).ready(function () {
 		// centerMode: true,
 		variableWidth: true,
 		arrows: false,
+		prevArrow: '<button type = "button" class = "slick-prev"></ button>',
+		nextArrow: '<button type = "button" class = "slick-next"></ button>',
 	});
 	$(".sSteps__slider--js").slick({
 		dots: true,

@@ -185,7 +185,10 @@
 		@include media-breakpoint-up(xl) {
 			padding: rem(40);
 		}
-		padding: rem(20);
+		@include media-breakpoint-up(lg) {
+			padding: rem(20);
+		}
+		padding: 0 rem(20) rem(20) rem(20);
 	}
 	&__title {
 		text-align: var(--align, center);
@@ -317,6 +320,23 @@
 			padding: 0;
 		}
 	}
+	.slick-arrow {
+		--radius: 20%;
+		--btn-pos: #{rem(-8)};
+		--arr-prev-pos: 30%;
+		background-color: $white;
+		background-size: 65%;
+		&.slick-prev {
+			left: var(--btn-pos);
+			background-position: var(--arr-prev-pos) center;
+			border-radius: 0 var(--radius) var(--radius) 0;
+		}
+		&.slick-next {
+			right: var(--btn-pos);
+			background-position: calc(100% - var(--arr-prev-pos)) center;
+			border-radius: var(--radius) 0 0 var(--radius);
+		}
+	}
 }
 
 .modal-win--case {
@@ -325,6 +345,13 @@
 	}
 	.case-item__link {
 		display: none;
+	}
+
+	.slick-arrow {
+		display: none !important;
+	}
+	.case-item__wrap {
+		margin-top: rem(35);
 	}
 	.slider-nav {
 		display: block !important;
