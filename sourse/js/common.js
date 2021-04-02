@@ -97,7 +97,16 @@ function eventHandler() {
 		...defaultSlide,
 		slidesToShow: 1,
 		lazyLoad: 'ondemand',
-		asNavFor: '.slider-nav'
+		asNavFor: '.slider-nav',
+		arrows: true,
+		prevArrow: '<button type = "button" class = "slick-prev"></ button>',
+		nextArrow: '<button type = "button" class = "slick-next"></ button>',
+		responsive: [{
+			breakpoint: 992,
+			settings: {
+				arrows: false,
+			}
+		}],
 	});
 	$('.slider-nav').slick({
 		...defaultSlide,
@@ -301,8 +310,9 @@ const JSCCommon = {
 			$(this)
 				.addClass('active').siblings().removeClass('active')
 				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn().addClass('active');
-
+				.eq($(this).index()).fadeIn(function(){
+					$(this).find('.slider-for, .slider-nav').slick("refresh");
+				}).addClass('active');
 		});
 	},
 	// /табы  . 
@@ -357,10 +367,12 @@ $(document).ready(function () {
 		th.prev().addClass("show").find(".sCases__col:hidden").fadeIn();
 		th.parents('.tabs__content').addClass("show");
 		let item = th.parents('.tabs__content').find(".sCases__col");
-		console.log(item);
+		$(".case-wrap").removeClass("half");
 		item.each(function(){ 
 			if ($(this).is(":hidden")) {
-					$(this).fadeIn(); 
+					$(this).fadeIn(function(){
+						$(this).find('.slider-for, .slider-nav').slick("refresh")
+					});
 				}
 		});
 	});
@@ -368,10 +380,12 @@ $(document).ready(function () {
 		dots: false,
 		infinite: true,
 		speed: 300,
-		slidesToShow: 1,
-		centerMode: true,
+		// slidesToShow: 1,
+		// centerMode: true,
 		variableWidth: true,
 		arrows: false,
+		prevArrow: '<button type = "button" class = "slick-prev"></ button>',
+		nextArrow: '<button type = "button" class = "slick-next"></ button>',
 	});
 	$(".sSteps__slider--js").slick({
 		dots: true,
@@ -385,6 +399,17 @@ $(document).ready(function () {
 		// variableWidth: true,
 		// arrows: false,
 	});
+	var prevScrollpos = window.pageYOffset;
+	window.onscroll = function() {
+		var currentScrollPos = window.pageYOffset;
+		var topNav = document.querySelector('.header--fixed .top-nav');
+		if (prevScrollpos > currentScrollPos) {
+			topNav.style.top = '63px';
+		} else {
+			topNav.style.top = '25px';
+		}
+		prevScrollpos = currentScrollPos;
+	};
 });
 
 // JSCCommon.LazyFunction();

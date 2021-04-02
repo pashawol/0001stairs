@@ -141,14 +141,17 @@ mixin s-calc2-body()
 					+b.form-wrap
 						.row
 							.col-sm-5
-								+e.input-wrap--small
-									label
-										+e.SPAN.title * Длина (м):
-										+e.INPUT.input(type='text' placeholder='' name='text')
-								+e.input-wrap--small
-									label
-										+e.SPAN.title * Ширина (м):
-										+e.INPUT.input(type='text' placeholder='' name='text')
+								.row
+									.col-6.col-sm-12
+										+e.input-wrap--small
+											label
+												+e.SPAN.title * Длина (м):
+												+e.INPUT.input(type='text' placeholder='' name='text')
+									.col-6.col-sm-12
+										+e.input-wrap--small
+											label
+												+e.SPAN.title * Ширина (м):
+												+e.INPUT.input(type='text' placeholder='' name='text')
 							.col-sm-7
 								+select('Тип навеса:', 'Арочный', 'Арочный')
 								+select('* Материал кровли:', 'Поликарбонат', 'Поликарбонат')

@@ -29,6 +29,10 @@
 		margin-left: rem(-17);
 		margin-right: rem(-17);
 		text-align: center;
+		@include media-breakpoint-up(xl) {
+			padding-left: rem(40);
+			padding-right: rem(40);
+		}
 	}
 	&__slide {
 		padding-left: rem(17);
@@ -63,12 +67,11 @@
 		}
 	}
 
-
-		@include media-breakpoint-up(xl) {
-			.container {
-				max-width: rem(257 * 5 + 63 *4);
-			}
+	@include media-breakpoint-up(xl) {
+		.container {
+			max-width: rem(257 * 5 + 63 * 4);
 		}
+	}
 
 	@include media-breakpoint-up(xl) {
 	}
@@ -105,6 +108,7 @@
 	@include media-breakpoint-down(md) {
 	}
 	@include media-breakpoint-down(sm) {
+		
 	}
 	@include media-breakpoint-down(xs) {
 	}

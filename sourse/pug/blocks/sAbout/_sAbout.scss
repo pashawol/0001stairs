@@ -1,5 +1,8 @@
 .sAbout {
 	padding-bottom: 0;
+	@include media-breakpoint-up(xl) {
+		padding-bottom: rem(50);
+	}
 	h2{
 		font-size: rem(30);
 	}

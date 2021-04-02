@@ -64,6 +64,10 @@
 		}
 	}
 
+	.object-fit-js {
+		object-position: bottom right;
+	}
+
 	//
 	@include media-breakpoint-up(xl) {
 	}
