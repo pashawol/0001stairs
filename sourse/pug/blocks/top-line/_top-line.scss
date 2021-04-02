@@ -10,6 +10,7 @@
     position: fixed;
     .top-line {
       padding: rem(15) 0 0;
+     
       @include media-breakpoint-up(lg) {
         padding: rem(16) 0 0;
       }
@@ -200,10 +201,11 @@
     font-size: rem(20);
     line-height: (27 / 22);
     @extend .text-body;
+     white-space: nowrap;
     text-decoration: none !important;
     margin-bottom: rem(0);
     font-weight: bold;
-    margin-left: rem(-50);
+    margin-left: rem(-100);
     @include media-breakpoint-up(lg) {
       font-size: rem(30);
       margin-left: 0;
