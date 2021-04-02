@@ -57,7 +57,7 @@
 			position: relative;
 			z-index: 5;
 		}
-		&:nth-child(n + 5) {
+		&:nth-child(n + 4) {
 			display: none;
 		}
 		@include media-breakpoint-down(lg) {
@@ -73,7 +73,7 @@
 			width: 100%;
 			left: 0;
 			bottom: 0;
-			height: 20%;
+			height: 31%;
 			background: linear-gradient(0deg, #ffffff 12.83%, rgba(255, 255, 255, 0) 100%);
 			z-index: 4;
 			position: absolute;
@@ -132,11 +132,16 @@
 	position: relative;
 	z-index: 5;
 	@include media-breakpoint-up(xl) {
-		top: -100px;
+		top: -40px;
 	}
 	&:hover {
 		border-color: transparent;
 	}
+}
+.half {
+	height: 300px;
+	overflow: hidden;
+	position: relative;
 }
 .case-item {
 	background: #ffffff;
@@ -203,7 +208,7 @@
 		.row {
 			margin-bottom: rem(5);
 		}
-		@include media-breakpoint-down (md) {
+		@include media-breakpoint-down(md) {
 			display: none;
 		}
 		@include media-breakpoint-up(sm) {

@@ -61,6 +61,11 @@ mixin top-line-canopy()
 							+b.toggle-menu-mobile--js
 								span
 						+time().col-12.d-lg-none.text-right
+			+e.links
+				+e.A.link(target="_blank" href="#")
+					span Написать в WhatsApp
+					+e.SPAN.imgWrap
+						img.res-i(src="img/svg/whatsapp.svg" data-src="img/svg/whatsapp.svg" alt="")
 
 mixin time()
 	.top-nav__time&attributes(attributes)

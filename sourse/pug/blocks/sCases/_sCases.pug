@@ -71,7 +71,27 @@ mixin sCases()
 					mixin content()
 						.tabs__content&attributes(attributes)
 							.row
+								+e.col.case-wrap
+									+caseItem('','', 'tmod', '#case-1')
+									.case-wrap.modal-win.modal-win--case(id="case-1" style="display: none")
+										+caseItem('','', 'tmod')
+								+e.col.case-wrap
+									+caseItem('','', 'tmod', '#case-1')
+									.case-wrap.modal-win.modal-win--case(id="case-1" style="display: none")
+										+caseItem('','', 'tmod')
+								+e.col.case-wrap.half
+									+caseItem('','', 'tmod', '#case-1')
+									.case-wrap.modal-win.modal-win--case(id="case-1" style="display: none")
+										+caseItem('','', 'tmod')
 								- for (var x = 0; x < 3; x++)
+									+e.col.case-wrap
+										+caseItem('','', 'tmod', '#case-1')
+										.case-wrap.modal-win.modal-win--case(id="case-1" style="display: none")
+											+caseItem('','', 'tmod')
+									+e.col.case-wrap
+										+caseItem('','', 'tmod', '#case-1')
+										.case-wrap.modal-win.modal-win--case(id="case-1" style="display: none")
+											+caseItem('','', 'tmod')
 									+e.col.case-wrap
 										+caseItem('','', 'tmod', '#case-1')
 										.case-wrap.modal-win.modal-win--case(id="case-1" style="display: none")

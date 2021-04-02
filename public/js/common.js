@@ -322,7 +322,7 @@ $(document).ready(function () {
 		th.prev().addClass("show").find(".sCases__col:hidden").fadeIn();
 		th.parents('.tabs__content').addClass("show");
 		var item = th.parents('.tabs__content').find(".sCases__col");
-		console.log(item);
+		$(".case-wrap").removeClass("half");
 		item.each(function () {
 			if ($(this).is(":hidden")) {
 				$(this).fadeIn(function () {
