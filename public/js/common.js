@@ -263,7 +263,9 @@ var JSCCommon = {
 	// табы  . 
 	tabscostume: function tabscostume(tab) {
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active').eq($(this).index()).fadeIn().addClass('active');
+			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active').eq($(this).index()).fadeIn(function () {
+				$(this).find('.slider-for, .slider-nav').slick("refresh");
+			}).addClass('active');
 		});
 	},
 	// /табы  . 

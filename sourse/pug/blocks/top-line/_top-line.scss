@@ -9,7 +9,7 @@
     z-index: 200;
     position: fixed;
     .top-line {
-      padding: rem(15) 0 rem(5);
+      padding: rem(15) 0 0;
       @include media-breakpoint-up(lg) {
         padding: rem(16) 0 0;
       }
@@ -77,7 +77,7 @@
   }
   &--base {
     .top-line {
-      padding: rem(5) 0 rem(5);
+      padding: rem(5) 0 0;
       @include media-breakpoint-up(lg) {
         padding: rem(35) 0 0;
       }

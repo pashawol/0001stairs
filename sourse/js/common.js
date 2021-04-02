@@ -310,8 +310,9 @@ const JSCCommon = {
 			$(this)
 				.addClass('active').siblings().removeClass('active')
 				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn().addClass('active');
-
+				.eq($(this).index()).fadeIn(function(){
+					$(this).find('.slider-for, .slider-nav').slick("refresh");
+				}).addClass('active');
 		});
 	},
 	// /табы  . 
