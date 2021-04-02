@@ -77,7 +77,7 @@
   }
   &--base {
     .top-line {
-      padding: rem(5) 0 0;
+      padding: rem(5) 0;
       @include media-breakpoint-up(lg) {
         padding: rem(35) 0 0;
       }
@@ -112,6 +112,9 @@
         @include media-breakpoint-down(lg) {
           padding: rem(5) 0;
         }
+      }
+      &__links {
+        display: none;
       }
     }
     .top-nav__time.col-12 {
