@@ -1,17 +1,7 @@
 .sContent {
-	--padding: calc(#{rem(35)} * 0.5);
-	@include media-breakpoint-up(sm) {
-		--padding: calc(#{rem(35)} * 0.6);
-	}
-	@include media-breakpoint-up(md) {
-		--padding: calc(#{rem(35)} * 0.8);
-		--margin: var(--padding);
-	}
-	@include media-breakpoint-up(lg) {
-		--padding: #{rem(35)};
-	}
 	color: $black;
-	padding: var(--padding);
+	padding: var(--spacing);
+	padding-bottom: calc(var(--spacing) * 4.28);
 	border-radius: $border-radius-lg;
 	background-color: $white;
 
@@ -20,32 +10,32 @@
 		font-weight: bold;
 		line-height: (48 / 40);
 		margin-bottom: 0;
-		padding-bottom: var(--padding);
+		padding-bottom: var(--spacing);
 	}
 	h2 {
 		@include rfs(30px);
 		font-weight: bold;
 		line-height: (36 / 30);
 		margin-bottom: 0;
-		padding-bottom: var(--padding);
+		padding-bottom: var(--spacing);
 	}
 	h3 {
 		@include rfs(25px);
 		font-weight: bold;
 		line-height: (30 / 25);
 		margin-bottom: 0;
-		padding-bottom: var(--padding);
+		padding-bottom: var(--spacing);
 	}
 	h4 {
 		@include rfs(20px);
 		font-weight: bold;
 		line-height: (24 / 20);
 		margin-bottom: 0;
-		padding-bottom: var(--padding);
+		padding-bottom: var(--spacing);
 	}
 	&__img-wrap {
 		img {
-			padding-bottom: var(--padding);
+			padding-bottom: var(--spacing);
 			@include media-breakpoint-down(lg) {
 				min-height: rem(300);
 				object-fit: cover;
@@ -53,43 +43,28 @@
 		}
 	}
 	figure {
-		padding-bottom: var(--padding);
+		padding-bottom: var(--spacing);
 		@include media-breakpoint-between(md, xl) {
-			padding-bottom: calc(var(--padding) / 2);
+			padding-bottom: calc(var(--spacing) / 2);
 		}
 		margin-bottom: 0;
 		max-width: 100%;
 		height: auto;
 		img {
-			width: 100%;
+			max-width: 100%;
 			height: auto;
-			object-fit: cover;
-		}
-		&.size-small {
-			@include media-breakpoint-up(md) {
-				max-width: 55%;
-				width: unset;
-			}
-			@include media-breakpoint-up(xl) {
-				max-width: 60%;
-			}
-			// img {
-			// 	@include media-breakpoint-down(sm) {
-			// 		max-height: rem(320);
-			// 	}
-			// }
 		}
 
 		&.alignright {
 			float: right;
-			margin-left: var(--margin);
+			margin-left: var(--spacing);
 			@include media-breakpoint-down(sm) {
 				float: none;
 			}
 		}
 		&.alignleft {
 			float: left;
-			margin-right: var(--margin);
+			margin-right: var(--spacing);
 			@include media-breakpoint-down(sm) {
 				float: none;
 			}
@@ -99,34 +74,33 @@
 		font-weight: normal;
 		line-height: 185.8%;
 		margin-bottom: 0;
-		padding-bottom: var(--padding);
+		padding-bottom: var(--spacing);
 	}
 	blockquote {
 		font-weight: normal;
 		font-size: rem(18);
 		line-height: 185.8%;
-		padding: var(--padding);
+		padding: var(--spacing);
 		background-color: $primary;
-		margin: 0 calc(-1 * var(--padding)) var(--padding) calc(-1 * var(--padding));
+		margin: 0 calc(-1 * var(--spacing)) var(--spacing) calc(-1 * var(--spacing));
 		@include media-breakpoint-up(xl) {
 			font-size: rem(20);
 		}
 	}
 
 	ul {
-		font-weight: 600;
-		font-size: rem(16);
+		font-weight: normal;
 		line-height: 185.8%;
-		padding-bottom: var(--padding);
+		padding-bottom: var(--spacing);
 		margin-bottom: 0;
-		padding-left: var(--padding);
+		padding-left: var(--spacing);
 		list-style: none;
 		@include media-breakpoint-up(xl) {
-			padding-left: calc(var(--padding) * 2.23);
+			padding-left: calc(var(--spacing) * 2.23);
 		}
 		li {
 			position: relative;
-			padding-left: calc(var(--padding) / 2 + #{rem(10)});
+			padding-left: calc(var(--spacing) / 2 + #{rem(10)});
 			&::before {
 				content: "";
 				@include a-cent(y);
@@ -180,26 +154,11 @@
 }
 
 .comments {
-	--margin-comments: calc(#{rem(22)} * 0.7);
-	--padding: calc(#{rem(35)} * 0.5);
-	
-	@include media-breakpoint-up(sm) {
-		--padding: calc(#{rem(35)} * 0.6);
-	}
-	@include media-breakpoint-up(md) {
-		--margin-comments: calc(#{rem(22)} * 0.8);
-		--padding: calc(#{rem(35)} * 0.8);
-	}
-	@include media-breakpoint-up(lg) {
-		--padding: #{rem(35)};
-		--margin-comments: #{rem(22)};
-	}
-	
 	&__heading {
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		padding: var(--padding) 0;
+		padding: var(--spacing) 0;
 	}
 	h6 {
 		font-size: rem(16);
@@ -241,7 +200,7 @@
 		color: $danger;
 	}
 	.form-wrap {
-		padding: 0 0 var(--padding) 0;
+		padding: 0 0 var(--spacing) 0;
 		&__input {
 			background: $white;
 			box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.07);
@@ -256,7 +215,7 @@
 			&[type="email"],
 			&[type="text"] {
 				padding: rem(10) rem(18);
-				margin-bottom: var(--margin-comments);
+				margin-bottom: var(--spacing-comments);
 				min-height: rem(49);
 			}
 			&::placeholder {
@@ -280,42 +239,28 @@
 		textarea {
 			padding: rem(18);
 			height: 265px;
-			margin-bottom: var(--margin-comments);
+			margin-bottom: var(--spacing-comments);
 			@include media-breakpoint-up(md) {
 				margin-bottom: 0;
 				height: 100%;
 			}
 		}
 		.polite-canopy {
-			margin-bottom: var(--margin-comments);
+			margin-bottom: var(--spacing-comments);
 		}
 	}
 }
 .questions {
-	--margin-questions: calc(#{rem(22)} * 0.5);
-	--padding: calc(#{rem(35)} * 0.5);
-	
-	@include media-breakpoint-up(sm) {
-		--padding: calc(#{rem(35)} * 0.6);
-	}
-	@include media-breakpoint-up(md) {
-		--margin-questions: calc(#{rem(22)} * 0.8);
-		--padding: calc(#{rem(35)} * 0.8);
-	}
-	@include media-breakpoint-up(lg) {
-		--padding: #{rem(35)};
-		--margin-questions: #{rem(22)};
-	}
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
 	background-color: $lightgreen;
-	padding: var(--margin-questions) var(--padding);
-	margin: 0 calc(-1 * var(--padding));
+	padding: rem(22) var(--spacing);
+	margin: 0 calc(-1 * var(--spacing));
 	&__content {
-		margin-bottom: var(--margin-questions);
-		
+		margin-bottom: rem(22);
+
 		@include media-breakpoint-up(md) {
 			margin-right: rem(32);
 			margin-bottom: 0;
@@ -332,7 +277,6 @@
 			text-transform: uppercase;
 			@include media-breakpoint-up(xl) {
 				font-size: rem(30);
-
 			}
 		}
 	}
@@ -350,6 +294,160 @@
 			background-image: url(../img/svg/whatsapp-2.svg);
 			background-repeat: no-repeat;
 			background-size: cover;
+		}
+	}
+}
+
+.similar-articles {
+	padding-top: calc(#{rem(83)} * 0.6);
+	padding-bottom: calc(#{rem(83)} * 0.6);
+	@include media-breakpoint-up(lg) {
+		padding-top: rem(83);
+		padding-bottom: rem(83);
+	}
+	color: $body-color2;
+	h2 {
+		text-transform: uppercase;
+	}
+	a {
+		&:hover {
+			text-decoration: none;
+			color: $primary;
+		}
+	}
+	&__link {
+		display: flex;
+		justify-content: space-between;
+		color: $body-color2;
+		padding: rem(10) rem(14);
+		box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.07);
+		border-radius: $border-radius-lg;
+		text-decoration: none;
+		@include media-breakpoint-up(md) {
+			padding: rem(16) rem(18);
+		}
+		@include media-breakpoint-up(xl) {
+			padding: rem(23) rem(26);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(10);
+		}
+	}
+	&__title {
+		vertical-align: middle;
+		font-weight: 600;
+		line-height: 185.8%;
+		margin-right: rem(10);
+		@include media-breakpoint-up(md) {
+			line-height: (26 / 22);
+			font-size: rem(22);
+		}
+	}
+	.social {
+		font-size: 25px !important;
+		&__item {
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
+.plan {
+	position: relative;
+	@include bg("s-not-know-bg2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right;
+	padding-top: 0;
+	padding-bottom: 0;
+	position: relative;
+	overflow: hidden;
+	color: $white;
+	margin: 0 calc(-1 * var(--spacing));
+	padding: var(--spacing);
+
+	@include media-breakpoint-up(xl) {
+		padding: rem(62) var(--spacing) rem(62) var(--spacing);
+	}
+	.row,
+	.col-12.col-lg-6.order-last {
+		position: static;
+	}
+	h2 {
+		text-transform: uppercase;
+		max-width: 387px;
+	}
+	&__img-wrap {
+		position: absolute;
+		top: 0;
+		right: rem(-50);
+		left: auto;
+		opacity: 0.25;
+		@include media-breakpoint-up(md) {
+			opacity: 0.4;
+		}
+		@include media-breakpoint-up(lg) {
+			opacity: 1;
+			top: rem(15);
+			left: -18%;
+		}
+		@include media-breakpoint-up(xl) {
+			left: -7%;
+		}
+	}
+	&__text {
+		margin-bottom: var(--spacing);
+		@include media-breakpoint-up(xl) {
+			margin-bottom: rem(45);
+		}
+		max-width: 365px;
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.form-wrap {
+		background-color: transparent;
+		padding: 0;
+		.row {
+			@include roww(18 / 2);
+		}
+		&__input {
+			background: $white;
+			font-size: rem(16);
+			line-height: 185.8%;
+			color: #35455c;
+			border-color: transparent;
+			border-radius: $border-radius-lg;
+			padding: rem(10) rem(18);
+			min-height: rem(49);
+			&:focus {
+				border-color: rgba($color: $primary, $alpha: 0.5);
+			}
+			&[type="tel"],
+			&[type="text"] {
+				margin-bottom: var(--spacing-comments);
+			}
+			&::placeholder {
+				font-size: rem(16);
+				line-height: 185.8%;
+				color: #35455c;
+			}
+			@include media-breakpoint-up(lg) {
+				max-width: 290px;
+			}
+		}
+		&__btn {
+			width: 216px;
+			min-height: 49px;
+			margin-bottom: var(--spacing);
+		}
+		.polite-canopy {
+			margin-bottom: 0;
+			@include media-breakpoint-up(xl) {
+				max-width: 290px;
+			}
 		}
 	}
 }

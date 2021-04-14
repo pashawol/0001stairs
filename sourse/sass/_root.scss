@@ -1,0 +1,16 @@
+:root {
+	--spacing: calc(#{rem(35)} * 0.5);
+	--spacing-comments: calc(#{rem(22)} * 0.7);
+	@include media-breakpoint-up(sm) {
+		--spacing: calc(#{rem(35)} * 0.6);
+	}
+	@include media-breakpoint-up(md) {
+		--spacing: calc(#{rem(35)} * 0.8);
+		--spacing-comments: calc(#{rem(22)} * 0.8);
+	}
+	@include media-breakpoint-up(lg) {
+		--spacing: #{rem(35)};
+		--spacing-comments: #{rem(22)};
+	}
+}
+
