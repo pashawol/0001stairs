@@ -1,0 +1,56 @@
+mixin sBlogArticles()
+	// start sBlogArticles
+	+b.sBlogArticles#sBlogArticles&attributes(attributes)
+		+b.FORM.search-form
+			+e.site-search.INPUT#site-search(type='search' placeholder='Поиск статьи' aria-label='Search')
+			+e.BUTTON.btn-search(type='submit')
+				+icon(`search`)
+		mixin article(h1, t, i, p, l)
+			+b.ARTICLE.blog-article
+				+b.article-head
+					+e.social
+						+e.item 
+							+icon(`eye`)
+							+e.SPAN.count 231
+						+e.item 
+							+icon(`conversation`)
+							+e.SPAN.count 5
+					+e.date 02.03.2021
+				if h1
+					h1!= t
+				else
+					h2!= t
+				+e.img-wrap
+					img.res-i(src=`img/@2x/article-${i}.jpg`, alt="")
+				if p
+					p!= p
+				if l
+					+e.link
+						a(href="#") Читать далее
+		- for (var x = 1; x < 3; x++)
+			+article(``, `Навесы из поликарбоната`, `1`, `Навесы из&nbsp;поликарбоната&nbsp;&mdash; компактные многопрофильные быстровозводимые строения. Легкая и&nbsp;прочная конструкция укроет в&nbsp;непогоду, создаст уют и&nbsp;позволит не&nbsp;беспокоиться за&nbsp;садовый инвентарь или автомобиль. Правильно, если строительство дома и&nbsp;покупка навеса ведется параллельно. Так, вы&nbsp;можете купить навес из&nbsp;поликарбоната и&nbsp;гармонично вписать его в&nbsp;архитектонику участка, выбрав место, конфигурацию и&nbsp;материалы. Однако, не&nbsp;переживайте, если дом построен. Сотрудники компании &laquo;СтальКомплект&raquo; приедут на&nbsp;место, оценят ситуацию, выполнят замеры, предложат подходящие варианты дизайна и&nbsp;обсудят специфику монтажа.`, `l`)
+
+		+b.NAV.page-navigation2(aria-label="Page navigation")
+			+e.UL.pagination
+				+e.LI.page-item
+					+e.A.page-link.disabled(href="#" aria-label="Previous")
+						+icon('shevron-left')
+				+e.LI.page-item
+					+e.A.page-link.active(href="#") 1
+				+e.LI.page-item
+					+e.A.page-link(href="#") 2
+				+e.LI.page-item
+					+e.A.page-link(href="#") 3
+				+e.LI.page-item
+					+e.A.page-link(href="#") 4
+				+e.LI.page-item
+					+e.A.page-link(href="#") 5
+				+e.LI.page-item
+					+e.A.page-link(href="#") 6
+				+e.LI.page-item
+					+e.A.page-link(href="#") 7
+				+e.LI.page-item
+					+e.A.page-link(href="#" aria-label="Next")
+						+icon('shevron-right')
+
+	// end sBlogArticles

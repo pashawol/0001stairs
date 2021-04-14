@@ -8,3 +8,5 @@
 1. <https://pashawol.github.io/0001stairs/public/frame9.html>
 1. <https://pashawol.github.io/0001stairs/public/frame10.html>
 1.  <https://pashawol.github.io/0001stairs/public/canopy-main.html>
+1.  <https://pashawol.github.io/0001stairs/public/canopy-blog.html>
+1.  <https://pashawol.github.io/0001stairs/public/canopy-content.html>

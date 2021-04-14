@@ -1,5 +1,4 @@
 .catalog {
-
 	padding-top: rem(28);
 
 	&__sorting-form {
@@ -13,20 +12,18 @@
 
 	&__form-select {
 		border: none;
-		color:#EDA65D;
+		color: #eda65d;
 		outline: none;
 		font-size: rem(14);
 		font-weight: 700;
 		option {
 			border: none;
-			color:#EDA65D;
+			color: #eda65d;
 			outline: none;
 		}
 	}
 
-
 	.filter {
-
 		display: none;
 
 		.row {
@@ -41,13 +38,13 @@
 			position: relative;
 			border: none;
 			background-color: transparent;
-			padding-right: rem(24);			
-			outline-color: #EDA65D;
+			padding-right: rem(24);
+			outline-color: #eda65d;
 			font-size: rem(14);
 			&:hover {
-				color: #EDA65D;
+				color: #eda65d;
 			}
-			
+
 			&::after {
 				content: "";
 				position: absolute;
@@ -70,53 +67,64 @@
 		}
 	}
 
-	
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-up(xs) {
+	}
 
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
 	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	@include media-breakpoint-between(md, xl) {
+	}
 
+	//
+	@include media-breakpoint-only(xs) {
+	}
+	@include media-breakpoint-only(sm) {
+	}
+	@include media-breakpoint-only(md) {
+	}
+	@include media-breakpoint-only(lg) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+
+	//
+	@include media-breakpoint-down(xl) {
+	}
+	@include media-breakpoint-down(lg) {
+	}
+	@include media-breakpoint-down(md) {
+	}
+	@include media-breakpoint-down(sm) {
+	}
+	@include media-breakpoint-down(xs) {
+	}
 }
 .section-title {
 	padding: 0;
 	text-transform: uppercase;
-		h1 {
-			font-size: rem(50);
-		}
-	
+	h1 {
+		font-size: rem(50);
+	}
+
 	.f-show {
 		position: relative;
 		bottom: rem(7);
 		text-transform: none;
 		font-size: rem(16);
 		font-weight: 700;
-		color: #EDA65D;
+		color: #eda65d;
 		padding: rem(10) rem(40) rem(10) rem(10);
 		cursor: pointer;
 		&:hover {
-			color:#35455C;
-		}	
+			color: #35455c;
+		}
 		&::after {
 			content: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='23' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.763 10.396L1.707 3.338c-.63-.63-.184-1.707.707-1.707h19.172c.89 0 1.337 1.077.707 1.707l-7.057 7.056a1 1 0 00-.293.708v5.964a1 1 0 01-.293.707l-3.888 3.887c-.63.63-1.707.184-1.707-.707v-9.851a1 1 0 00-.292-.707z' stroke='url(%23paint0_linear)' stroke-width='2'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear' x1='12' y1='1.632' x2='12' y2='23.369' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23EDA65D'/%3e%3cstop offset='1' stop-color='%23EDA65D'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
 			position: absolute;
@@ -134,15 +142,15 @@
 		border: none;
 		background-color: transparent;
 		padding-right: rem(24);
-		outline-color: #EDA65D;
+		outline-color: #eda65d;
 		padding-top: rem(10);
 		padding-bottom: rem(10);
 		padding-left: rem(10);
 		cursor: pointer;
 		&:hover {
-			color: #EDA65D;
+			color: #eda65d;
 		}
-		
+
 		&::after {
 			content: "";
 			position: absolute;
@@ -155,7 +163,6 @@
 		}
 	}
 }
-
 
 .page-navigation {
 	display: flex;
@@ -182,12 +189,12 @@
 	}
 
 	.disabled {
-		color:#BBBBBB;
+		color: #bbbbbb;
 	}
-	 .active {
-		border: 1px solid #EDA65D;
-		border-radius: rem(4)
-	 }
+	.active {
+		border: 1px solid #eda65d;
+		border-radius: rem(4);
+	}
 	.icon-next {
 		width: rem(7);
 		height: rem(10);
@@ -218,22 +225,21 @@
 	margin-bottom: rem(12);
 	&__input {
 		position: absolute;
-		@extend .invisible
+		@extend .invisible;
 	}
 	&__text {
 		font-size: rem(14);
 		padding: rem(8);
-		border: 1px solid #EDA65D;
+		border: 1px solid #eda65d;
 		display: block;
 		cursor: pointer;
 	}
 	&__input:checked + &__text {
-		background: #FFE6CC;
+		background: #ffe6cc;
 	}
 }
 
-.filter{
-
+.filter {
 	&__tittle {
 		font-size: 20px;
 		font-weight: 700;
@@ -276,35 +282,32 @@
 		left: rem(8);
 		@include media-breakpoint-down(lg) {
 			display: none;
-		}		
+		}
 	}
 	&__reset-all--bottom {
 		@include media-breakpoint-up(xl) {
 			display: none;
 		}
 	}
-	
 }
-
 
 .custom-input {
 	margin-bottom: rem(10);
-	 
+
 	&__lab {
-		border-color: #EDA65D;
-		top: rem(1); 
+		border-color: #eda65d;
+		top: rem(1);
 	}
 
 	&__input[type="checkbox"] + &__lab {
-		
-		&::after{ 
-			content:	url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M.447 6.354l3.008 3.008 8.098-8.099' stroke='url(%23paint0_linear)'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear' x1='6' y1='1.263' x2='6' y2='9.362' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23EDA65D'/%3e%3cstop offset='1' stop-color='%23EDA65D'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+		&::after {
+			content: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M.447 6.354l3.008 3.008 8.098-8.099' stroke='url(%23paint0_linear)'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear' x1='6' y1='1.263' x2='6' y2='9.362' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23EDA65D'/%3e%3cstop offset='1' stop-color='%23EDA65D'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
 			margin-top: 0;
 			z-index: 2;
-		}		
+		}
 	}
-	&__input:checked + &__lab{
-		background-color: #FFE6CC;
+	&__input:checked + &__lab {
+		background-color: #ffe6cc;
 	}
 }
 
@@ -320,11 +323,11 @@
 }
 
 .catalog-item {
-	background-color: #F4F4F4;
+	background-color: #f4f4f4;
 	padding: rem(20);
 	margin: 0 auto;
 	min-height: calc(100% - #{rem(30)});
-	margin-bottom: rem(25);	
+	margin-bottom: rem(25);
 	@include media-breakpoint-down(sm) {
 		padding: rem(15) rem(15) rem(10) rem(15);
 		margin-bottom: rem(20);
@@ -332,9 +335,9 @@
 
 	&__caption:hover {
 		.catalog-item__btn {
-			background-color: #F7CBA1;
-			border-color: #F7CBA1;
-			color: #2b3545;;
+			background-color: #f7cba1;
+			border-color: #f7cba1;
+			color: #2b3545;
 		}
 		.catalog-item__tittle {
 			text-decoration: underline;
@@ -357,7 +360,6 @@
 				min-width: (190px * 2 + 40px);
 			}
 		}
-
 	}
 	&__tittle {
 		font-size: rem(16);
@@ -404,7 +406,7 @@
 		position: relative;
 		font-size: rem(20);
 		font-weight: 700;
-		color: #EDA65D;
+		color: #eda65d;
 		line-height: calc(25 / 20);
 		flex-grow: 1;
 		left: rem(5);

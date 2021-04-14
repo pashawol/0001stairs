@@ -10,6 +10,9 @@
     position: fixed;
     .top-line {
       padding: rem(15) 0 0;
+      @include media-breakpoint-up(sm) {
+        padding: rem(15) 0 rem(5);
+      }
       @include media-breakpoint-up(lg) {
         padding: rem(16) 0 0;
       }

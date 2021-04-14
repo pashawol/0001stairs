@@ -1,0 +1,20 @@
+mixin sBlog()
+	// start sBlog
+	+b.sBlog#sBlog&attributes(attributes)
+		.container
+			.row
+				.col-lg-3.order-last.order-lg-first
+					+e.ASIDE.aside
+						ul
+							li
+								a(href="#") Навесы длиной 4 метра
+							li.active
+								a(href="#") Навесы из поликарбоната
+							li
+								a(href="#") Навесы длиной 2 метра
+							li
+								a(href="#") Крепление к земле, столбы
+				.col-lg-9
+					block
+
+	// end sBlog
