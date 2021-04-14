@@ -392,7 +392,7 @@
 			left: -18%;
 		}
 		@include media-breakpoint-up(xl) {
-			left: -7%;
+			left: -8%;
 		}
 	}
 	&__text {
@@ -442,6 +442,9 @@
 			width: 216px;
 			min-height: 49px;
 			margin-bottom: var(--spacing);
+			@include media-breakpoint-only(md) {
+				margin-bottom: 0;
+			}
 		}
 		.polite-canopy {
 			margin-bottom: 0;
