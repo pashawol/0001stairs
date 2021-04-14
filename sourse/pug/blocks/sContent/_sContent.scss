@@ -419,7 +419,7 @@
 			line-height: 185.8%;
 			color: #35455c;
 			border-color: transparent;
-			border-radius: $border-radius-lg;
+			border-radius: rem(5);
 			padding: rem(10) rem(18);
 			min-height: rem(49);
 			&:focus {
