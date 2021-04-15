@@ -283,7 +283,7 @@ $h: rem(3);
 		border-radius: 5px;
 		background-image: url(../img/svg/cevron-down.svg);
 		background-repeat: no-repeat;
-		background-size: 70%;
+		background-size: 65%;
 		background-position: 50% 55%;
 		&:hover, &:active {
 			background-color: darken($color: $primary, $amount: 5);
