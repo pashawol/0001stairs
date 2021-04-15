@@ -53,12 +53,13 @@ function eventHandler() {
 	heightses();
 
 	function whenResize() {
-		var topNav = document.querySelector('header');
-		if (!topNav) return; // document.querySelector('body').style.paddingTop = topNav.offsetHeight + 'px';
+		var topNavBase = document.querySelector('.header--base');
+		var topNavFixed = document.querySelector('.header--fixed');
+		if (!topNavFixed) return; // document.querySelector('body').style.paddingTop = topNav.offsetHeight + 'px';
 
-		console.log(topNav.offsetHeight);
+		console.log(topNavBase.offsetHeight);
 		window.addEventListener('scroll', function (e) {
-			this.scrollY > 0 ? topNav.classList.add('fixed') : topNav.classList.remove('fixed');
+			this.scrollY > topNavBase.offsetHeight ? topNavFixed.classList.add('fixed') : topNavFixed.classList.remove('fixed');
 		}, {
 			passive: true
 		});
@@ -71,7 +72,7 @@ function eventHandler() {
 	});
 	whenResize(); // листалка по стр
 
-	$(" .top-nav li a, .scroll-link").click(function () {
+	$(".scroll-link").click(function () {
 		var elementClick = $(this).attr("href");
 		var destination = $(elementClick).offset().top - 50;
 		$('html, body').animate({
@@ -370,4 +371,11 @@ $(document).ready(function () {
 
 		prevScrollpos = currentScrollPos;
 	};
+
+	$(".menu-mobile--js .menu-item-has-children").each(function () {
+		$(this).append('<div class="toggle-l"></div>');
+	});
+	$('.menu-mobile--js .menu-item-has-children').on('click', '.toggle-l', function () {
+		$(this).prev().slideToggle();
+	});
 }); // JSCCommon.LazyFunction();

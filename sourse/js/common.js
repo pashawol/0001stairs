@@ -51,17 +51,17 @@ function eventHandler() {
 	heightses();
 
 	function whenResize() {
-		let topNav = document.querySelector('header');
-		if (!topNav) return;
+		let topNavBase = document.querySelector('.header--base');
+		let topNavFixed = document.querySelector('.header--fixed');
+		if (!topNavFixed) return;
 		// document.querySelector('body').style.paddingTop = topNav.offsetHeight + 'px';
-		console.log(topNav.offsetHeight);
+		console.log(topNavBase.offsetHeight);
 		
 		window.addEventListener('scroll', function (e) {
-			this.scrollY > 0
-				? topNav.classList.add('fixed')
-				: topNav.classList.remove('fixed');
+			this.scrollY > topNavBase.offsetHeight
+				? topNavFixed.classList.add('fixed')
+				: topNavFixed.classList.remove('fixed');
 		}, { passive: true })
-
 	}
 
 	window.addEventListener('resize', () => {
@@ -72,7 +72,7 @@ function eventHandler() {
 	whenResize();
 
 	// листалка по стр
-	$(" .top-nav li a, .scroll-link").click(function () {
+	$(".scroll-link").click(function () {
 		const elementClick = $(this).attr("href");
 		const destination = $(elementClick).offset().top - 50;
 
@@ -410,6 +410,14 @@ $(document).ready(function () {
 		}
 		prevScrollpos = currentScrollPos;
 	};
+	
+	$(".menu-mobile--js .menu-item-has-children").each(function(){
+		$(this).append('<div class="toggle-l"></div>');
+	})
+
+	$( '.menu-mobile--js .menu-item-has-children').on('click', '.toggle-l', function(){
+			$(this).prev().slideToggle()
+		})
 });
 
 // JSCCommon.LazyFunction();
