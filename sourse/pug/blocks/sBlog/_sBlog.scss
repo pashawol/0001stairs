@@ -1,5 +1,5 @@
 .sBlog {
-	padding-top: calc(#{rem(90)} * 0.6);
+	padding-top: calc(#{rem(90)} * 0.4);
 	@include media-breakpoint-up(lg) {
 		padding-top: rem(90);
 	}

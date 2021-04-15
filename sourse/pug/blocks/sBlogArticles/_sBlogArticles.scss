@@ -141,6 +141,15 @@
 	&:not(:last-of-type) {
 		margin-bottom: var(--spacing);
 	}
+	&__title {
+		display: block;
+		color: $black;
+		padding-bottom: var(--spacing);
+		&:hover {
+			text-decoration: none;
+			color: $primary;
+		}
+	}
 	h2 {
 		@include rfs(40px);
 		font-weight: bold;

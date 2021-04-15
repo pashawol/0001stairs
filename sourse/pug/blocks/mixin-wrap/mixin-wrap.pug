@@ -113,16 +113,22 @@ mixin soc2()
 			+icon('tw')
 //- /scial buttons
 //- WP menu
+		"КАЛЬКУЛЯТОР":"#",
 mixin mnu()
 	-
 		var nav= { 
-		"КАЛЬКУЛЯТОР":"#",
 		"ПРАЙС-ЛИСТ":"#",
 		"КАТАЛОГ":"#",
 		"НАШИ РАБОТЫ":"#",
 		"УСЛУГИ":"#"}
 	ul.menu
-		li.menu-item.menu-item-has-children 
+		li.menu-item.menu-item-has-children
+			a(href="#") КАЛЬКУЛЯТОР
+			ul.sub-menu
+				li.menu-item: a(href='#') Подменю один
+				li.menu-item: a(href='#') Подменю два
+				li.menu-item: a(href='#') Подменю три
+				li.menu-item: a(href='#') Подменю четыре
 		each linkPatch, linkName in nav
 			li.menu-item: a(href= linkPatch)= linkName
 

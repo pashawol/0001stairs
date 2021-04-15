@@ -159,14 +159,10 @@
 		justify-content: space-between;
 		flex-wrap: wrap;
 		padding: var(--spacing) 0;
-	}
-	h6 {
-		font-size: rem(16);
+	}	
+	&__title {
 		font-weight: bold;
 		line-height: 185.8%;
-		margin-bottom: 0;
-	}
-	&__title {
 		margin-bottom: rem(8);
 		@include media-breakpoint-up(md) {
 			margin-bottom: 0;
@@ -193,6 +189,8 @@
 		}
 	}
 	&__warning {
+		font-weight: normal;
+
 		line-height: 185.8%;
 	}
 	.danger {
