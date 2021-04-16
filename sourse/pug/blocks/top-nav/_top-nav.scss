@@ -274,20 +274,21 @@ $h: rem(3);
 	}
 	.toggle-l {
 		@include mt;
+		cursor: pointer;
 		position: absolute;
 		top: 0;
 		right: 5px;
 		width: rem(44);
 		height: rem(44);
-		background-color: $primary;
-		border-radius: 5px;
+		// background-color: $primary;
+		// border-radius: 5px;
 		background-image: url(../img/svg/cevron-down.svg);
 		background-repeat: no-repeat;
-		background-size: 65%;
-		background-position: 50% 55%;
-		&:hover, &:active {
-			background-color: darken($color: $primary, $amount: 5);
-		}
+		background-size: 40%;
+		background-position: center;
+		// &:hover, &:active {
+		// 	background-color: darken($color: $primary, $amount: 5);
+		// }
 	}
 
 	& > a::after {

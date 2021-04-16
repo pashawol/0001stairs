@@ -304,8 +304,20 @@
 		padding-bottom: rem(83);
 	}
 	color: $body-color2;
-	h2 {
+	&__main-title {
+		font-size: rem(24);
+		font-weight: bold;
+		line-height: (36 / 30);
+		margin-bottom: 0;
+		padding-bottom: var(--spacing);
 		text-transform: uppercase;
+		@include media-breakpoint-up(sm) {
+			font-size: rem(26);
+
+		}
+		@include media-breakpoint-up(lg) {
+			font-size: rem(30);
+		}
 	}
 	a {
 		&:hover {
@@ -371,9 +383,22 @@
 	.col-12.col-lg-6.order-last {
 		position: static;
 	}
-	h2 {
+	&__title {
+		font-size: rem(24);
+		font-weight: bold;
+		line-height: (36 / 30);
+		margin-bottom: 0;
+		padding-bottom: var(--spacing);
 		text-transform: uppercase;
-		max-width: 387px;
+		max-width: 350px;
+		@include media-breakpoint-up(sm) {
+			font-size: rem(26);
+			
+		}
+		@include media-breakpoint-up(md) {
+			font-size: rem(30);
+			max-width: 387px;
+		}
 	}
 	&__img-wrap {
 		position: absolute;

@@ -62,7 +62,7 @@ mixin sContent()
 				span Задай их&nbsp;в&nbsp;whatsapp!
 			+e.btn.btn.btn-body2(href='#') задать вопрос в&nbsp;WhatsApp
 		+b.similar-articles
-			h2 похожие статьи:
+			+e.main-title похожие статьи:
 			- for (var x = 1; x <= 4; x++)
 				+e.link(href='#')
 					+e.title Навесы из поликарбоната
@@ -80,7 +80,7 @@ mixin sContent()
 						img(src="img/@2x/plan-1.png", alt="")
 				.col-12.col-lg-6
 					+e.content
-						h2 #[span.text-primary Планируете] строительство навеса?
+						+e.title #[span.text-primary Планируете] строительство навеса?
 						+e.text Оставьте ваш номер телефона, вам перезвонит наш менеджер и проконсультирует вас.
 						+form-wrap
 							.row
