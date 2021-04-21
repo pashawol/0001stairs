@@ -12,12 +12,12 @@
 
 	background-color: rgba($color: $black, $alpha: 0.02);
 	.section-title {
-		margin-bottom: rem(47);
+		padding-bottom: rem(47);
 		@include media-breakpoint-up(sm) {
-			margin-bottom: rem(66);
+			padding-bottom: rem(66);
 		}
 		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(79);
+			padding-bottom: rem(79);
 		}
 	}
 	&__slider-wrap {

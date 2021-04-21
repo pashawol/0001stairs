@@ -8,9 +8,9 @@
 		padding-bottom: rem(48);
 	}
 	.section-title {
-		margin-bottom: rem(42);
+		padding-bottom: rem(42);
 		@include media-breakpoint-up(sm) {
-			margin-bottom: rem(65);
+			padding-bottom: rem(65);
 		}
 	}
 	.roww {

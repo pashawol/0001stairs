@@ -37,18 +37,28 @@ $output-bourbon-deprecation-warnings: false;
 	overflow: hidden;
 }
 
+.h2,
+h2 {
+	// color: $black;
+	text-transform: uppercase;
+	font-size: rem(27) !important;
+	font-weight: bold;
+	line-height: (36 / 30);
+	@include media-breakpoint-up(xl) {
+		font-size: rem(30);
+	}
+}
+
 .section-title {
-	
-		h2 {
-			// color: $black;
-			font-size: rem(27);
-			font-weight: bold;
-			line-height: (36 / 30);
-			@include media-breakpoint-up(xl) {
-				font-size: rem(30);
-			}
+	h2 {
+		text-transform: uppercase;
+		font-size: rem(27) !important;
+		font-weight: bold;
+		line-height: (36 / 30);
+		@include media-breakpoint-up(xl) {
+			font-size: rem(30);
 		}
-	
+	}
 }
 
 .slick-arrow {
@@ -114,7 +124,6 @@ $output-bourbon-deprecation-warnings: false;
 			}
 		}
 	}
-	
 }
 
 // .catalog  {

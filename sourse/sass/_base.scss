@@ -80,9 +80,19 @@ body {
 }
 
 .bg-body {
-	h2 {
+	.h2, h2 {
 		color: $white;
 	}
+}
+
+.s-chats {
+	.h2_big {
+		color: #fff;
+	}
+}
+
+.h6_mat {
+	padding-bottom: em(18);
 }
 
 // @include media-breakpoint-up(lg) {
