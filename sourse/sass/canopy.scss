@@ -38,7 +38,7 @@ $output-bourbon-deprecation-warnings: false;
 }
 
 .section-title {
-	&--sm {
+	
 		h2 {
 			// color: $black;
 			font-size: rem(27);
@@ -48,7 +48,7 @@ $output-bourbon-deprecation-warnings: false;
 				font-size: rem(30);
 			}
 		}
-	}
+	
 }
 
 .slick-arrow {
