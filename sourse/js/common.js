@@ -55,18 +55,16 @@ function eventHandler() {
 		let topNavFixed = document.querySelector('.header--fixed');
 		if (!topNavFixed) return;
 		// document.querySelector('body').style.paddingTop = topNav.offsetHeight + 'px';
-		console.log(topNavBase.offsetHeight);
-		
-		window.addEventListener('scroll', function (e) {
-			this.scrollY > topNavBase.offsetHeight
-				? topNavFixed.classList.add('fixed')
-				: topNavFixed.classList.remove('fixed');
-		}, { passive: true })
+		window.scrollY > topNavBase.offsetHeight
+			? topNavFixed.classList.add('fixed')
+			: topNavFixed.classList.remove('fixed');
 	}
+	window.addEventListener('scroll', function (e) {
+		whenResize();
+	}, { passive: true })
 
 	window.addEventListener('resize', () => {
 		whenResize();
-
 	}, { passive: true });
 
 	whenResize();
