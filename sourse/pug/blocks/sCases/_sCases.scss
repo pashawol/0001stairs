@@ -75,7 +75,7 @@
 			left: 0;
 			bottom: 0;
 			height: 20%;
-			background: linear-gradient(0deg, #ffffff 12.83%, rgba(255, 255, 255, 0) 100%);
+			background: linear-gradient(0deg, #ffffff 40%, rgba(255, 255, 255, 0) 100%);
 			z-index: 4;
 			position: absolute;
 		}
@@ -145,7 +145,7 @@
 	background-color: transparent;
 	padding: 0;
 	@include media-breakpoint-up(xl) {
-		top: -40px;
+		top: -330px;
 	}
 	&:hover {
 		border-color: transparent;
