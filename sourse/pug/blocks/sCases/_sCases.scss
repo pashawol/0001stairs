@@ -21,8 +21,8 @@
 		}
 		&__btn {
 			margin-bottom: rem(13);
-			padding-left: rem(10) !important;
-			padding-right: rem(10) !important;
+			height: rem(49);
+			padding: rem(13) rem(10) !important;
 			@include media-breakpoint-down(sm) {
 				font-size: 12px;
 			}
