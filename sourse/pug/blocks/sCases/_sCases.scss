@@ -7,7 +7,8 @@
 		margin-right: auto;
 		// max-width: rem(700);
 		// justify-content: space-between;
-		&__caption {
+		&__caption,
+		&__caption2 {
 			@include media-breakpoint-up(xl) {
 				@include roww(45);
 			}
@@ -22,7 +23,7 @@
 		&__btn {
 			margin-bottom: rem(13);
 			height: rem(49);
-			padding: rem(13) rem(10) !important;
+			padding: rem(14) rem(10) !important;
 			@include media-breakpoint-down(sm) {
 				font-size: 12px;
 			}
@@ -73,7 +74,7 @@
 			width: 100%;
 			left: 0;
 			bottom: 0;
-			height: 31%;
+			height: 20%;
 			background: linear-gradient(0deg, #ffffff 12.83%, rgba(255, 255, 255, 0) 100%);
 			z-index: 4;
 			position: absolute;
@@ -81,6 +82,15 @@
 	}
 	.show .bottom {
 		display: none;
+	}
+
+	.row {
+		#CarriedoutContainer {
+			width: 100%;
+		}
+		.text-center#loadMoreCarriedout {
+			width: 100%;
+		}
 	}
 	@include media-breakpoint-up(xl) {
 	}
@@ -125,12 +135,15 @@
 .btn-more {
 	cursor: pointer;
 	color: #35455c;
+	border: none;
 	border-bottom: 1px solid;
 	cursor: pointer;
 	@include mt;
 	display: inline-block;
 	position: relative;
 	z-index: 5;
+	background-color: transparent;
+	padding: 0;
 	@include media-breakpoint-up(xl) {
 		top: -40px;
 	}
