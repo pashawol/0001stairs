@@ -234,6 +234,41 @@ mixin prod2(st)
 			+e.link.text-center(href="#") Примеры работ
 	// /+b.prod2-item
 
+mixin prod3(l, i1, i2, i3, i4)
+	+b.prod-item-popular
+		if l
+			+e.label.text-right: span!= l
+		.wrapping
+			.row
+				.col-xl-7
+					+e.grid
+						a(href=`img/@2x/c-catalog-${i1}.jpg` data-fancybox="catalog")
+							+pic(`c-catalog-${i1}.jpg`,'','lazy',0)
+						a(href=`img/@2x/c-catalog-${i2}.jpg` data-fancybox="catalog")
+							+pic(`c-catalog-${i2}.jpg`,'','lazy',0)
+						a(href=`img/@2x/c-catalog-${i3}.jpg` data-fancybox="catalog")
+							+pic(`c-catalog-${i3}.jpg`,'','lazy',0)
+						a(href=`img/@2x/c-catalog-${i4}.jpg` data-fancybox="catalog")
+							+pic(`c-catalog-${i4}.jpg`,'','lazy',0)
+				.col-xl-5
+					+e.caption
+						+e.table
+							mixin tr(t1, t2)
+								.row
+									+e.col.col.fw-500= t1
+									+e.col.col-auto.strong= t2
+							+tr("Наименование:",'НАВЕС Н-1630')
+							+tr("Ширина:",'3 метра')
+							+tr("Длина:",'6 метров')
+							+tr("Высота:",'2,5 метра')
+							+tr("Тип навеса:",'арочный')
+							+tr("Материал кровли:",'поликарбонат')
+						+e.foot
+							+e.item-price
+								.strong от&nbsp;57&nbsp;600&nbsp;₽
+							+e.btn.btn-primary(href="#") Узнать подробнее
+	// /+b.prod2-item
+
 //- /picture
 	example
 	+piclazy('consult','png','bg')

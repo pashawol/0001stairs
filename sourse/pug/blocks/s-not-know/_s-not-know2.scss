@@ -98,6 +98,12 @@
 			@include media-breakpoint-down(sm) {
 				text-align: center;
 			}
+			a {
+				text-decoration: underline;
+				&:hover {
+					text-decoration: none;
+				}
+			}
 		}
 		.polite-canopy {
 			padding-bottom: rem(20);

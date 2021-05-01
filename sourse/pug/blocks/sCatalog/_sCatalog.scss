@@ -1,0 +1,253 @@
+.sCatalog {
+	background-color: #f5f5f5;
+	padding-bottom: rem(60);
+	padding-top: rem(50);
+	@include media-breakpoint-up(lg) {
+		padding-bottom: rem(95);
+		padding-top: rem(80);
+	}
+	.section-title {
+		margin-bottom: 0;
+		padding-bottom: rem(50);
+		@include media-breakpoint-up(sm) {
+			padding-bottom: rem(30);
+		}
+		@include media-breakpoint-up(lg) {
+			padding-bottom: rem(60);
+		}
+		h2 {
+			margin-bottom: 0;
+			padding-bottom: rem(30);
+			@include media-breakpoint-up(sm) {
+				padding-bottom: rem(35);
+			}
+		}
+		&__text {
+			font-weight: normal;
+			font-size: rem(20);
+			line-height: 130%;
+			text-transform: none;
+			margin: 0 auto;
+			max-width: rem(375);
+			@include media-breakpoint-up(lg) {
+				max-width: rem(600);
+			}
+		}
+	}
+
+	.filter {
+		padding-bottom: rem(50);
+		@include media-breakpoint-up(lg) {
+			padding-bottom: rem(80);
+		}
+		&__top {
+			padding-bottom: 0;
+		}
+		.row {
+			&--medium {
+				@include roww(60 / 2);
+			}
+		}
+		.btn-input-filter {
+			margin-bottom: 0;
+			&__text {
+				&--primary {
+					width: rem(215);
+				}
+			}
+		}
+		.input-wrap-filter {
+			option {
+				@include media-breakpoint-down(xs) {
+					font-size: rem(17);
+				}
+			}
+			&__input-wrap {
+				label {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.prod-item-popular {
+		padding: 0;
+		background-color: transparent;
+		&:not(:last-child) {
+			margin-bottom: rem(35);
+		}
+		.wrapping {
+			box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.13);
+			position: relative;
+			overflow: hidden;
+			border-radius: 10px;
+			background-color: #fff;
+		}
+
+		&__label {
+			span {
+				display: inline-block;
+				background-color: $primary;
+				color: $white;
+				font-style: normal;
+				font-weight: 900;
+				line-height: (25 / 20);
+				border-radius: 10px 10px 0 0;
+				@include rfs(18px);
+				padding: rem(8) rem(30) rem(6) rem(30);
+				@include media-breakpoint-up(xl) {
+					font-size: rem(20);
+					padding: rem(8) rem(38) rem(6) rem(38);
+				}
+			}
+		}
+
+		&__col {
+			margin-bottom: 2px;
+		}
+
+		&__grid {
+			display: grid;
+			grid-template-rows: 1fr 80px;
+			grid-template-columns: repeat(3, 1fr);
+			@include media-breakpoint-up(sm) {
+				grid-template-rows: repeat(3, 1fr);
+				grid-template-columns: 1fr 136px;
+			}
+			height: 100%;
+			row-gap: 7px;
+			column-gap: 7px;
+			min-height: 300px;
+			@include media-breakpoint-up(md) {
+				min-height: 350px;
+			}
+			@include media-breakpoint-up(lg) {
+				min-height: 400px;
+			}
+			@include media-breakpoint-up(xl) {
+				min-height: 312px;
+			}
+			a {
+				width: 100%;
+				&:nth-child(1) {
+					grid-row: 1/1;
+					@include media-breakpoint-up(sm) {
+						grid-row: 1/4;
+					}
+					@include media-breakpoint-down(xs) {
+						grid-column: 1/4;
+					}
+				}
+				&:nth-child(2) {
+					@include media-breakpoint-up(sm) {
+						grid-row: 1/1;
+					}
+				}
+				&:nth-child(3) {
+					@include media-breakpoint-up(sm) {
+						grid-row: 2/2;
+					}
+				}
+				&:nth-child(4) {
+					@include media-breakpoint-up(sm) {
+						grid-row: 3/3;
+					}
+				}
+				&:nth-child(n + 2) {
+					position: relative;
+					&::after {
+						content: "";
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						top: 0;
+						left: 0;
+						background-color: rgba($black, 0.6);
+					}
+					@include media-breakpoint-up(sm) {
+						grid-column: 2/2;
+					}
+				}
+			}
+		}
+		picture {
+			text-align: center;
+			margin-bottom: 0;
+			background-color: $white;
+			width: 100%;
+			height: 100%;
+			&::before {
+				display: none;
+			}
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: top;
+			}
+		}
+		&__caption {
+			padding: rem(15) rem(30);
+			@include media-breakpoint-up(sm) {
+				padding: rem(40) rem(50);
+			}
+			@include media-breakpoint-up(md) {
+				padding: rem(40) rem(60);
+			}
+			@include media-breakpoint-up(xl) {
+				padding: rem(30) rem(70) rem(35) rem(35);
+			}
+		}
+		&__btn {
+			width: rem(170);
+			height: rem(43);
+			padding: rem(10) rem(9);
+		}
+		.btn-primary {
+			background-color: $primary;
+			&:hover {
+				background-color: #ffc33e;
+				border-color: #ffbf31;
+			}
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-up(xs) {
+	}
+
+	//
+	@include media-breakpoint-between(md, xl) {
+	}
+
+	//
+	@include media-breakpoint-only(xs) {
+	}
+	@include media-breakpoint-only(sm) {
+	}
+	@include media-breakpoint-only(md) {
+	}
+	@include media-breakpoint-only(lg) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+
+	//
+	@include media-breakpoint-down(xl) {
+	}
+	@include media-breakpoint-down(lg) {
+	}
+	@include media-breakpoint-down(md) {
+	}
+	@include media-breakpoint-down(sm) {
+	}
+	@include media-breakpoint-down(xs) {
+	}
+}

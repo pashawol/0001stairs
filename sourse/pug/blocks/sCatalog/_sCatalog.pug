@@ -1,0 +1,37 @@
+mixin sCatalog()
+	// start sCatalog
+	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
+		.container
+			+b.section-title--sm.text-center
+				h2 КАТАЛОГ НАВЕСОВ ДЛЯ АВТОМОБИЛЕЙ
+				+e.text Мы&nbsp;строим навесы на&nbsp;заказ #[span.strong по&nbsp;индивидуальным параметрам] каждого заказчика.
+
+			+b.filter
+				+e.top
+					.row.row--medium.justify-content-center.d-none.d-lg-flex
+						.col-auto
+							+b.LABEL.btn-input-filter
+								+e.INPUT.input(type="radio" name="count" checked)
+								+e.SPAN.text--primary Для 1&nbsp;автомобиля
+						.col-auto
+							+b.LABEL.btn-input-filter
+								+e.INPUT.input(type="radio" name="count")
+								+e.SPAN.text--primary Для 2х&nbsp;автомобилей
+						.col-auto
+							+b.LABEL.btn-input-filter
+								+e.INPUT.input(type="radio" name="count")
+								+e.SPAN.text--primary Для 3х&nbsp;автомобилей
+					.row.justify-content-center.d-lg-none
+						.col-auto 
+							+b.input-wrap-filter
+								+select('', 'Для 1 автомобиля', 'Для 2х автомобилей', 'Для 3х автомобилей')
+			+e.items
+				+prod3(`СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ`, `1`, `2`, `3`, `4`)
+				+prod3(`АКЦИЯ`, `1`, `2`, `3`, `4`)
+				+prod3(``, `2`, `1`, `3`, `4`)
+				+prod3(``, `3`, `2`, `1`, `4`)
+				+prod3(``, `4`, `2`, `3`, `1`)
+
+
+
+	// end sCatalog
