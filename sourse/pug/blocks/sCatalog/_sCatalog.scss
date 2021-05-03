@@ -160,6 +160,7 @@
 				&:nth-child(n + 2) {
 					position: relative;
 					&::after {
+						@include mt;
 						content: "";
 						position: absolute;
 						width: 100%;
@@ -169,12 +170,19 @@
 						background-color: rgba($black, 0.6);
 						z-index: 2;
 					}
+					&:hover {
+						&::after {
+							background-color: rgba($black, 0.2);
+						}
+					}
 					@include media-breakpoint-up(sm) {
 						grid-column: 2/2;
 					}
 				}
 			}
 		}
+		
+
 		&__video {
 			&::before {
 				content: "";
