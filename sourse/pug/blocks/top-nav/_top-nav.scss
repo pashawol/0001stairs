@@ -262,10 +262,14 @@ $h: rem(3);
 
 .menu-item-has-children {
 	position: relative;
+
 	@include media-breakpoint-up(lg) {
+		a {
+			padding-right: rem(27) !important;
+		}
 		&:hover {
 			& > a::after {
-				transform: rotate(180deg);
+				transform: rotate(180deg) translateY(50%);
 			}
 			.sub-menu {
 				display: block;
@@ -294,17 +298,17 @@ $h: rem(3);
 	& > a::after {
 		@include media-breakpoint-up(lg) {
 			content: "";
+			@include mt;
+			@include a-cent(y);
+			right: 5px;
 			background-image: url(../img/svg/shevron-down-dark.svg);
 			display: inline-block;
-			background-size: 100% 100%;
+			background-size: 10px 10px;
 			background-position: center center;
 			background-repeat: no-repeat;
 			height: rem(18);
-			width: rem(10);
-			margin-left: rem(8);
-			position: relative;
-			top: rem(3);
-			@include mt;
+			width: rem(18);
+			// margin-left: rem(8);
 		}
 	}
 }
