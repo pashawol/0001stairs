@@ -71,8 +71,15 @@
       }
     }
     .menu {
+      @include media-breakpoint-only(lg) {
+        margin-left: rem(-9);
+        margin-right: rem(-9);
+      }
       a {
         padding: rem(15) rem(20);
+        @include media-breakpoint-only(lg) {
+          padding: rem(15) rem(9);
+        }
       }
     }
     &:not(.fixed) {
@@ -132,6 +139,17 @@
       @include media-breakpoint-up(sm) {
         display: block;
         padding-top: rem(7);
+      }
+    }
+    .menu {
+      @include media-breakpoint-only(lg) {
+        margin-left: rem(-9);
+        margin-right: rem(-9);
+      }
+      a {
+        @include media-breakpoint-only(lg) {
+          padding: rem(20) rem(9);
+        }
       }
     }
   }
