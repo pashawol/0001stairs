@@ -52,7 +52,7 @@ mixin top-line-canopy()
 						.col-auto.order
 							+e.btn.btn-primary.link-modal(href="#modal-call" data-order="Заказать звонок" data-title='Заказать звонок' data-text="Оставьте заявку и наш менеджер перезвонит вам!" data-btn="ЗАКАЗАТЬ ЗВОНОК")
 								+icon("telephone")
-								| Заказать звонок
+								span.d-none.d-sm-inline Заказать звонок
 						.col-auto.measure
 							+e.btn.btn-primary.link-modal(href="#modal-call" data-order="Вызвать замерщика" data-title='Вызвать замерщика' data-text="Оставьте заявку и наш замерщик приедет к вам!" data-btn="ВЫЗВАТЬ ЗАМЕРЩИКА")
 								+icon("rule")
@@ -62,10 +62,20 @@ mixin top-line-canopy()
 								span
 						+time().col-12.d-lg-none.text-right
 			+e.links
-				+e.A.link(target="_blank" href="#")
-					span Написать в WhatsApp
-					+e.SPAN.imgWrap
-						img.res-i(src="img/svg/whatsapp.svg" data-src="img/svg/whatsapp.svg" alt="")
+				.row
+					.col-6
+						+e.A.link(target="_blank" href="#")
+							span Написать в WhatsApp
+							+e.SPAN.imgWrap
+								img.res-i(src="img/svg/whatsapp.svg" data-src="img/svg/whatsapp.svg" alt="")
+						+e.btn--whatsapp.btn-primary.d-sm-none(href="#")
+								img(src="img/svg/whatsapp.svg", alt="")
+								| Написать в Whatsapp
+					.col-6.d-sm-none
+						+e.btn.btn-primary.link-modal(href="#modal-call" data-order="Заказать звонок" data-title='Заказать звонок' data-text="Оставьте заявку и наш менеджер перезвонит вам!" data-btn="ЗАКАЗАТЬ ЗВОНОК")
+								+icon("telephone")
+								| Заказать звонок
+				+e.logo-wrapper-caption.d-sm-none Изготовление и&nbsp;монтаж навесов в&nbsp;Москве и&nbsp;Московской oбласти
 
 mixin time()
 	.top-nav__time&attributes(attributes)
