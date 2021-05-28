@@ -87,6 +87,9 @@
 		text-decoration: none !important;
 		font-weight: bold;
 		display: block;
+		&:hover {
+			color: $primary;
+		}
 	}
 }
 
@@ -334,7 +337,7 @@ $h: rem(3);
 		}
 	}
 	a {
-		text-transform: uppercase;
+		// text-transform: uppercase;
 		font-size: rem(14);
 		padding: rem(10) rem(15);
 		@include media-breakpoint-up(lg) {

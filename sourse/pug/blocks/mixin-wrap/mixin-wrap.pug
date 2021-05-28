@@ -117,13 +117,14 @@ mixin soc2()
 mixin mnu()
 	-
 		var nav= { 
-		"ПРАЙС-ЛИСТ":"#",
-		"КАТАЛОГ":"#",
-		"НАШИ РАБОТЫ":"#",
-		"УСЛУГИ":"#"}
+		"Прайс-лист":"#",
+		"Каталог":"#",
+		"Наши работы":"#",
+		"Услуги":"#",
+		"Партнёрам":"#"}
 	ul.menu
 		li.menu-item.menu-item-has-children
-			a(href="#") КАЛЬКУЛЯТОР
+			a(href="#") Калькулятор
 			ul.sub-menu
 				li.menu-item: a(href='#') Подменю один
 				li.menu-item: a(href='#') Подменю два
@@ -135,8 +136,8 @@ mixin mnu()
 mixin mnu2()
 	-
 		var nav= { 
-		"АКЦИИ":"#",
-		"КОНТАКТЫ":"#s-contact"
+		"Акции":"#",
+		"Контакты":"#s-contact"
 		}
 	ul.menu
 		each linkPatch, linkName in nav
@@ -252,8 +253,8 @@ mixin prod3(l, i1, i2, i3, i4)
 							a(href=`img/@2x/c-catalog-${i4}.jpg` data-fancybox="catalog")
 								+pic(`c-catalog-${i4}.jpg`,'','lazy',0)
 						else
-							+e.video(href=`https://youtu.be/iUqOoP2gzfA` data-fancybox="catalog")
-								img.res-i(src=`//img.youtube.com/vi/iUqOoP2gzfA/mqdefault.jpg` alt='')
+							+e.video(href=`https://youtu.be/jVe6adUdWc4` data-fancybox="catalog")
+								img.res-i(src=`//img.youtube.com/vi/jVe6adUdWc4/sddefault.jpg` alt='')
 
 				.col-xl-5
 					+e.caption

@@ -1,0 +1,5 @@
+JSCCommonsPartners();
+	sPartners() {
+
+	}
+	

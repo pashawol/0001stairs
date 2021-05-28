@@ -1,15 +1,14 @@
 extends layout/main.pug
 block variables
-	- let  mainPage= null
+	- let  mainPage= `bg-light`
 block title
-	- let  title= 'Главная'
+	- let  title= 'Партнёрам'
 	title= title
 
 
 //- include ../blocks/s-content/_s-content.pug
 include ../blocks/s-contact/_s-contact.pug
-include ../blocks/s-production/_s-production.pug
-include ../blocks/s-not-know/_s-not-know.pug
+//- include ../blocks/s-production/_s-production.pug
 //- include ../blocks/s-materials/_s-materials.pug
 //- include ../blocks/s-3d-maket/_s-3d-maket.pug
 //- include ../blocks/s-cases/_s-cases.pug
@@ -21,18 +20,20 @@ include ../blocks/s-not-know/_s-not-know.pug
 //- include ../blocks/s-type-of-materials/_s-type-of-materials.pug
 //- include ../blocks/s-khow-order/_s-khow-order.pug
 //- include ../blocks/s-rews/_s-rews.pug
-include ../blocks/s-sert/_s-sert.pug
-include ../blocks/s-price/_s-price.pug
-include ../blocks/s-calc/_s-calc.pug
-include ../blocks/s-popular/_s-popular.pug
-include ../blocks/sCases/_sCases.pug
-include ../blocks/sAbout/_sAbout.pug
-include ../blocks/sSliderGal/_sSliderGal.pug
-include ../blocks/sSteps/_sSteps.pug
-include ../blocks/sWorkshops/_sWorkshops.pug
+//- include ../blocks/s-sert/_s-sert.pug
+//- include ../blocks/s-price/_s-price.pug
+//- include ../blocks/s-calc/_s-calc.pug
+//- include ../blocks/s-popular/_s-popular.pug
+//- include ../blocks/sCases/_sCases.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sSliderGal/_sSliderGal.pug
+//- include ../blocks/sSteps/_sSteps.pug
+//- include ../blocks/s-not-know/_s-not-know.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sPartners/_sPartners.pug
 
 block pagecontent
- 
+
 	+mob-mnu()
 	+header().header--fixed
 		+top-line-canopy()
@@ -40,20 +41,20 @@ block pagecontent
 	+header().header--base
 		+top-line-canopy()
 		+top-nav()
-	+header-block-canopy()
-	+s-popular()
-	+s-calc2
-	+s-calc3
-	+s-calc4
-	+s-not-know2
-	+sCases
+	//- +header-block-canopy()
+	//- +s-popular()
+	//- +s-calc2
+	//- +s-calc3
+	//- +s-calc4
+	+sPartners
+	//- +s-not-know3
+	//- +sCases
 	//- +s-cases
-	+s-price-canopy()
-	+sAbout
-	+sWorkshops
-	+sSliderGal
+	//- +s-price-canopy()
+	//- +sAbout
+	//- +sSliderGal
 
-	+s-production-canopy()
+	//- +s-production-canopy()
 	//- +s-production
 	//- +s-materials
 	//- +s-3d-maket
@@ -65,8 +66,8 @@ block pagecontent
 	//- +s-type-of-materials
 	//- +s-khow-order
 	//- +s-rews
-	+s-sert-canopy()
-	+sSteps
+	//- +s-sert-canopy()
+	//- +sSteps
 	+s-contact()
 	+footer()
 

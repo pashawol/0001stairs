@@ -10,15 +10,44 @@ mixin caseItem(prew, l, tmod, id)
 					else
 						+e.gal-wrap
 							.slider-for
-								- for (var x = 1; x < 6; x++)
-									+e.slide
-										+e.gal-link--lg(data-fancybox="cases-gal" href=`img/@2x/s-cases-1-1.jpg`)
-											img(data-lazy=`img/@2x/s-cases-1-1.jpg`, src="#", alt="") 
+								+e.slide
+									+e.gal-link--lg(data-fancybox="cases-gal" href=`img/@2x/s-cases-1-1.jpg`)
+										img(data-lazy=`img/@2x/s-cases-1-1.jpg`, src="#", alt="") 
+								+e.slide
+									+e.gal-link--lg(data-fancybox="cases-gal" href=`img/@2x/s-cases-1-1.jpg`)
+										img(data-lazy=`img/@2x/s-cases-1-1.jpg`, src="#", alt="") 
+								+e.slide
+									+e.gal-link--lg(data-fancybox="cases-gal" href=`img/@2x/s-cases-1-1.jpg`)
+										img(data-lazy=`img/@2x/s-cases-1-1.jpg`, src="#", alt="") 
+								+e.slide
+									+e.gal-link--lg.video(data-fancybox="cases-gal" href=`https://youtu.be/jVe6adUdWc4`)
+										img(data-lazy=`//img.youtube.com/vi/jVe6adUdWc4/sddefault.jpg`, src="#", alt="") 
+								+e.slide
+									+e.gal-link--lg(data-fancybox="cases-gal" href=`img/@2x/s-cases-1-1.jpg`)
+										img(data-lazy=`img/@2x/s-cases-1-1.jpg`, src="#", alt="") 
+								+e.slide
+									+e.gal-link--lg(data-fancybox="cases-gal" href=`img/@2x/s-cases-1-1.jpg`)
+										img(data-lazy=`img/@2x/s-cases-1-1.jpg`, src="#", alt="") 
 							.slider-nav
-								- for (var x = 1; x < 6; x++)
-									+e.slide--sm
-										+e.gal-link--sm( )
-											img(data-lazy=`img/@2x/s-cases-1-1.jpg`, src="#", alt="") 
+								//- - for (var x = 1; x < 6; x++)
+								+e.slide--sm
+									+e.gal-link--sm( )
+										img(data-lazy=`img/@2x/s-cases-1-1.jpg`, src="#", alt="") 
+								+e.slide--sm
+									+e.gal-link--sm( )
+										img(data-lazy=`img/@2x/s-cases-1-1.jpg`, src="#", alt="") 
+								+e.slide--sm
+									+e.gal-link--sm( )
+										img(data-lazy=`img/@2x/s-cases-1-1.jpg`, src="#", alt="") 
+								+e.slide--sm
+									+e.gal-link--sm.video( )
+										img(data-lazy=`//img.youtube.com/vi/jVe6adUdWc4/sddefault.jpg`, src="#", alt="") 
+								+e.slide--sm
+									+e.gal-link--sm( )
+										img(data-lazy=`img/@2x/s-cases-1-1.jpg`, src="#", alt="") 
+								+e.slide--sm
+									+e.gal-link--sm( )
+										img(data-lazy=`img/@2x/s-cases-1-1.jpg`, src="#", alt="") 
 			.col
 				+e.caption 
 					+e.title Навес из&nbsp;поликарбоната 6&nbsp;x&nbsp;6&nbsp;м

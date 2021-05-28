@@ -1,0 +1,26 @@
+mixin sWorkshops()
+	// start sWorkshops
+	+b.SECTION.sWorkshops.section#sWorkshops&attributes(attributes)
+		.container
+			+e.inner
+				+b.section-title.text-center
+					h2 
+						span.text-primary 6
+						span.text-primary цехов
+						| на территории московской&nbsp;области
+				+e.content
+					mixin line(c, a)
+						+e.line
+							.row.d-flex.align-items-center
+								.col-6
+									span.city!= c
+								.col-6
+									span.adress!= a
+					+line(`Лобня`, `ул. Маяковского, д.5`)
+					+line(`Одинцово`, `ул. Транспортная, д. 2`)
+					+line(`Кашира`, `ул. Стрелецкая, д.66`)
+					+line(`Клин`, `ул. Маяковского, д. 19`)
+					+line(`Павловский посад`, `Фатеево, д. 118`)
+					+line(`Сергиев посад`, `ул. Стахановская, д. 1Б`)
+
+	// end sWorkshops

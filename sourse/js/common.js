@@ -19,7 +19,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Frame10-1.jpg);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/frame98.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -78,6 +78,13 @@ function eventHandler() {
 
 		return false;
 	});
+
+	$('.header-block-c__link--js').click(function () {
+		const elementClick = $(this).attr("href");
+		const destination = $(elementClick).offset().top - 90;
+		$('html, body').animate({ scrollTop: destination}, 1000);
+	});
+
 
 
 

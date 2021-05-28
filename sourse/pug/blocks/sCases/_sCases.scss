@@ -276,6 +276,16 @@
 		margin-bottom: rem(20);
 		position: relative;
 		overflow: hidden;
+		&.video {
+			&::after {
+				content: "";
+				@include a-cent;
+				background-image: url(../img/svg/youtube-play.svg);
+				background-repeat: no-repeat;
+				background-size: contain;
+				z-index: 1;
+			}
+		}
 		img {
 			position: absolute;
 			left: 0;
@@ -286,11 +296,26 @@
 		}
 		&--lg {
 			@include block(555, 367);
+			&.video {
+				&::after {
+					content: "";
+					@include a-cent;
+					width: rem(65);
+					height: rem(65);
+				}
+			}
 		}
 		&--sm {
 			@include block;
 			margin-left: 10px;
 			margin-right: 10px;
+			cursor: pointer;
+			&.video {
+				&::after {
+					width: rem(40);
+					height: rem(40);
+				}
+			}
 		}
 	}
 	.slider-nav {

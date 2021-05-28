@@ -1,0 +1,30 @@
+mixin sPartners()
+	// start sPartners
+	+b.SECTION.sPartners.section#sPartners&attributes(attributes)
+		.container
+			+b.section-title--sm.text-center
+				h1 Дилерам, маркетологам, строителям и партнерам
+				+e.text Мы&nbsp;берем на&nbsp;себя все хлопоты по&nbsp;общению с&nbsp;клиентом, замеру, подписанию договора, изготовлению, доставке и&nbsp;монтажу навесов для ваших клиентов. #[br] Начните работать с&nbsp;надежным подрядчиком и&nbsp;получайте&nbsp;5% от&nbsp;стоимости навеса.
+
+		+b.form-wrap
+			.container
+				.row
+					.col-md-6.col-xl-5
+							+e.img-wrap
+								img(src="img/@2x/partners-1.png", alt="")
+					.col-md-6.col-xl-7
+						+e.subtitle Оставьте свои контакты и навсегда забудьте о проблемах с установкой навеса
+						.row.row--lg
+							.col-12.col-xl-auto
+								+e.INPUT.input(type='text' placeholder='Имя' name='firstName')
+								+e.INPUT.input(type='text' placeholder='Фамилия' name='lastName')
+							.col-12.col-xl-auto.text-center.text-md-left
+								+b.polite-canopy
+									+b.LABEL.custom-input-2
+										+e.INPUT.input(type="checkbox" checked)
+										+e.SPAN.label
+										+e.SPAN.text Я согласен(а) с условиями передачи&nbsp;информации
+								+e.btn.btn-primary(type="submit") Отправить
+					
+
+	// end sPartners

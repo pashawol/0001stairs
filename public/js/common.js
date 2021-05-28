@@ -29,7 +29,7 @@ function eventHandler() {
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Frame10-1.jpg);"></div>'); // /добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/frame98.jpg);"></div>'); // /добавляет подложку для pixel perfect
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {
@@ -79,6 +79,13 @@ function eventHandler() {
 			scrollTop: destination
 		}, 1100);
 		return false;
+	});
+	$('.header-block-c__link--js').click(function () {
+		var elementClick = $(this).attr("href");
+		var destination = $(elementClick).offset().top - 90;
+		$('html, body').animate({
+			scrollTop: destination
+		}, 1000);
 	}); // // карусель
 
 	var defaultSlide = {

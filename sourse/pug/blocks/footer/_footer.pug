@@ -5,22 +5,22 @@ mixin footer()
 				.row
 					.col-sm-auto
 						h6.strong.ttu.text-white Остались вопросы?
-					.small.col-xl-4.text-white Введите свой вопрос и&nbsp;через 15&nbsp;минут с&nbsp;Вами свяжется наш специалист  
+					.small.col-md-7.col-xl-auto.text-white Введите свой вопрос и&nbsp;через 15&nbsp;минут с&nbsp;Вами свяжется наш специалист  
 				.row
 					.col-lg-7
 						+input('Ваш вопрос','textarea')
 					.col
 						+input-lg('+_(___)___-__-__','tel','Ваш телефон:') 
-						+e.btn.btn-3d.btn-primary.btn-block(type="submit") Получить проект и и расчет
+						+e.btn.btn-3d.btn-primary.btn-block(type="submit") Задать вопрос
 				+polite()
 			+e.body.container
 				.row
 					.col-xl-4.col-auto
 						+e.logo-wrapper
 							a(href="/")
-								img(src="img/svg/logo.svg", alt="")
-								span.logo-text Лестница  под ключ
-							+e.logo-wrapper-caption.d-none.d-xl-block Изготовление и&nbsp;монтаж лестниц любой сложности в&nbsp;Москве и&nbsp;области 
+								img(src="img/svg/canopy.svg", alt="")
+								//- span.logo-text Лестница  под ключ
+							+e.logo-wrapper-caption.d-lg-none.d-xl-block Изготовление и монтаж навесов в Москве и Московской oбласти
 						+e.btn-wrap
 							+e.btn.btn-primary.link-modal(href="#modal-call" data-order="Заказать звонок" data-title='Заказать звонок' data-text="Оставьте заявку и наш менеджер перезвонит вам!" data-btn="ЗАКАЗАТЬ ЗВОНОК")
 								+icon("telephone")
@@ -32,31 +32,35 @@ mixin footer()
 						ul
 							-
 								var nav= {
-									" Лестницы из дерева":'',
-									" Лестницы из металла":'',
-									" Лестницы из бетона":'',
-									" Каркасы лестниц":'',
-									" Отделка лестниц":'',
-									" Лестницы из камня":'',
-									" Кованые лестницы":'',
-									" Лестницы из нержавейки":'',
-									"Стеклянные лестницы ":'',
-									"Лестницы винтовые ":'',
-									"Лестницы забежные ":'',
-									"Лестницы с площадкой ":'',
-									"Наружные лестницы ":'',
-									"Пожарные лестницы ":'',
-									"Перила и ограждения ":'',
-									"Антресольные этажи ":'',
-								 
+									"Навесы для автомобилей":'',
+									"Навесы к дому":'',
+									"Навесы для дачи":'',
+									"Металлоконструкции":'',
+									"Гаражи из сэндвич панелей":'',
+									"Кованые изделия":'',
+									"Ангары":'',
+									"Навесы из дерева":'',
+									"Беседки":'',
+									"Козырьки":'',
+									"Навесы для бассейнов":'',
+									"Навесы для барбекю":'',
+									"Террасы":'',
+									"Ворота":'',
+									"Заборы":'',
+									"Крыльцо":'',
+									"Лестницы":'',
 								}
 							each linkPatch, linkName in nav 
 								li
 									a(href="#")= linkName 
-					+e.col.col-lg-auto
-						+e.tel(href="tel:+78615598877") + 7 861 559 88 77
-						.smallest Москва и Московская область
-						.smallest.text-secondary © Copyright 2019. Все права защищены
+					+e.col.col-lg-auto.d-flex.flex-column.justify-content-between
+						+e.contacts
+							+e.tel(href="tel:+78615598877") + 7 861 559 88 77
+							.smallest Москва и Московская область
+							+e.social(href="#") Наш
+								span.strong Instagram
+								+icon('insta-bw')
+						.smallest.text-secondary.mb-1 © Copyright 2019. Все права защищены
 			.container
 				+e.foot Внимание! данный сайт носит информационный характер и&nbsp;ни&nbsp;при каких условиях не&nbsp;является публичной офертой, которая определяется положениями статьи 437 (2) гражданского кодекса рф. Для получения подробной информации о&nbsp;наличии и&nbsp;стоимости указанных товаров&nbsp;и (или) услуг, пожалуйста, обращайтесь к&nbsp;нашим менеджерам. или мы&nbsp;сами свяжемся с&nbsp;вами
 
@@ -186,7 +190,6 @@ mixin footer-bath()
 									"Пожарные лестницы ":'',
 									"Перила и ограждения ":'',
 									"Антресольные этажи ":'',
-								 
 								}
 							each linkPatch, linkName in nav 
 								li
