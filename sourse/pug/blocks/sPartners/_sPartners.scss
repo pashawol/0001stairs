@@ -50,12 +50,12 @@
 			width: 100%;
 			margin-left: auto;
 			margin-right: auto;
-			margin-bottom: rem(25);
-			&:last-child {
-				@include media-breakpoint-up(xl) {
-					margin-bottom: 0;
-				}
-			}
+			// margin-bottom: rem(25);
+			// &:last-child {
+			// 	@include media-breakpoint-up(xl) {
+			// 		margin-bottom: 0;
+			// 	}
+			// }
 			@include media-breakpoint-up(sm) {
 				max-width: rem(410);
 			}
@@ -68,8 +68,17 @@
 				width: rem(216);
 			}
 		}
-		.polite-canopy {
+		.wpcf7-form-control-wrap {
 			margin-bottom: rem(25);
+			&:last-child {
+				@include media-breakpoint-up(xl) {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.polite-canopy {
+			// margin-bottom: rem(25);
 			max-width: rem(240);
 			width: 100%;
 			margin-left: auto;
@@ -81,6 +90,15 @@
 				width: rem(240);
 				margin-left: 0;
 				margin-right: 0;
+			}
+			.wpcf7-form-control-wrap {
+				margin-bottom: rem(25) !important;
+			}
+			label {
+				margin-bottom: 0;
+			}
+			.wpcf7-list-item {
+				margin-left: 0;
 			}
 		}
 		&__btn {

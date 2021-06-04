@@ -16,14 +16,17 @@ mixin sPartners()
 						+e.subtitle Оставьте свои контакты и навсегда забудьте о проблемах с установкой навеса
 						.row.row--lg
 							.col-12.col-xl-auto
-								+e.INPUT.input(type='text' placeholder='Имя' name='firstName')
-								+e.INPUT.input(type='text' placeholder='Фамилия' name='lastName')
+								span.wpcf7-form-control-wrap.yuor-name
+									+e.INPUT.input(type='text' placeholder='Имя' name='firstName')
+								span.wpcf7-form-control-wrap.tel-147
+									+e.INPUT.input(type='text' placeholder='Фамилия' name='lastName')
 							.col-12.col-xl-auto.text-center.text-md-left
 								+b.polite-canopy
-									+b.LABEL.custom-input-2
-										+e.INPUT.input(type="checkbox" checked)
-										+e.SPAN.label
-										+e.SPAN.text Я согласен(а) с условиями передачи&nbsp;информации
+									span.wpcf7-form-control-wrap
+										+b.LABEL.custom-input-2
+											+e.INPUT.input(type="checkbox" checked)
+											+e.SPAN.label
+											+e.SPAN.text Я согласен(а) с условиями передачи&nbsp;информации
 								+e.btn.btn-primary(type="submit") Отправить
 					
 
