@@ -592,3 +592,7 @@ $smallest: rem(12);
 		color: #ffffff;
 	}
 }
+
+.comments textarea{
+	margin-bottom: var(--spacing-comments);
+}

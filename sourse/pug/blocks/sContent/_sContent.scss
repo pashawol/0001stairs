@@ -174,8 +174,11 @@
 	&__share {
 		display: flex;
 		justify-content: space-between;
-		width: 200px;
+		// width: 200px;
 		max-height: rem(24);
+		span{
+			margin-right: rem(10);
+		}
 		.soc {
 			&__item {
 				color: $black;
@@ -475,5 +478,29 @@
 				max-width: 290px;
 			}
 		}
+	}
+}
+
+.comments__share {
+	ul{
+		span{
+			margin-right: 0 !important;
+		}
+		padding-left: 0 !important;
+	}
+}
+
+
+.comment-form-cookies-consent {
+	max-width: rem(290);
+	position: relative;
+	padding-left: rem(30);
+	font-size: 14px;
+	
+
+	input{
+		position: absolute;
+		left: 0;
+		top: 2px;
 	}
 }

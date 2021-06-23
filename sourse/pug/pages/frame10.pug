@@ -33,9 +33,13 @@ include ../blocks/card/_card.pug
 block pagecontent
  
 	+mob-mnu()
-	+header()
-		+top-line()
+	+header().header--fixed
+		+top-line-canopy()
 		+top-nav()
+	+header().header--base
+		+top-line-canopy()
+		+top-nav()
+	//- +header-blo
 	+card
 	//-+catalog
 	//- +sStandartEquipment
