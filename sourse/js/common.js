@@ -82,7 +82,7 @@ function eventHandler() {
 	$('.header-block-c__link--js').click(function () {
 		const elementClick = $(this).attr("href");
 		const destination = $(elementClick).offset().top - 90;
-		$('html, body').animate({ scrollTop: destination}, 1000);
+		$('html, body').animate({ scrollTop: destination }, 1000);
 	});
 
 
@@ -192,28 +192,28 @@ function eventHandler() {
 		nextArrow: '<button type = "button" class = "slick-next"></ button>',
 		responsive: [
 			{
-			breakpoint: 1400,
-			settings: {
-				slidesToShow: 5,
-			}
+				breakpoint: 1400,
+				settings: {
+					slidesToShow: 5,
+				}
 
-		},
+			},
 			{
-			breakpoint: 1200,
-			settings: {
-				slidesToShow: 4,
-			}
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 4,
+				}
 
-		},
-		 {
-			breakpoint: 576,
-			settings: {
-				slidesToShow: 3,
-				arrows: true,
-			}
+			},
+			{
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 3,
+					arrows: true,
+				}
 
 
-		}],
+			}],
 
 	});
 	setTimeout(() => {
@@ -234,7 +234,7 @@ function eventHandler() {
 		});
 	});
 
-	if($('.sticky-js').length){
+	if ($('.sticky-js').length) {
 		$('.sticky-js').hcSticky({
 			stickTo: $('.card__inner')[0],
 			top: 140,
@@ -315,7 +315,7 @@ const JSCCommon = {
 			$(this)
 				.addClass('active').siblings().removeClass('active')
 				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn(function(){
+				.eq($(this).index()).fadeIn(function () {
 					$(this).find('.slider-for, .slider-nav').slick("refresh");
 				}).addClass('active');
 		});
@@ -359,26 +359,26 @@ $(document).ready(function () {
 	}
 
 
-	$(".case-item__link").click(function(){
+	$(".case-item__link").click(function () {
 		let id = $(this).attr('href');
 		console.log(id);
 		setTimeout(() => {
 			$(id).find('.slider-for, .slider-nav').slick("refresh")
 		}, 10);
 	});
-	$(".btn-more").click(function(){
+	$(".btn-more").click(function () {
 		let th = $(this);
 		th.hide();
 		th.prev().addClass("show").find(".sCases__col:hidden").fadeIn();
 		th.parents('.tabs__content').addClass("show");
 		let item = th.parents('.tabs__content').find(".sCases__col");
 		$(".case-wrap").removeClass("half");
-		item.each(function(){ 
+		item.each(function () {
 			if ($(this).is(":hidden")) {
-					$(this).fadeIn(function(){
-						$(this).find('.slider-for, .slider-nav').slick("refresh")
-					});
-				}
+				$(this).fadeIn(function () {
+					$(this).find('.slider-for, .slider-nav').slick("refresh")
+				});
+			}
 		});
 	});
 	$(".sSliderGal--js").slick({
@@ -405,7 +405,7 @@ $(document).ready(function () {
 		// arrows: false,
 	});
 	var prevScrollpos = window.pageYOffset;
-	window.onscroll = function() {
+	window.onscroll = function () {
 		var currentScrollPos = window.pageYOffset;
 		var topNav = document.querySelector('.header--fixed .top-nav');
 		if (prevScrollpos > currentScrollPos) {
@@ -415,14 +415,19 @@ $(document).ready(function () {
 		}
 		prevScrollpos = currentScrollPos;
 	};
-	
-	$(".menu-mobile--js .menu-item-has-children").each(function(){
+
+	$(".menu-mobile--js .menu-item-has-children").each(function () {
 		$(this).append('<div class="toggle-l"></div>');
 	})
 
-	$( '.menu-mobile--js .menu-item-has-children').on('click', '.toggle-l', function(){
-			$(this).prev().slideToggle()
-		})
+	$('.menu-mobile--js .menu-item-has-children').on('click', '.toggle-l', function () {
+		$(this).prev().slideToggle()
+	})
+
+	$(".menu-mobile--js .menu-item-has-children > a").on('click', function (e) {
+		e.preventDefault();
+		$(this).next().slideToggle("sub-menu");
+	});
 });
 
 // JSCCommon.LazyFunction();
