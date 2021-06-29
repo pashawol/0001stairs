@@ -139,6 +139,9 @@
 		@include media-breakpoint-down(xs) {
 			font-size: rem(20);
 		}
+		@include media-breakpoint-down(lg) {
+			padding-bottom: rem(5);
+		}
 		&--sm {
 			font-size: rem(24);
 		}
@@ -147,6 +150,11 @@
 
 	&__size {
 		&--top {
+			@include media-breakpoint-down(lg) {
+				display: flex;
+				align-items: center;
+				flex-grow: 1;
+			}
 			padding-bottom: rem(5);
 		}
 	}
@@ -661,6 +669,7 @@
 		position: relative;
 		color: $primary;
 		padding: rem(10) 0;
+		text-align: center;
 		&::before {
 			content: '';
 			position: absolute;
@@ -672,7 +681,7 @@
 			background-color: rgba($color: #000000, $alpha: 0.3)
 		}
 		@include media-breakpoint-down(md) {
-			display: block;			
+			display: block;
 		}
 
 		@include media-breakpoint-down(sm) {
@@ -689,16 +698,16 @@
 	&--left {
 		span {
 			@include media-breakpoint-down(sm) {
-				margin-left: rem(10);
+				// margin-left: rem(10);
 			}
 		}
 	}
 
 	&--right {
 		span {
-			@include media-breakpoint-down(sm) {
-				padding-left: rem(20);
-			}
+			// @include media-breakpoint-down(sm) {
+			// 	padding-left: rem(20);
+			// }
 		}
 	}
 	
