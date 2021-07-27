@@ -363,21 +363,17 @@ $(document).ready(function () {
 		// variableWidth: true,
 		// arrows: false,
 
-	});
-	var prevScrollpos = window.pageYOffset;
-
-	window.onscroll = function () {
-		var currentScrollPos = window.pageYOffset;
-		var topNav = document.querySelector('.header--fixed .top-nav');
-
-		if (prevScrollpos > currentScrollPos) {
-			topNav.style.top = '63px';
-		} else {
-			topNav.style.top = '25px';
-		}
-
-		prevScrollpos = currentScrollPos;
-	};
+	}); // var prevScrollpos = window.pageYOffset;
+	// window.onscroll = function () {
+	// 	var currentScrollPos = window.pageYOffset;
+	// 	var topNav = document.querySelector('.header--fixed .top-nav');
+	// 	if (prevScrollpos > currentScrollPos) {
+	// 		topNav.style.top = '63px';
+	// 	} else {
+	// 		topNav.style.top = '25px';
+	// 	}
+	// 	prevScrollpos = currentScrollPos;
+	// };
 
 	$(".menu-mobile--js .menu-item-has-children").each(function () {
 		$(this).append('<div class="toggle-l"></div>');
