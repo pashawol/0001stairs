@@ -30,6 +30,7 @@ include ../blocks/sAbout/_sAbout.pug
 include ../blocks/sSliderGal/_sSliderGal.pug
 include ../blocks/sSteps/_sSteps.pug
 include ../blocks/sWorkshops/_sWorkshops.pug
+include ../blocks/sClientsFeedback/_sClientsFeedback.pug
 
 block pagecontent
  
@@ -65,6 +66,18 @@ block pagecontent
 	//- +s-type-of-materials
 	//- +s-khow-order
 	//- +s-rews
+	+sClientsFeedback({
+		color:'#000000',
+		bgcolor:'#FFCF64',
+		})
+	+sClientsFeedback({
+		color:'#ffffff',
+		bgcolor:'#2B3545',
+		})
+	+sClientsFeedback({
+		color:'#000000',
+		bgcolor:'#F8F2E5',
+		})
 	+s-sert-canopy()
 	+sSteps
 	+s-contact()

@@ -1,0 +1,43 @@
+mixin sClientsFeedback(data)
+	// start sClientsFeedback
+	+b.SECTION.sClientsFeedback.section#sClientsFeedback(style=`--bg-color:${data.bgcolor}; --color:${data.color}`)&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Отзывы наших клиентов
+
+			+e.slider-wrap 
+				+e.slider--js 
+					mixin slide(data)
+						+e.slide 
+							+e.comment
+								p!= data.t
+								audio(src="#" controls)
+								
+								+e.author
+									+e.name= data.n 
+									+e.place.small= data.p
+								+e.more(href="#") Подробный отзыв...
+							
+					+slide({
+						t:`Я&nbsp;просто ох..ел от&nbsp;качества металла! Да&nbsp;за&nbsp;такие деньги мне еще и&nbsp;машину отмыли от&nbsp;битума...`,
+						n:`Игорь Хворостинов`,
+						p:`г. Мытищи`,
+					})
+					+slide({
+						t:`Возможно это слишком много инфы и&nbsp;должна быть инфа кратко и&nbsp;возможность открыть полную...`,
+						n:`Игорь Хворостинов`,
+						p:`г. Мытищи`,
+					})
+					+slide({
+						t:`Полную инфу давать на&nbsp;отдельной странице с&nbsp;отзывами а&nbsp;на&nbsp;основной краткую выжимку?`,
+						n:`Игорь Хворостинов`,
+						p:`г. Мытищи`,
+					})
+					+slide({
+						t:`Возможно это слишком много инфы и&nbsp;должна быть инфа кратко и&nbsp;возможность открыть полную...`,
+						n:`Игорь Хворостинов`,
+						p:`г. Мытищи`,
+					})
+					
+					
+	// end sClientsFeedback

@@ -404,6 +404,16 @@ $(document).ready(function () {
 		// variableWidth: true,
 		// arrows: false,
 	});
+	$(".sClientsFeedback__slider--js").slick({
+		dots: true,
+		lazyLoad: 'progressive',
+		infinite: true,
+		speed: 300,
+		slidesToShow: 3,
+		prevArrow: '<button type = "button" class = "slick-prev"></ button>',
+		nextArrow: '<button type = "button" class = "slick-next"></ button>',
+		
+	});
 	// var prevScrollpos = window.pageYOffset;
 	// window.onscroll = function () {
 	// 	var currentScrollPos = window.pageYOffset;
