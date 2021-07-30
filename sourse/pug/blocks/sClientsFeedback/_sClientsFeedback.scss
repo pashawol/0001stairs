@@ -1,9 +1,16 @@
 .sClientsFeedback {
 	background-color: var(--bg-color);
-	--arrPos: -200px;
+	--arrPos: -10px;
+	--gutter-x: 25px;
+	@include media-breakpoint-up(md) {
 	--gutter-x: 35px;
+	}
 	padding-top: rem(83);
 	padding-bottom: rem(110);
+
+	@media (min-width: 1630px) {
+		--arrPos: -200px;
+	}
 	& > * {
 		color: var(--color);
 	}
@@ -15,19 +22,32 @@
 		}
 	}
 	.slick-list {
-		margin-left: calc(-1 * var(--gutter-x) / 2);
-		margin-right: calc(-1 * var(--gutter-x) / 2);
 		min-height: rem(625);
 		display: flex;
 		align-items: center;
+		@include media-breakpoint-up(sm) {
+			margin-left: calc(-1 * var(--gutter-x) / 2);
+			margin-right: calc(-1 * var(--gutter-x) / 2);
+		}
+	}
+	&__slider {
+		@include media-breakpoint-up(sm) {
+			padding: 0 rem(15);
+		}
+		@include media-breakpoint-up(xxl) {
+			padding: 0;
+		}
 	}
 
 	.slick-track {
 		display: flex;
 	}
+	.slick-slide {
+		height: auto;
+	}
 
 	.slick-arrow {
-		top: 45%;
+		top: 44%;
 	}
 
 	.slick-next {
@@ -36,25 +56,23 @@
 	.slick-prev {
 		left: var(--arrPos);
 	}
-	
-	.slick-dots {
-		margin-bottom: 0;
-	}
+
 	&__comment {
 		height: 100%;
 		display: flex;
 		flex-direction: column;
 		margin-left: calc(var(--gutter-x) / 2);
 		margin-right: calc(var(--gutter-x) / 2);
-		// & > * {
-		// 	color: $black;
-		// }
+
 		p {
 			flex-grow: 1;
 			margin-bottom: rem(65);
 			font-weight: 600;
 			font-size: rem(20);
 			line-height: (25 / 20);
+			@include media-breakpoint-only(sm) {
+				font-size: rem(17);
+			}
 		}
 		audio {
 			width: 100%;
@@ -72,23 +90,38 @@
 		font-weight: 600;
 		font-size: rem(20);
 		line-height: (25 / 20);
+		margin-right: rem(10);
+		@include media-breakpoint-only(sm) {
+			font-size: rem(16);
+		}
 	}
 	&__more {
 		font-weight: 600;
 		text-decoration-line: underline;
 		color: var(--color);
-		// &:hover {
-		// 	color: $white;
-		// }
+		@include media-breakpoint-only(sm) {
+			font-size: rem(14);
+		}
 	}
 	.slick-dots {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		margin-bottom: 0;
+		max-width: 100%;
 		li {
 			position: relative;
-			margin: 5px 22px;
 			background-color: transparent;
+			margin: 5px 8px;
+			@include media-breakpoint-up(sm) {
+				margin: 5px 10px;
+			}
+			@include media-breakpoint-up(md) {
+				margin: 5px 13px;
+			}
+			@include media-breakpoint-up(xl) {
+				margin: 5px 22px;
+			}
 			&::after {
 				content: "";
 				@include a-cent;

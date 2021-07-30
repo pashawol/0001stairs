@@ -412,7 +412,30 @@ $(document).ready(function () {
 		slidesToShow: 3,
 		prevArrow: '<button type = "button" class = "slick-prev"></ button>',
 		nextArrow: '<button type = "button" class = "slick-next"></ button>',
-		
+		responsive: [
+			{
+				breakpoint: 1400,
+				settings: {
+					slidesToShow: 3,
+				}
+
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2,
+				}
+
+			},
+			{
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 1,
+					arrows: true,
+				}
+
+
+			}],
 	});
 	// var prevScrollpos = window.pageYOffset;
 	// window.onscroll = function () {
