@@ -9,6 +9,13 @@ mixin header-block(h1, i='header-bg')
 						block
 					else
 						h1 Сделаем и&nbsp;установим лестницу любой сложности под ключ с&nbsp;гарантией до&nbsp;15&nbsp;лет
+						ul 
+							li #[span Заводское производство] (привезем на участок готовую конструкцию и установим)
+
+							li #[span Выгодная доставка] (6 цехов в разных районах МО)
+
+							li Наши навесы #[span выдерживают нагрузку] 300 кг на м2
+
 					+e.text Выезд замерщика в&nbsp;день обращения!
 					+e.item-wrap.d-none.d-xl-block
 						.row
@@ -160,9 +167,15 @@ mixin header-block-canopy(h1)
 		</picture>
 		.container
 			.text-center.text-md-left
-				h1 ИЗГОТОВИМ И&nbsp;УСТАНОВИМ
-					span.text-primary НАВЕС НА&nbsp;ЗАКАЗ
-				+e.text #[+e.link--js(href="#sWorkshops") 6 ЦЕХОВ] В&nbsp;МОСКВЕ И&nbsp;МО
+				h1 Навесы с двойным запасом прочности
+					span от завода-изготовителя
+				ul 
+					li #[span Заводское производство] (привезем на участок готовую конструкцию и установим)
+
+					li #[span Выгодная доставка] (6 цехов в разных районах МО)
+
+					li Наши навесы #[span выдерживают нагрузку] 300 кг на м2
+				//- +e.text #[+e.link--js(href="#sWorkshops") 6 ЦЕХОВ] В&nbsp;МОСКВЕ И&nbsp;МО
 				+e.btn-wrap
 					+e.btn.btn-primary(href="#") РАССЧИТАТЬ СТОИМОСТЬ
 					+e.btn.btn-primary--outline.link-modal(href="#modal-call" data-order="Вызвать замерщика" data-title="Вызвать замерщика" data-text="Оставьте заявку и наш замерщик приедет к вам!" data-btn="ВЫЗВАТЬ ЗАМЕРЩИКА") ВЫЗВАТЬ ЗАМЕРЩИКА
