@@ -16,7 +16,7 @@ mixin sClientsFeedback(data)
 								+e.author
 									+e.name= data.n 
 									+e.place.small= data.p
-								+e.more(href="#") Подробный отзыв...
+								+e.more.link-modal(href="#modal-rew"  ) Подробный отзыв...
 							
 					+slide({
 						t:`Я&nbsp;просто ох..ел от&nbsp;качества металла! Да&nbsp;за&nbsp;такие деньги мне еще и&nbsp;машину отмыли от&nbsp;битума...`,
@@ -43,41 +43,58 @@ mixin sClientsFeedback(data)
 						n:`Игорь Хворостинов`,
 						p:`г. Мытищи`,
 					})
-					+slide({
-						t:`Возможно это слишком много инфы и&nbsp;должна быть инфа кратко и&nbsp;возможность открыть полную...`,
-						n:`Игорь Хворостинов`,
-						p:`г. Мытищи`,
-					})
-					+slide({
-						t:`Полную инфу давать на&nbsp;отдельной странице с&nbsp;отзывами а&nbsp;на&nbsp;основной краткую выжимку?`,
-						n:`Игорь Хворостинов`,
-						p:`г. Мытищи`,
-					})
-					+slide({
-						t:`Возможно это слишком много инфы и&nbsp;должна быть инфа кратко и&nbsp;возможность открыть полную...`,
-						n:`Игорь Хворостинов`,
-						p:`г. Мытищи`,
-					})
-					+slide({
-						t:`Я&nbsp;просто ох..ел от&nbsp;качества металла! Да&nbsp;за&nbsp;такие деньги мне еще и&nbsp;машину отмыли от&nbsp;битума...`,
-						n:`Игорь Хворостинов`,
-						p:`г. Мытищи`,
-					})
-					+slide({
-						t:`Возможно это слишком много инфы и&nbsp;должна быть инфа кратко и&nbsp;возможность открыть полную...`,
-						n:`Игорь Хворостинов`,
-						p:`г. Мытищи`,
-					})
-					+slide({
-						t:`Полную инфу давать на&nbsp;отдельной странице с&nbsp;отзывами а&nbsp;на&nbsp;основной краткую выжимку?`,
-						n:`Игорь Хворостинов`,
-						p:`г. Мытищи`,
-					})
-					+slide({
-						t:`Возможно это слишком много инфы и&nbsp;должна быть инфа кратко и&nbsp;возможность открыть полную...`,
-						n:`Игорь Хворостинов`,
-						p:`г. Мытищи`,
-					})
+					//- +slide({
+					//- 	t:`Возможно это слишком много инфы и&nbsp;должна быть инфа кратко и&nbsp;возможность открыть полную...`,
+					//- 	n:`Игорь Хворостинов`,
+					//- 	p:`г. Мытищи`,
+					//- })
+					//- +slide({
+					//- 	t:`Полную инфу давать на&nbsp;отдельной странице с&nbsp;отзывами а&nbsp;на&nbsp;основной краткую выжимку?`,
+					//- 	n:`Игорь Хворостинов`,
+					//- 	p:`г. Мытищи`,
+					//- })
+					//- +slide({
+					//- 	t:`Возможно это слишком много инфы и&nbsp;должна быть инфа кратко и&nbsp;возможность открыть полную...`,
+					//- 	n:`Игорь Хворостинов`,
+					//- 	p:`г. Мытищи`,
+					//- })
+					//- +slide({
+					//- 	t:`Я&nbsp;просто ох..ел от&nbsp;качества металла! Да&nbsp;за&nbsp;такие деньги мне еще и&nbsp;машину отмыли от&nbsp;битума...`,
+					//- 	n:`Игорь Хворостинов`,
+					//- 	p:`г. Мытищи`,
+					//- })
+					//- +slide({
+					//- 	t:`Возможно это слишком много инфы и&nbsp;должна быть инфа кратко и&nbsp;возможность открыть полную...`,
+					//- 	n:`Игорь Хворостинов`,
+					//- 	p:`г. Мытищи`,
+					//- })
+					//- +slide({
+					//- 	t:`Полную инфу давать на&nbsp;отдельной странице с&nbsp;отзывами а&nbsp;на&nbsp;основной краткую выжимку?`,
+					//- 	n:`Игорь Хворостинов`,
+					//- 	p:`г. Мытищи`,
+					//- })
+					//- +slide({
+					//- 	t:`Возможно это слишком много инфы и&nbsp;должна быть инфа кратко и&nbsp;возможность открыть полную...`,
+					//- 	n:`Игорь Хворостинов`,
+					//- 	p:`г. Мытищи`,
+					//- })
 					
-					
+
+		+b.form-wrap(id="modal-rew" class="  modal-win modal-win--rew modal-form" style="display: none")
+			mixin modals(data)
+				+e.comment
+					.row.pb-3
+						.col
+							+e.name.h6= data.n
+						.col-auto
+							+e.place.small= data.p
+					.mb-3
+						audio(src="#" controls)
+					h6!= data.t
+					p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero quaerat fugit accusamus doloremque laudantium magnam dolores, dolorum voluptatum fugiat est, quas inventore tempora eum, hic quia quod voluptates voluptate necessitatibus. Perspiciatis ipsum consequuntur quas cupiditate ratione. Reiciendis, quae ipsam. Accusamus, nostrum architecto. Similique placeat non numquam, dignissimos officiis veniam aspernatur at optio voluptates eius nobis beatae est labore nostrum eaque ipsam consequatur nulla facere provident perspiciatis vero! Delectus voluptates voluptate voluptatum officia itaque nam distinctio cupiditate ratione velit dolorum aspernatur hic quod, excepturi praesentium, odit enim assumenda atque quidem aliquam tempora! Nulla qui eligendi et consectetur, nam illo, quam eius cumque delectus quia officia dignissimos consequatur quisquam necessitatibus incidunt perspiciatis sint architecto! Dolor nesciunt ratione, vitae aliquam sunt, fugit quod iure magnam quia distinctio ea eius laudantium accusamus. Iusto obcaecati aliquam distinctio culpa unde harum optio ratione in quae blanditiis, rerum nostrum ullam et pariatur ipsam commodi labore, voluptatem repudiandae reiciendis quod numquam corporis consectetur, adipisci odit. Reiciendis, reprehenderit exercitationem? Itaque quam reiciendis laboriosam esse pariatur totam explicabo. Eius quis doloremque non sint veritatis deleniti fuga nobis quod? Cumque, aliquam assumenda, deleniti porro et eaque dolore earum obcaecati explicabo accusamus tempora dolor illum officia perferendis voluptatem laudantium! Tenetur, at quia.
+			+modals({
+				t:`Я&nbsp;просто ох..ел от&nbsp;качества металла! Да&nbsp;за&nbsp;такие деньги мне еще и&nbsp;машину отмыли от&nbsp;битума...`,
+				n:`Игорь Хворостинов`,
+				p:`г. Мытищи`,
+			})
 	// end sClientsFeedback

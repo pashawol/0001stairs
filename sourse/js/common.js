@@ -261,7 +261,7 @@ const JSCCommon = {
 	modalCall() {
 
 		$(".link-modal").fancybox({
-			arrows: false,
+			// arrows: false,
 			infobar: false,
 			touch: false,
 			// type : 'inline',
