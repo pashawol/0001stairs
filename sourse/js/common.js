@@ -58,6 +58,10 @@ function eventHandler() {
 		window.scrollY > topNavBase.offsetHeight
 			? topNavFixed.classList.add('fixed')
 			: topNavFixed.classList.remove('fixed');
+		
+		window.scrollY > topNavBase.offsetHeight
+			? topNavBase.classList.add('btn-show')
+			: topNavBase.classList.remove('btn-show');
 	}
 	window.addEventListener('scroll', function (e) {
 		whenResize();
@@ -261,7 +265,7 @@ const JSCCommon = {
 	modalCall() {
 
 		$(".link-modal").fancybox({
-			arrows: false,
+			// arrows: false,
 			infobar: false,
 			touch: false,
 			// type : 'inline',

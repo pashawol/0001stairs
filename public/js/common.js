@@ -58,6 +58,7 @@ function eventHandler() {
 		if (!topNavFixed) return; // document.querySelector('body').style.paddingTop = topNav.offsetHeight + 'px';
 
 		window.scrollY > topNavBase.offsetHeight ? topNavFixed.classList.add('fixed') : topNavFixed.classList.remove('fixed');
+		window.scrollY > topNavBase.offsetHeight ? topNavBase.classList.add('btn-show') : topNavBase.classList.remove('btn-show');
 	}
 
 	window.addEventListener('scroll', function (e) {
@@ -225,7 +226,7 @@ var JSCCommon = {
 	// /LazyFunction
 	modalCall: function modalCall() {
 		$(".link-modal").fancybox({
-			arrows: false,
+			// arrows: false,
 			infobar: false,
 			touch: false // type : 'inline',
 

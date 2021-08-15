@@ -315,6 +315,16 @@ $h: rem(3);
 		}
 	}
 }
+.thanks-page {
+	.menu-item-has-children {
+		& > a::after {
+			@include media-breakpoint-up(lg) {
+				background-image: url(../img/svg/shevron-down-light.svg);
+			}
+		}
+	}
+}
+
 .sub-menu {
 	display: none;
 	list-style: none;

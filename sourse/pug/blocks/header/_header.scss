@@ -1,53 +1,113 @@
-.thanks-page .header{
-  background-color: $body-color;
-  color: #ffffff;
-  padding-top: 65px;
-  .top-line{
-    
+.thanks-page {
+  .header {
     background-color: $body-color;
+    color: $white;
+    // padding-top: 65px;
+    .top-line {
+      background-color: $body-color;
+      &__logo-wrapper {
+        img {
+          filter: invert(1);
+        }
+      }
+      &__logo-wrapper-caption {
+        color: $white !important;
+        border-color: $white;
+      }
+      &__tel {
+        color: $white !important;
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+    .top-nav {
+      background-color: $body-color;
+    }
+
+    .menu > .menu-item > a {
+      @include media-breakpoint-up(lg) {
+        color: $white;
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
   }
-  .top-nav{
-    background-color: transparent;
+
+  //
+  @include media-breakpoint-up(xl) {
   }
-  a{
-    color: #ffffff !important;
+
+  @include media-breakpoint-up(lg) {
   }
-  img{
-    filter: invert(1);
+
+  @include media-breakpoint-up(md) {
   }
-  // 
-  @include media-breakpoint-up(xl) {}
 
-  @include media-breakpoint-up(lg) {}
+  @include media-breakpoint-up(sm) {
+  }
 
-  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(xs) {
+  }
 
-  @include media-breakpoint-up(sm) {}
+  //
+  @include media-breakpoint-between(md, xl) {
+  }
 
-  @include media-breakpoint-up(xs) {}
+  //
+  @include media-breakpoint-only(xs) {
+  }
 
-  // 
-  @include media-breakpoint-between(md, xl) {}
+  @include media-breakpoint-only(sm) {
+  }
 
-  // 
-  @include media-breakpoint-only(xs) {}
+  @include media-breakpoint-only(md) {
+  }
 
-  @include media-breakpoint-only(sm) {}
+  @include media-breakpoint-only(lg) {
+  }
 
-  @include media-breakpoint-only(md) {}
+  @include media-breakpoint-only(xl) {
+  }
 
-  @include media-breakpoint-only(lg) {}
+  //
+  @include media-breakpoint-down(xl) {
+  }
 
-  @include media-breakpoint-only(xl) {}
+  @include media-breakpoint-down(lg) {
+  }
 
-  // 
-  @include media-breakpoint-down(xl) {}
+  @include media-breakpoint-down(md) {
+  }
 
-  @include media-breakpoint-down(lg) {}
+  @include media-breakpoint-down(sm) {
+  }
 
-  @include media-breakpoint-down(md) {}
+  @include media-breakpoint-down(xs) {
+  }
+}
 
-  @include media-breakpoint-down(sm) {}
-
-  @include media-breakpoint-down(xs) {}
- }
+@include media-breakpoint-down(xs) {
+  .top-line__links {
+    @include mt;
+    display: block;
+    position: fixed;
+    width: calc(100%);
+    bottom: 0;
+    background: $white;
+    left: 0;
+    padding: 10px !important;
+    transform: translateY(100%);
+    opacity: 0;
+    .top-line__logo-wrapper-caption {
+      display: none !important;
+    }
+  }
+  .header.btn-show {
+    .top-line__links {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
